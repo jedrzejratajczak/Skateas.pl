@@ -1,7 +1,11 @@
 node_modules
+.prettierignore
+.gitignore
 .next
 .husky
 coverage
 .prettierignore
 .stylelintignore
 .eslintignore
+*.env
+.env
