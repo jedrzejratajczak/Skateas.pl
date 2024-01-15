@@ -27,7 +27,9 @@
         "**/*.ts",
         "**/*.tsx",
         ".next/types/**/*.ts",
-        "src/components/header/test.js"
+        "src/components/header/test.js",
+        "server/db.js",
+        "server/models/user.js"
     ],
     "exclude": ["node_modules"]
 }
