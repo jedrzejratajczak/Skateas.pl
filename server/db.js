@@ -1,4 +1,3 @@
-const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const productModel = require('./models/products');
@@ -10,10 +9,6 @@ const {
     updateProductById,
     deleteProductById,
 } = require('./controllers/productController');
-
-const app = express();
-app.use(express.json());
-app.use(cors());
 
 const uri =
     'mongodb+srv://annar:QazwsxEdc@cluster0.tmkg2z6.mongodb.net/?retryWrites=true&w=majority';
@@ -40,6 +35,3 @@ const sampleProduct = {
 run();
 createProduct(sampleProduct);
 deleteProductById('65a6e2e46722b29b59e2686c');
-
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
