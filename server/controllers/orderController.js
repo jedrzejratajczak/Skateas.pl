@@ -1,73 +1,74 @@
 const orderModel = require('../models/store');
 
-// Create a new order
-const createOrder = async (req, res) => {
+const createOrder = async (orderData) => {
     try {
-        const newOrder = new orderModel(req.body);
+        const newOrder = new orderModel(orderData);
         await newOrder.save();
-        res.status(201).json(newOrder);
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        throw err;
+    } finally {
+        mongoose.connection.close();
     }
 };
 
-// Get all orders
-const getAllOrders = async (req, res) => {
+const getAllOrders = async () => {
     try {
         const orders = await orderModel.find();
-        res.status(200).json(orders);
+        return orders;
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        throw err;
+    } finally {
+        mongoose.connection.close();
     }
 };
 
-// Get order by Id
-const getOrderById = async (req, res) => {
+const getOrderById = async (orderId) => {
     try {
-        const order = await orderModel.findBy(req.params.id);
+        const order = await orderModel.findBy(orderId);
         if (!order) {
-            return res.status(404).json({ message: 'Order not found' });
+            return null;
         }
-        res.status(200).json(order);
+        return order;
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        throw err;
+    } finally {
+        mongoose.connection.close();
     }
 };
 
-// Update product by Id
-const updateOrdertById = async (req, res) => {
+const updateOrdertById = async (orderId, updates) => {
     try {
-        const orderId = req.params.id;
-        const updates = req.body;
+        const updatedOrder = await orderModel.findByIdAndUpdate(
+            orderId,
+            updates,
+            {
+                new: true,
+            },
+        );
 
-        const order = await orderModel.findByIdAndUpdate(orderId, updates, {
-            new: true,
-        });
-
-        if (!order) {
-            return res.status(404).json({ message: 'Order not found' });
+        if (!updatedOrder) {
+            return null;
         }
-
-        res.status(200).json(order);
+        return updatedOrder;
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        throw err;
+    } finally {
+        mongoose.connection.close();
     }
 };
 
-// Delete product by Id
-const deleteOrderById = async (req, res) => {
+const deleteOrderById = async (orderId) => {
     try {
-        const orderId = req.params.id;
+        const deletedOrder = await orderModel.findByIdAndDelete(orderId);
 
-        const order = await orderModel.findByIdAndDelete(orderId);
-
-        if (!order) {
-            return res.status(404).json({ message: 'Order not found' });
+        if (!deletedOrder) {
+            return null;
         }
-
-        res.status(200).json({ message: 'Order deleted successfully' });
+        return deletedOrder;
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        throw err;
+    } finally {
+        mongoose.connection.close();
     }
 };
 

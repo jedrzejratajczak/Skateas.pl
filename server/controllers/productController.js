@@ -65,6 +65,7 @@ const deleteProductById = async (productId) => {
         const deletedProduct = await productModel.findByIdAndDelete(productId);
 
         if (!deletedProduct) {
+            return null;
         }
         console.log('Deleted product:', deletedProduct);
         return deletedProduct;
