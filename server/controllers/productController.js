@@ -1,77 +1,77 @@
-const productModel = require('../models/store');
+const mongoose = require('mongoose');
+const productModel = require('../models/products');
 
-// Create a new product
-const createProduct = async (req, res) => {
+const createProduct = async (productData) => {
     try {
-        const newProduct = new productModel(req.body);
-        await newProduct.save();
-        res.status(201).json(newProduct);
+        const product = new productModel(productData);
+        const savedProduct = await product.save();
+        console.log('Product saved successfully:', savedProduct);
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        throw err;
+    } finally {
+        mongoose.connection.close();
     }
 };
 
-// Get all products
-const getAllProducts = async (req, res) => {
+const getAllProducts = async () => {
     try {
         const products = await productModel.find();
-        res.status(200).json(products);
+        return products;
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        throw err;
+    } finally {
+        mongoose.connection.close();
     }
 };
 
-// Get product by Id
-const getProductById = async (req, res) => {
+const getProductById = async (productId) => {
     try {
-        const product = await productModel.findBy(req.params.id);
+        const product = await productModel.findBy(productId);
         if (!product) {
-            return res.status(404).json({ message: 'Product not found' });
+            return null;
         }
-        res.status(200).json(product);
+        console.log('Retrieved product by ID:', product);
+        return product;
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        throw err;
+    } finally {
+        mongoose.connection.close();
     }
 };
 
-// Update product by Id
-const updateProductById = async (req, res) => {
+const updateProductById = async (productId, updates) => {
     try {
-        const productId = req.params.id;
-        const updates = req.body;
-
-        const product = await productModel.findByIdAndUpdate(
+        const updatedProduct = await productModel.findByIdAndUpdate(
             productId,
             updates,
             {
                 new: true,
             },
         );
-
-        if (!product) {
-            return res.status(404).json({ message: 'Product not found' });
+        if (!updatedProduct) {
+            return null;
         }
-
-        res.status(200).json(user);
+        console.log('Updated product:', updatedProduct);
+        return updatedProduct;
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        throw err;
+    } finally {
+        mongoose.connection.close();
     }
 };
 
-// Delete product by Id
-const deleteProductById = async (req, res) => {
+const deleteProductById = async (productId) => {
     try {
-        const productId = req.params.id;
+        const deletedProduct = await productModel.findByIdAndDelete(productId);
 
-        const product = await productModel.findByIdAndDelete(productId);
-
-        if (!product) {
-            return res.status(404).json({ message: 'Product not found' });
+        if (!deletedProduct) {
         }
-
-        res.status(200).json({ message: 'Product deleted successfully' });
+        console.log('Deleted product:', deletedProduct);
+        return deletedProduct;
     } catch (err) {
-        res.status(500).json({ error: err.message });
+        throw err;
+    } finally {
+        mongoose.connection.close();
     }
 };
 

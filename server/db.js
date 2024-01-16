@@ -1,47 +1,45 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-
+const productModel = require('./models/products');
+const run = require('./config/databaseConfig');
 const {
-    product,
-    order,
-    commentModel,
-    deliveryModel,
-    adminModel,
-} = require('./models/Store');
+    createProduct,
+    getAllProducts,
+    getProductById,
+    updateProductById,
+    deleteProductById,
+} = require('./controllers/productController');
 
 const app = express();
-
 app.use(express.json());
 app.use(cors());
 
-const uri = `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASS}@${process.env.MONGODB_HOST}`;
-console.log(uri);
+const uri =
+    'mongodb+srv://annar:QazwsxEdc@cluster0.tmkg2z6.mongodb.net/?retryWrites=true&w=majority';
+
 mongoose.connect(uri);
 
-run();
-async function run() {
-    try {
-        const product = await product.create({
-            name: 'board1',
-            description: 'board',
+const sampleProduct = {
+    name: 'board1',
+    description: 'board',
+    price: 300,
+    isAvailable: true,
+    photos: ['photo1', 'photo2'],
+    category: 'boards',
+    priceHistory: [
+        {
+            date: new Date('2024-01-16'),
             price: 300,
-            isAvailable: true,
-            photos: 'photo1',
-            category: 'boards',
-            priceHistory: [
-                {
-                    date: '10/01/2024',
-                    price: 300,
-                },
-            ],
-            tags: ['board'],
-        });
-        console.log(product);
-    } catch (e) {
-        console.log(e.message);
-    }
-}
+        },
+        { date: new Date('2024-01-17'), price: 300 },
+    ],
+    tags: ['board', 'new'],
+};
+
+run();
+createProduct(sampleProduct);
+deleteProductById('65a6e2e46722b29b59e2686c');
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
