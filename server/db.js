@@ -10,8 +10,7 @@ const {
     deleteProductById,
 } = require('./controllers/productController');
 
-const uri =
-    'mongodb+srv://annar:QazwsxEdc@cluster0.tmkg2z6.mongodb.net/?retryWrites=true&w=majority';
+const uri = `mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASS}@${process.env.MONGODB_HOST}`;
 
 mongoose.connect(uri);
 
