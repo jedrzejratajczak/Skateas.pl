@@ -2,25 +2,18 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 const data = {};
 
+const APP_URL_ITEM = ''
+
 const addItem = async (data) => {
-    try {
-        const response = await fetch(APP_URL_ITEM, {
-            method: METHOD_POST,
-            headers: {
-                CONTENT_TYPE_JSON,
-            },
-            body: JSON.stringify(data),
-        });
+    //databse:
+    // const newItem = new itemModel(req, res);
+    // const savedItem = await newItem.save();
 
-        if (!response.ok) {
-            throw new Error('Failed to add item');
-        }
-
-        const newItem = await response.json();
-        return newItem;
-    } catch (error) {
-        throw error;
+    if (savedItem.savedSuccessfully()) {
+        throw new Error({ code: 400, message: 'Failed to add item' });
     }
+
+    return newItem;
 };
 
 const updateItem = async (data) => {

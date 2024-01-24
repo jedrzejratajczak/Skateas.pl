@@ -15,13 +15,13 @@ export default async function handler(
     switch (req.method) {
         case METHOD_POST:
             try {
-                //databse:
-                // const newItem = new itemModel(req, res);
-                // const savedItem = await newItem.save();
                 const data = addItem(req.body);
                 res.status(201).json(data);
             } catch (error) {
-                res.status(500).json({ error: 'Internal Server Error' });
+                if (error.code)
+                    res.status(error.code).json({ message: error.message });
+                else
+                    res.status(500).json({ error: 'Internal Server Error' });
             }
             break;
 
