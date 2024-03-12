@@ -6,13 +6,13 @@ export type PriceHistory = {
 };
 
 export type Item = {
-  name: string;
+  product: string;
   description: string;
   price: number;
   quantity: number;
   visible: boolean;
   category: string;
-  priceHistory: PriceHistory[];
+  priceHistory?: PriceHistory[];
   photos: string[];
 };
 
@@ -22,7 +22,7 @@ const PriceHistorySchema = new mongoose.Schema({
 });
 
 const itemSchema = new mongoose.Schema({
-  name: String,
+  product: String,
   description: String,
   price: Number,
   quantity: Number,
