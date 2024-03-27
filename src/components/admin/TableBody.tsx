@@ -5,12 +5,13 @@ import {
 } from '@tremor/react';
 import { useRouter } from 'next/navigation';
 
+import { deleteItem } from '@/server/controllers/itemController';
 import { Item, PriceHistory } from '@/server/models/item';
 
-import { ActionIcons } from './Icons';
+import ActionIcons from './Icons';
 
 export type TableBodyProps = {
-  items: Item[];
+  items: (Item & { _id: string })[];
 };
 
 const renderPriceHistory = (priceHistory: PriceHistory[]) =>
@@ -24,16 +25,20 @@ const renderPriceHistory = (priceHistory: PriceHistory[]) =>
 const TableBody = ({ items }: TableBodyProps) => {
   const { push } = useRouter();
 
-  const handleEdit = () => {
-    push('admin/products/edit');
+  const handleEdit = (_id: string) => {
+    push(`admin/products/edit/${_id}`);
+  };
+
+  const handleDelete = async (_id: string) => {
+    await deleteItem(_id);
   };
 
   return (
     <TremorTableBody>
       {items ? (
-        items.map((item: Item, id) => (
-          <TableRow key={item.product}>
-            <TableCell>{item.product}</TableCell>
+        items.map(item => (
+          <TableRow key={item._id}>
+            <TableCell>{item.name}</TableCell>
             <TableCell>{item.description}</TableCell>
             <TableCell>{item.price} zł</TableCell>
             <TableCell>{item.quantity}</TableCell>
@@ -50,7 +55,10 @@ const TableBody = ({ items }: TableBodyProps) => {
             </TableCell>
             <TableCell>{item.photos}</TableCell>
             <TableCell>
-              <ActionIcons handleEdit={handleEdit} />
+              <ActionIcons
+                handleEdit={() => handleEdit(item._id)}
+                handleDelete={() => handleDelete(item._id)}
+              />
             </TableCell>
           </TableRow>
         ))
