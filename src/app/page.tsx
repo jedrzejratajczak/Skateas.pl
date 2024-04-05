@@ -1,3 +1,5 @@
-const AcademyPage = () => <div>Akademia</div>;
+const AcademyPage = () => {
+  return <div>Akademia</div>;
+};
 
 export default AcademyPage;
