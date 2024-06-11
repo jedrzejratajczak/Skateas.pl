@@ -17,8 +17,8 @@ const Breadcrumbs = () => {
         breadcrumbPath += `/${path}`;
 
         return (
-          <li className="before:px-3 before:content-['\3E']">
-            <Link href={breadcrumbPath} key={path}>
+          <li className="before:px-3 before:content-['\3E']" key={path}>
+            <Link href={breadcrumbPath}>
               {path[0].toUpperCase() + path.slice(1)}
             </Link>
           </li>

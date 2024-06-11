@@ -26,11 +26,12 @@ export default function HomePage() {
             </p>
           </div>
           <p className="font-roboto text-xs text-[#FFFFFF]">
-            Czy Twoje dziecko marzy o przygodzie na deskorolce? Zapisz je na
-            zajęcia skateboardingu w nowym sezonie i daj mu szansę na rozwijanie
-            umiejętności, zdobywanie pewności siebie i poznawanie nowych
-            przyjaciół! Niech Twój maluch odkryje radość z aktywności na świeżym
-            powietrzu i zaprzyjaźni się z deską już dziś!
+            Czy Twoje dziecko marzy o przygodzie na&nbsp;deskorolce? Zapisz
+            je&nbsp;na&nbsp;zajęcia skateboardingu w nowym sezonie i&nbsp;daj
+            mu&nbsp;szansę na rozwijanie umiejętności, zdobywanie pewności
+            siebie i&nbsp;poznawanie nowych przyjaciół! Niech Twój maluch
+            odkryje radość z&nbsp;aktywności na świeżym powietrzu
+            i&nbsp;zaprzyjaźni się z&nbsp;deską już dziś!
           </p>
           <button className="m-auto my-1 rounded-[50px] border border-[#FABE24] bg-[#FBD24D] px-2 py-1 text-sm text-[#404040]">
             Zapisy &gt;&gt;
@@ -63,16 +64,16 @@ export default function HomePage() {
             height={200}
             className="absolute -left-28 -top-40 scale-x-[-1]"
           />
-          <p className="my-3 text-justify font-roboto text-xs text-[#FFFFFF]">
+          <p className="my-3 text-center font-roboto text-xs text-[#FFFFFF]">
             Akademia skateboardingu jest idealnym miejscem zarówno dla tych,
-            którzy chcą postawić pierwsze kroki na deskorolce, jak i dla tych,
-            którzy pragną rozwijać swoje umiejętności pod okiem doświadczonych
-            instruktorów. Podczas zajęć skupiamy się nie tylko na technikach
-            jazdy, ale również na ważnych aspektach takich jak: uważność i
-            bezpieczeństwo w otoczeniu, budowanie dobrych relacji z
-            rówieśnikami, szacunek do innych, pokonywanie własnych barier oraz
-            zwalczanie słabości. Dołącz do nas i odkryj radość z jazdy na
-            deskorolce!
+            którzy chcą postawić pierwsze kroki na deskorolce, jak i&nbsp;dla
+            tych, którzy pragną rozwijać swoje umiejętności pod okiem
+            doświadczonych instruktorów. Podczas zajęć skupiamy się nie tylko
+            na&nbsp;technikach jazdy, ale również na ważnych aspektach takich
+            jak: uważność i&nbsp;bezpieczeństwo w otoczeniu, budowanie dobrych
+            relacji z&nbsp;rówieśnikami, szacunek do innych, pokonywanie
+            własnych barier oraz zwalczanie słabości. Dołącz do nas
+            i&nbsp;odkryj radość z&nbsp;jazdy na&nbsp;deskorolce!
           </p>
           <Image
             src="/images/deska1.png"
@@ -141,7 +142,7 @@ export default function HomePage() {
           </p>
         </div>
         <div className="flex items-center gap-4">
-          <div className="my-3 flex flex-col gap-4 text-justify font-roboto text-xs text-[#FFFFFF]">
+          <div className="my-3 flex flex-col gap-4 text-left font-roboto text-xs text-[#FFFFFF]">
             <p>
               Cześć! Mam na imię Adam i{' '}
               <span className="text-[#FFC600]">
@@ -149,25 +150,26 @@ export default function HomePage() {
               </span>
               . To, co zaczęło się jako prosta zajawka, stało się nieodłączną
               częścią mojego życia. Deskorolka nie tylko daje mi ogromną radość
-              z jazdy, ale również zmieniła mój sposób postrzegania świata.
-              Dzięki niej poznałem wspaniałych ludzi z różnych zakątków Polski i
-              świata oraz odwiedziłem wiele nowych miejsc.
+              z&nbsp;jazdy, ale również zmieniła mój sposób postrzegania świata.
+              Dzięki niej poznałem wspaniałych ludzi z&nbsp;różnych zakątków
+              Polski i&nbsp;świata oraz odwiedziłem wiele nowych miejsc.
             </p>
             <p>
               <span className="text-[#FFC600]">
                 Od 2021 roku uczę jazdy na deskorolce
               </span>
-              , aby dzielić się swoją pasją z innymi i pokazać, co najbardziej
-              urzekło mnie w skateboardingu. Obecnie
+              , aby dzielić się swoją pasją z&nbsp;innymi i&nbsp;pokazać,
+              co&nbsp;najbardziej urzekło mnie w skateboardingu. Obecnie
               <span className="text-[#FFC600]">
+                {' '}
                 jestem licencjonowanym instruktorem Polish Skate Federation{' '}
               </span>
-              i prowadzę: regularne zajęcia we Wrocławiu, warsztaty dla szkół i
-              fundacji, zajęcia wyjazdowe w różnych miastach.
+              i prowadzę: regularne zajęcia we Wrocławiu, warsztaty dla szkół
+              i&nbsp;fundacji, zajęcia wyjazdowe w różnych miastach.
             </p>
             <p>
-              Jako instruktor współpracuję również z największymi obozami
-              deskorolkowymi w Europie,{' '}
+              Jako instruktor współpracuję również z&nbsp;największymi obozami
+              deskorolkowymi w&nbsp;Europie,{' '}
               <span className="text-[#FFC600]">Woodcamp</span>.
             </p>
           </div>
