@@ -6,10 +6,10 @@ export function TripleExclamationMark({
   className
 }: TripleExclamationMarkProps) {
   return (
-    <div className={`absolute font-poetsen-one text-transparent ${className}`}>
-      <ExclamationMark className="-left-3.5 -top-2 rotate-3" />
-      <ExclamationMark className="-top-[15px] rotate-[17deg]" big />
-      <ExclamationMark className="-top-0 left-[13px] rotate-[30deg]" />
+    <div className={`absolute ${className}`}>
+      <ExclamationMark className="absolute -left-3.5 -top-2 rotate-3 text-2xl" />
+      <ExclamationMark className="absolute -top-[15px] rotate-[17deg] text-4xl" />
+      <ExclamationMark className="absolute -top-0 left-[13px] rotate-[30deg] text-2xl" />
     </div>
   );
 }

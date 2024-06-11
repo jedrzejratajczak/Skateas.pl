@@ -1,4 +1,4 @@
-type ExclamationMarkProps = { className: string; big?: boolean };
+type ExclamationMarkProps = { className?: string; big?: boolean };
 
 export function ExclamationMark({
   className,
@@ -6,7 +6,7 @@ export function ExclamationMark({
 }: ExclamationMarkProps) {
   return (
     <span
-      className={`absolute ${big ? 'text-4xl' : 'text-2xl'} ${className}`}
+      className={`font-poetsen-one text-transparent ${className}`}
       style={{ WebkitTextStroke: big ? '3px #FFFFFF' : '2px #FFFFFF' }}
     >
       !
