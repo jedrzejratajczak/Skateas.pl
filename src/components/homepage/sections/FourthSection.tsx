@@ -12,8 +12,8 @@ export function FourthSection() {
         subtitle="o mnie"
       />
       <div className="flex items-center gap-4">
-        <div className="my-3 flex flex-col gap-4 font-roboto text-xs text-white">
-          <p>
+        <div className="my-3 font-roboto text-xs text-white">
+          <p className="mb-4">
             Cześć! Mam na imię Adam i{' '}
             <span className="text-[#FFC600]">
               jeżdżę na deskorolce od 13 lat
@@ -34,12 +34,12 @@ export function FourthSection() {
               jestem licencjonowanym instruktorem Polish Skate Federation{' '}
             </span>
             i prowadzę:
-            <ul className="relative left-3 list-disc">
-              <li>regularne zajęcia we Wrocławiu,</li>
-              <li>warsztaty dla szkół i fundacji,</li>
-              <li>zajęcia wyjazdowe w różnych miastach.</li>
-            </ul>
           </p>
+          <ul className="relative left-3 mb-4 list-disc">
+            <li>regularne zajęcia we Wrocławiu,</li>
+            <li>warsztaty dla szkół i fundacji,</li>
+            <li>zajęcia wyjazdowe w różnych miastach.</li>
+          </ul>
           <p>
             Jako instruktor współpracuję również z&nbsp;największymi obozami
             deskorolkowymi w&nbsp;Europie,{' '}

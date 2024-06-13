@@ -2,7 +2,7 @@ import '@/tailwind.css';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="pl">
-    <body className="font-inter">{children}</body>
+    <body className="bg-[#171717] font-inter">{children}</body>
   </html>
 );
 

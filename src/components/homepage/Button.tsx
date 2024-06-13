@@ -1,6 +1,8 @@
 const colors = {
   green: 'border-[#2DD3BE] bg-[#5EE9D3]',
-  orange: 'border-[#FABE24] bg-[#FBD24D]'
+  orange: 'border-[#FABE24] bg-[#FBD24D]',
+  pink: 'border-[#BF83FB] bg-[#D7B3FD]',
+  blue: 'border-[#4A90E2] bg-[#6FADE2]'
 };
 
 type ButtonProps = {

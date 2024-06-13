@@ -4,7 +4,7 @@ type TitleProps = {
   subtitle?: string;
   subtitleClassName?: string;
   title: string;
-  titleClassName: string;
+  titleClassName?: string;
   withExclamations?: boolean;
   withQuestions?: boolean;
 };
