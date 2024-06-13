@@ -2,6 +2,7 @@ import {
   FifthSection,
   FirstSection,
   FourthSection,
+  Navbar,
   SecondSection,
   SeventhSection,
   SixthSection,
@@ -11,6 +12,7 @@ import {
 export default function HomePage() {
   return (
     <>
+      <Navbar />
       <FirstSection />
       <SecondSection />
       <ThirdSection />
