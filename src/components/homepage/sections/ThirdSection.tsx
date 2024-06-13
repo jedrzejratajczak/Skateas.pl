@@ -1,3 +1,4 @@
+import { Button } from '../Button';
 import { Offer } from '../Offer';
 
 export function ThirdSection() {
@@ -31,14 +32,18 @@ export function ThirdSection() {
         text="To, co zaczęło się jako prosta zajawka, stało się nieodłączną częścią mojego życia..."
         title="Eventy"
       />
-      <div className="flex flex-col items-center gap-2.5">
-        <p className="py-1 text-center text-[#FFFFFF]">
-          Chcesz nawiązać współpracę w inny sposób? Mogę zorganizować
-          zajęcia/pokazy/warsztaty skateboardingowe na Twoim wydarzeniu.
-        </p>
-        <button className="rounded-[50px] border border-[#2DD3BE] bg-[#5EE9D3] px-2 py-1 text-[#404040]">
-          Dowiedz się więcej &gt;&gt;
-        </button>
+      <div className="flex flex-col items-center gap-2.5 py-1 ">
+        <div className="text-center font-roboto text-xs text-white">
+          <p>
+            Chcesz nawiązać <span className="font-bold">współpracę</span>{' '}
+            w&nbsp;inny sposób?
+          </p>
+          <p>
+            Mogę zorganizować zajęcia/pokazy/warsztaty skateboardingowe
+            na&nbsp;Twoim wydarzeniu.
+          </p>
+        </div>
+        <Button color="green">Dowiedz się więcej &gt;&gt;</Button>
       </div>
     </div>
   );

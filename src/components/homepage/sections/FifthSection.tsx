@@ -22,9 +22,7 @@ export function FifthSection() {
         >
           ?
         </span>
-        <p className="text-center font-poetsen-one text-4xl text-[#FFFFFF]">
-          FAQ
-        </p>
+        <p className="text-center font-poetsen-one text-4xl text-white">FAQ</p>
         <span
           className="absolute -top-1 left-[calc(50%+50px)] rotate-[20deg] font-poetsen-one text-5xl text-transparent"
           style={{ WebkitTextStroke: '2px #FFFFFF' }}

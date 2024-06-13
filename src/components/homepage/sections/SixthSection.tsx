@@ -9,12 +9,12 @@ export function SixthSection() {
         <p className="font-poetsen-one text-4xl text-[#D7B3FD]">
           Masz pytania?
         </p>
-        <p className="relative -top-1 left-[70px] font-poetsen-one text-2xl text-[#FFFFFF]">
+        <p className="relative -top-1 left-[70px] font-poetsen-one text-2xl text-white">
           Napisz do mnie!
         </p>
       </div>
       <div className="flex items-center gap-4">
-        <div className="my-3 flex flex-col gap-4 text-left font-roboto text-xs text-[#FFFFFF]">
+        <div className="my-3 flex flex-col gap-4 text-left font-roboto text-xs text-white">
           <p>
             Cześć! Mam na imię Adam i{' '}
             <span className="text-[#FFC600]">
@@ -62,7 +62,7 @@ export function SixthSection() {
           </div>
         </div>
       </div>
-      <div className="text-center font-poetsen-one text-xs text-[#FFFFFF]">
+      <div className="text-center font-poetsen-one text-xs text-white">
         <p>
           „OGROMNĄ CZĘŚCIĄ SKATEBOARDINGU, ZARÓWNO FIZYCZNIE, JAK I KULTUROWO,
           JEST ODKRYWANIE RZECZY, O KTÓRYCH NIE WIEDZIAŁEŚ, ŻE ICH SZUKASZ”

@@ -36,7 +36,7 @@ export function Dropdown({
         </span>
       </button>
       <div
-        className={`overflow-hidden rounded-b-[20px] text-[#FFFFFF] transition-all ${border} ${open ? 'max-h-[100px] border px-4 py-3 delay-75' : 'max-h-0'}`}
+        className={`overflow-hidden rounded-b-[20px] text-white transition-all ${border} ${open ? 'max-h-[100px] border px-4 py-3 delay-75' : 'max-h-0'}`}
       >
         {text}
       </div>

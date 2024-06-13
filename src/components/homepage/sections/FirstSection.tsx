@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import { Button } from '../Button';
 import { ExclamationMark } from '../ExclamationMark';
 
 export function FirstSection() {
@@ -9,11 +10,11 @@ export function FirstSection() {
         <div className="font-poetsen-one">
           <p className="text-4xl text-[#FBD24D]">Sezon 2024</p>
           <p className="relative -top-6 left-[70px]">
-            <span className="text-2xl text-[#FFFFFF]">rozpoczęty</span>
+            <span className="text-2xl text-white">rozpoczęty</span>
             <ExclamationMark className="text-4xl" />
           </p>
         </div>
-        <p className="font-roboto text-xs text-[#FFFFFF]">
+        <p className="font-roboto text-xs text-white">
           Czy Twoje dziecko marzy o&nbsp;przygodzie na&nbsp;deskorolce? Zapisz
           je&nbsp;na&nbsp;zajęcia skateboardingu w&nbsp;nowym sezonie i&nbsp;daj
           mu&nbsp;szansę na rozwijanie umiejętności, zdobywanie pewności siebie
@@ -21,9 +22,9 @@ export function FirstSection() {
           z&nbsp;aktywności na świeżym powietrzu i&nbsp;zaprzyjaźni się
           z&nbsp;deską już dziś!
         </p>
-        <button className="m-auto my-1 rounded-[50px] border border-[#FABE24] bg-[#FBD24D] px-4 py-1 text-sm text-[#404040]">
+        <Button color="orange" className="m-auto my-1">
           Zapisy &gt;&gt;
-        </button>
+        </Button>
       </div>
       <div className="relative h-[255px] overflow-hidden">
         <Image
