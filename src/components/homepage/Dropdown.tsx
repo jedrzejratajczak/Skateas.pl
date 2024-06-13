@@ -24,7 +24,7 @@ export function Dropdown({
     <div className="relative">
       <button
         onClick={toggle}
-        className={`flex w-full items-center justify-between border px-5 py-1 font-poetsen-one ${border} ${bg} transition-all duration-75 ${open ? '' : 'delay-150'} ${open ? 'rounded-t-[20px]' : 'rounded-[20px]'}`}
+        className={`flex w-full items-center justify-between border px-5 py-1 font-poetsen-one transition-all duration-100 ${border} ${bg} ${open ? '' : 'delay-150'} ${open ? 'rounded-t-[20px]' : 'rounded-[20px]'}`}
         style={{ color: primaryColor }}
       >
         <p className="text-base">{title}</p>
@@ -36,7 +36,7 @@ export function Dropdown({
         </span>
       </button>
       <div
-        className={`overflow-hidden rounded-b-[20px] text-white transition-all ${border} ${open ? 'max-h-[100px] border px-4 py-3 delay-75' : 'max-h-0'}`}
+        className={`overflow-hidden rounded-b-[20px] text-white transition-all ${border} ${open ? 'max-h-[150px] border px-4 py-3 delay-100' : 'max-h-0'}`}
       >
         {text}
       </div>

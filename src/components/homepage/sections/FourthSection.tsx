@@ -1,9 +1,6 @@
-import Image from 'next/image';
-
 import { PersonPill } from '../PersonPill';
 import { Quote } from '../Quote';
 import { Title } from '../Title';
-import { TripleExclamationMark } from '../TripleExclamationMark';
 
 export function FourthSection() {
   return (
