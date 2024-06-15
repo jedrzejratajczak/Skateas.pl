@@ -9,7 +9,7 @@ export function NextSectionButton({ sectionId }: NextSectionButtonProps) {
   return (
     <button
       onClick={scrollToView}
-      className="m-auto w-min rotate-90 px-3 py-2 font-poetsen-one text-2xl tracking-widest text-transparent"
+      className="m-auto w-min rotate-90 px-3 py-2 font-poetsen-one text-2xl tracking-widest text-transparent md:text-4xl"
       style={{ WebkitTextStroke: '2px #FFFFFF' }}
     >
       &gt;&gt;

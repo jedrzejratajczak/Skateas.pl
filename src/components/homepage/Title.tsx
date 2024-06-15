@@ -41,12 +41,16 @@ export function Title({
           </span>
         </>
       )}
-      <p className={`relative text-4xl ${titleClassName}`}>{title}</p>
+      <p className={`relative text-4xl md:text-5xl ${titleClassName}`}>
+        {title}
+      </p>
       {subtitle && (
-        <p className={`relative text-2xl ${subtitleClassName}`}>{subtitle}</p>
+        <p className={`relative text-2xl md:text-4xl ${subtitleClassName}`}>
+          {subtitle}
+        </p>
       )}
       {withExclamations && (
-        <TripleExclamationMark className="left-[calc(50%+88px)] top-0" />
+        <TripleExclamationMark className="left-[calc(50%+88px)] top-0 md:-top-3 md:left-[calc(50%+120px)]" />
       )}
       {withQuestions && (
         <>
