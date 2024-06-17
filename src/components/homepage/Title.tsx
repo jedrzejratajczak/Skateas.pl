@@ -22,19 +22,19 @@ export function Title({
       {withQuestions && (
         <>
           <span
-            className="absolute -top-0 left-[calc(50%-155px)] -rotate-[20deg] font-poetsen-one text-3xl text-transparent"
+            className="absolute -top-0 left-[calc(50%-155px)] -rotate-[20deg] font-poetsen-one text-3xl text-transparent  md:left-[calc(50%-195px)] md:top-1 md:text-4xl"
             style={{ WebkitTextStroke: '2px #FFFFFF' }}
           >
             ?
           </span>
           <span
-            className="absolute -top-0.5 left-[calc(50%-120px)] rotate-[20deg] font-poetsen-one text-4xl text-transparent"
+            className="absolute -top-0.5 left-[calc(50%-120px)] rotate-[20deg] font-poetsen-one text-4xl text-transparent md:left-[calc(50%-155px)] md:top-0 md:text-5xl"
             style={{ WebkitTextStroke: '2px #FFFFFF' }}
           >
             ?
           </span>
           <span
-            className="absolute -top-1 left-[calc(50%-75px)] -rotate-[20deg] font-poetsen-one text-5xl text-transparent"
+            className="absolute -top-1 left-[calc(50%-75px)] -rotate-[20deg] font-poetsen-one text-5xl text-transparent md:left-[calc(50%-105px)] md:text-6xl"
             style={{ WebkitTextStroke: '2px #FFFFFF' }}
           >
             ?
@@ -55,19 +55,19 @@ export function Title({
       {withQuestions && (
         <>
           <span
-            className="absolute -top-1 left-[calc(50%+50px)] rotate-[20deg] font-poetsen-one text-5xl text-transparent"
+            className="absolute -top-1 left-[calc(50%+50px)] rotate-[20deg] font-poetsen-one text-5xl text-transparent md:left-[calc(50%+70px)] md:text-6xl"
             style={{ WebkitTextStroke: '2px #FFFFFF' }}
           >
             ?
           </span>
           <span
-            className="absolute -top-0.5 left-[calc(50%+95px)] -rotate-[20deg] font-poetsen-one text-4xl text-transparent"
+            className="absolute -top-0.5 left-[calc(50%+95px)] -rotate-[20deg] font-poetsen-one text-4xl text-transparent md:left-[calc(50%+125px)] md:top-0 md:text-5xl"
             style={{ WebkitTextStroke: '2px #FFFFFF' }}
           >
             ?
           </span>
           <span
-            className="absolute -top-0 left-[calc(50%+130px)] rotate-[20deg] font-poetsen-one text-3xl text-transparent"
+            className="md: absolute left-[calc(50%+130px)] top-0 rotate-[20deg] font-poetsen-one text-3xl text-transparent md:left-[calc(50%+170px)] md:top-1 md:text-4xl "
             style={{ WebkitTextStroke: '2px #FFFFFF' }}
           >
             ?

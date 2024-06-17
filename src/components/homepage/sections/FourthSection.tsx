@@ -12,7 +12,7 @@ export function FourthSection() {
         subtitle="o mnie"
       />
       <div className="flex items-center gap-4">
-        <div className="my-3 font-roboto text-xs text-white">
+        <div className="my-3 font-roboto text-xs text-white md:text-base">
           <p className="mb-4">
             Cześć! Mam na imię Adam i{' '}
             <span className="text-[#FFC600]">

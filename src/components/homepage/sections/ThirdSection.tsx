@@ -32,8 +32,8 @@ export function ThirdSection() {
         text="To, co zaczęło się jako prosta zajawka, stało się nieodłączną częścią mojego życia..."
         title="Eventy"
       />
-      <div className="flex flex-col items-center gap-2.5 py-1 ">
-        <div className="text-center font-roboto text-xs text-white">
+      <div className="flex flex-col items-center gap-2.5 py-1 md:gap-5">
+        <div className="text-center font-roboto text-xs text-white md:text-base">
           <p>
             Chcesz nawiązać <span className="font-bold">współpracę</span>{' '}
             w&nbsp;inny sposób?

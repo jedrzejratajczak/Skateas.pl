@@ -19,28 +19,26 @@ export function Offer({
     <button
       className={`grid grid-cols-[min-content,1fr,min-content] items-center gap-3 rounded-[50px] px-[5px] py-1 text-left ${containerClassName}`}
     >
-      <div className="h-[70px] w-[70px] overflow-hidden rounded-full">
+      <div className="relative h-[70px] w-[70px] overflow-hidden rounded-full md:h-[90px] md:w-[90px]">
         <Image
           src={img}
           alt=""
-          width={70}
-          height={70}
-          layout="fixed"
+          layout="fill"
           objectFit="cover"
           objectPosition="center"
         />
       </div>
       <div>
         <p
-          className="font-poetsen-one text-base"
+          className="font-poetsen-one text-base md:text-lg"
           style={{ color: primaryColor }}
         >
           {title}
         </p>
-        <p className="text-xs text-[#171717]">{text}</p>
+        <p className="text-xs text-[#171717] md:text-base">{text}</p>
       </div>
       <div
-        className="font-poetsen-one mr-3 text-[32px] text-transparent"
+        className="mr-3 font-poetsen-one text-[32px] text-transparent md:text-5xl"
         style={{ WebkitTextStroke: `2px ${primaryColor}` }}
       >
         &gt;&gt;
