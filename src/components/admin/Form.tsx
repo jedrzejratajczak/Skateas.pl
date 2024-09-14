@@ -24,6 +24,7 @@ export const fields = [
 ];
 
 export type FormValues = Omit<Item, 'priceHistory'>;
+
 type FormProps = {
   handleButtonClick: () => void;
   data?: FormValues;
