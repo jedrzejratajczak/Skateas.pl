@@ -15,6 +15,7 @@ const ContactForm = () => {
     handleSubmit,
     formState: { errors }
   } = useForm<FormFields>();
+
   const onSubmit: SubmitHandler<FormFields> = async data => {
     const req = await fetch(`/api/email`, {
       method: 'POST',

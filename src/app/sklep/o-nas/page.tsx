@@ -1,6 +1,6 @@
-import AboutUsSection from '@/components/AboutUsSection';
-import InfoPagesWrapper from '@/components/InfoPagesWrapper';
-import OurValuesSection from '@/components/OurValuesSection';
+import AboutUsSection from '@/shop/AboutUsSection';
+import InfoPagesWrapper from '@/components/shop/InfoPagesWrapper';
+import OurValuesSection from '@/components/shop/OurValuesSection';
 
 export default function AboutUs() {
   return (

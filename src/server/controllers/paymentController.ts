@@ -11,11 +11,11 @@ import {
 } from '@/utils/payments';
 
 import {
-  transactionNotificationModel,
-  TransactionVerificationType
+  TransactionNotification,
+  TransactionVerificationData
 } from '../models/transaction';
 
-type TransactionNotification = Omit<TransactionVerificationType, 'sign'>;
+type TransactionNotification = Omit<TransactionVerificationData, 'sign'>;
 
 export const registerPayment = async ({
   userId,
@@ -103,9 +103,7 @@ export const savePaymentNotification = async (
     };
   }
 
-  const paymentNotification = new transactionNotificationModel(
-    notificationData
-  );
+  const paymentNotification = new TransactionNotification(notificationData);
 
   await paymentNotification.save();
 };

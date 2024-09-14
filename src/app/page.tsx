@@ -7,7 +7,7 @@ import {
   SeventhSection,
   SixthSection,
   ThirdSection
-} from '@/homepage/index';
+} from '@/components/home/index';
 
 export default function HomePage() {
   return (

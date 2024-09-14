@@ -2,9 +2,8 @@
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
-import Form, { FormValues } from '@/components/products/Form';
-import FormTitle from '@/components/products/FormTitle';
-import { getItem } from '@/server/controllers/itemController';
+import Form, { FormValues } from '@/components/admin/products/Form';
+import FormTitle from '@/components/admin/products/FormTitle';
 
 export default function NewProductForm({ params }: { params: { id: string } }) {
   const { push } = useRouter();

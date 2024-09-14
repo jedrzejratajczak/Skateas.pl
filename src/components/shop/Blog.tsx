@@ -1,5 +1,5 @@
-import Title from './Common/Title';
 import Posts from './Posts';
+import Title from './Title';
 
 const Blog = () => {
   return (

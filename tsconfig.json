@@ -15,12 +15,18 @@
     "incremental": true,
     "plugins": [{ "name": "next" }],
     "paths": {
-      "@/*": ["./src/*"],
+      // Environment
+      "@/environment": ["./src/environment"],
+
+      // Server
+      "@/server/*": ["./src/server/*"],
       "@/controllers/*": ["./src/server/controllers/*"],
-      "@/services/*": ["./src/server/services/*"],
-      "@/models/*": ["./src/server/models/*"],
       "@/middlewares/*": ["./src/server/middlewares/*"],
-      "@/homepage/*": ["./src/components/homepage/*"]
+      "@/models/*": ["./src/server/models/*"],
+      "@/services/*": ["./src/server/services/*"],
+
+      // Client
+      "@/components/*": ["./src/components/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

@@ -9,8 +9,7 @@ type NavItemProps = {
 const NavItem = ({ name, pathname, isCurrentPath }: NavItemProps) => (
   <Link
     href={pathname}
-    className={`px-8 py-4 text-xl
-          ${isCurrentPath ? 'text-highlight' : 'text-black'}`}
+    className={`px-8 py-4 text-xl ${isCurrentPath ? 'text-highlight' : 'text-black'}`}
   >
     {name}
   </Link>

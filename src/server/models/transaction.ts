@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-export type TransactionRegistration = {
+export type TransactionRegistrationData = {
   sessionId: string;
   amount: number;
   currency: string;
@@ -10,7 +10,7 @@ export type TransactionRegistration = {
   urlStatus: string;
 };
 
-export type TransactionVerification = {
+export type TransactionVerificationData = {
   merchantId: number;
   posId: number;
   sessionId: string;
@@ -40,7 +40,7 @@ const transactionVerificationSchema = new mongoose.Schema({
   sign: String
 });
 
-export const transactionRegistrationModel = mongoose.model(
+export const TransactionRegistration = mongoose.model(
   'transactionRegistration',
   transactionRegistrationSchema
 );
