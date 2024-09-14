@@ -1,6 +1,4 @@
-import Footer from '@/shop/Footer';
-import MainContent from '@/components/main/MainContent';
-import Navbar from '@/components/Navbar';
+import { Footer, MainContent, Navbar } from '@/shop';
 
 export default function StorePage() {
   return (

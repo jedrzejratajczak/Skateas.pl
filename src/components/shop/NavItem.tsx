@@ -6,13 +6,13 @@ type NavItemProps = {
   isCurrentPath: boolean;
 };
 
-const NavItem = ({ name, pathname, isCurrentPath }: NavItemProps) => (
-  <Link
-    href={pathname}
-    className={`px-8 py-4 text-xl ${isCurrentPath ? 'text-highlight' : 'text-black'}`}
-  >
-    {name}
-  </Link>
-);
-
-export default NavItem;
+export function NavItem({ name, pathname, isCurrentPath }: NavItemProps) {
+  return (
+    <Link
+      href={pathname}
+      className={`px-8 py-4 text-xl ${isCurrentPath ? 'text-highlight' : 'text-black'}`}
+    >
+      {name}
+    </Link>
+  );
+}

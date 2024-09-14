@@ -1,8 +1,8 @@
 import React, { ReactNode } from 'react';
 
-import Banner from './Banner';
-import Footer from './Footer';
-import Navbar from './Navbar';
+import { Banner } from './Banner';
+import { Footer } from './Footer';
+import { Navbar } from './Navbar';
 
 const items = [
   {
@@ -27,17 +27,15 @@ const items = [
   }
 ];
 
-type InfoPagesWrapperProps = {
-  children: ReactNode;
-};
+type InfoPagesWrapperProps = { children: ReactNode };
 
-const InfoPagesWrapper = ({ children }: InfoPagesWrapperProps) => (
-  <div>
-    <Navbar />
-    <Banner items={items} />
-    {children}
-    <Footer />
-  </div>
-);
-
-export default InfoPagesWrapper;
+export function InfoPagesWrapper({ children }: InfoPagesWrapperProps) {
+  return (
+    <div>
+      <Navbar />
+      <Banner items={items} />
+      {children}
+      <Footer />
+    </div>
+  );
+}

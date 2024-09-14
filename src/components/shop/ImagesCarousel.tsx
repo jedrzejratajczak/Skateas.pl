@@ -11,7 +11,7 @@ type CustomIndicatorProps = {
   onClick: () => void;
 };
 
-const ImagesCarousel = ({ images }: { images: StaticImageData[] }) => {
+export function ImagesCarousel({ images }: { images: StaticImageData[] }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const handleIndicatorClick = (index: number) => {
@@ -56,6 +56,4 @@ const ImagesCarousel = ({ images }: { images: StaticImageData[] }) => {
       </Carousel>
     </div>
   );
-};
-
-export default ImagesCarousel;
+}

@@ -9,12 +9,12 @@ type ProductBadgeProps = {
   variant: keyof typeof colorVariants;
 };
 
-const ProductBadge = ({ text, variant }: ProductBadgeProps) => (
-  <div
-    className={`rounded-[10px] ${colorVariants[variant]} px-2.5 py-3.5 font-bold text-white`}
-  >
-    {text}
-  </div>
-);
-
-export default ProductBadge;
+export function ProductBadge({ text, variant }: ProductBadgeProps) {
+  return (
+    <div
+      className={`rounded-[10px] ${colorVariants[variant]} px-2.5 py-3.5 font-bold text-white`}
+    >
+      {text}
+    </div>
+  );
+}

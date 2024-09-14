@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const Breadcrumbs = () => {
+export function Breadcrumbs() {
   const currentPath = usePathname();
   const pathnames = currentPath.split('/').filter(x => x);
   let breadcrumbPath = '';
@@ -26,6 +26,4 @@ const Breadcrumbs = () => {
       })}
     </ul>
   );
-};
-
-export default Breadcrumbs;
+}

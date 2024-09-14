@@ -1,7 +1,7 @@
 import {
   TransactionRegistration,
   TransactionVerification
-} from '../models/transaction';
+} from '@/models/transaction';
 
 export const getTransactionRegistration = async (transactionId: string) => {
   const transaction = await TransactionRegistration.findById(transactionId);

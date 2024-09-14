@@ -41,16 +41,16 @@ const transactionVerificationSchema = new mongoose.Schema({
 });
 
 export const TransactionRegistration = mongoose.model(
-  'transactionRegistration',
+  'transactionRegistrations',
   transactionRegistrationSchema
 );
 
 export const TransactionVerification = mongoose.model(
-  'transactionVerification',
+  'transactionVerifications',
   transactionVerificationSchema
 );
 
 export const TransactionNotification = mongoose.model(
-  'transactionNotification',
+  'transactionNotifications',
   transactionVerificationSchema
 );

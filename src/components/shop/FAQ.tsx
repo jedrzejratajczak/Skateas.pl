@@ -1,5 +1,3 @@
-const FAQ = () => {
+export function FAQ() {
   return <section>FAQ</section>;
-};
-
-export default FAQ;
+}

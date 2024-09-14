@@ -2,10 +2,9 @@
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
-import Form, { FormValues } from '@/components/admin/products/Form';
-import FormTitle from '@/components/admin/products/FormTitle';
+import { Form, FormTitle, type FormValues } from '@/admin';
 
-export default function NewProductForm({ params }: { params: { id: string } }) {
+export default function ProductsEdit({ params }: { params: { id: string } }) {
   const { push } = useRouter();
   const [product, setProduct] = useState<FormValues>();
 

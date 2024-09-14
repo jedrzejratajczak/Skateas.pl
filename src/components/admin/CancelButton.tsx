@@ -4,7 +4,7 @@ type CancelButtonType = {
   handleCancel: () => void;
 };
 
-const CancelButton = ({ handleCancel }: CancelButtonType) => {
+export function CancelButton({ handleCancel }: CancelButtonType) {
   return (
     <Button
       className="mt-5 rounded-md bg-blue-500 p-2 text-white"
@@ -13,6 +13,4 @@ const CancelButton = ({ handleCancel }: CancelButtonType) => {
       Porzuć zmiany
     </Button>
   );
-};
-
-export default CancelButton;
+}

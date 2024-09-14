@@ -5,15 +5,14 @@ import {
   PAYMENT_VERIFICATION_ENDPOINT
 } from '@/environment';
 import {
+  TransactionNotification,
+  TransactionVerificationData
+} from '@/models/transaction';
+import {
   getRegistrationData,
   getVerificationData,
   PaymentType
-} from '@/utils/payments';
-
-import {
-  TransactionNotification,
-  TransactionVerificationData
-} from '../models/transaction';
+} from '@/server/utils/payments';
 
 type TransactionNotification = Omit<TransactionVerificationData, 'sign'>;
 

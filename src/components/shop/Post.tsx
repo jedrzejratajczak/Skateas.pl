@@ -5,7 +5,7 @@ import { ImageButtonProps } from './Sets';
 
 type BlogPostsTypes = Omit<ImageButtonProps, 'text'>;
 
-const Post = ({ href, src, alt }: BlogPostsTypes) => {
+export function Post({ href, src, alt }: BlogPostsTypes) {
   return (
     <div className="h-567">
       <Link href={href}>
@@ -15,6 +15,4 @@ const Post = ({ href, src, alt }: BlogPostsTypes) => {
       </Link>
     </div>
   );
-};
-
-export default Post;
+}

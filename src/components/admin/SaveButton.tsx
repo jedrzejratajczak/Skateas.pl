@@ -1,6 +1,6 @@
 import { Button } from '@tremor/react';
 
-const SaveButton = () => {
+export function SaveButton() {
   return (
     <Button
       type="submit"
@@ -9,6 +9,4 @@ const SaveButton = () => {
       Zapisz
     </Button>
   );
-};
-
-export default SaveButton;
+}

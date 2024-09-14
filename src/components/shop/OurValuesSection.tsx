@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-const OurValuesSection = () => {
+export function OurValuesSection() {
   return (
     <div className="mx-[48px] mb-[93px] flex flex-col items-center">
       <h3 className="m-[48px] text-[36px] font-black">WYZNAWANE WARTOŚCI</h3>
@@ -84,6 +84,4 @@ const OurValuesSection = () => {
       </div>
     </div>
   );
-};
-
-export default OurValuesSection;
+}

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { MdShoppingCart } from 'react-icons/md';
 
-import NavItem from './NavItem';
+import { NavItem } from './NavItem';
 
 const shopNavItems = [
   { name: 'Deski', pathname: '/' },
@@ -16,7 +16,7 @@ const academyNavItems = [
   { name: 'Blog', pathname: '' }
 ];
 
-const Navbar = () => {
+export function Navbar() {
   const currentPath = usePathname();
 
   return (
@@ -65,6 +65,4 @@ const Navbar = () => {
       </div>
     </div>
   );
-};
-
-export default Navbar;
+}

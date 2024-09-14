@@ -9,7 +9,7 @@ export type FormFields = {
   privacy_policy: boolean;
 };
 
-const ContactForm = () => {
+export function ContactForm() {
   const {
     register,
     handleSubmit,
@@ -131,6 +131,4 @@ const ContactForm = () => {
       </button>
     </form>
   );
-};
-
-export default ContactForm;
+}

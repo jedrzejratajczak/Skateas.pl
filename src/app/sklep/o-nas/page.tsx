@@ -1,6 +1,4 @@
-import AboutUsSection from '@/shop/AboutUsSection';
-import InfoPagesWrapper from '@/components/shop/InfoPagesWrapper';
-import OurValuesSection from '@/components/shop/OurValuesSection';
+import { AboutUsSection, InfoPagesWrapper, OurValuesSection } from '@/shop';
 
 export default function AboutUs() {
   return (

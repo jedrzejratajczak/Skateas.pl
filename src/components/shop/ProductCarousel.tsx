@@ -3,7 +3,7 @@ import 'react-multi-carousel/lib/styles.css';
 
 import Carousel from 'react-multi-carousel';
 
-import ProductCard, { ProductCardProps } from './ProductCard';
+import { ProductCard, ProductCardProps } from './ProductCard';
 
 type ProductCarouselProps = {
   productsList: ProductCardProps[];
@@ -26,33 +26,33 @@ const responsive = {
   }
 };
 
-const ProductCarousel = ({ productsList }: ProductCarouselProps) => (
-  <Carousel
-    responsive={responsive}
-    arrows={false}
-    swipeable
-    draggable
-    infinite
-    partialVisible
-    autoPlay
-    autoPlaySpeed={3000}
-    containerClass="carousel-container"
-    shouldResetAutoplay
-  >
-    {productsList.map(product => (
-      <ProductCard
-        src={product.src}
-        alt={product.alt}
-        name={product.name}
-        description={product.description}
-        price={product.price}
-        lowestPrice={product.lowestPrice}
-        badgeText={product.badgeText}
-        badgeVariant={product.badgeVariant}
-        key={product.name}
-      />
-    ))}
-  </Carousel>
-);
-
-export default ProductCarousel;
+export function ProductCarousel({ productsList }: ProductCarouselProps) {
+  return (
+    <Carousel
+      responsive={responsive}
+      arrows={false}
+      swipeable
+      draggable
+      infinite
+      partialVisible
+      autoPlay
+      autoPlaySpeed={3000}
+      containerClass="carousel-container"
+      shouldResetAutoplay
+    >
+      {productsList.map(product => (
+        <ProductCard
+          src={product.src}
+          alt={product.alt}
+          name={product.name}
+          description={product.description}
+          price={product.price}
+          lowestPrice={product.lowestPrice}
+          badgeText={product.badgeText}
+          badgeVariant={product.badgeVariant}
+          key={product.name}
+        />
+      ))}
+    </Carousel>
+  );
+}

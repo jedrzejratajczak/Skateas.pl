@@ -6,8 +6,8 @@ import { useForm } from 'react-hook-form';
 import { addItem } from '@/server/controllers/itemController';
 import { Item } from '@/server/models/item';
 
-import CancelButton from './CancelButton';
-import SaveButton from './SaveButton';
+import { CancelButton } from './CancelButton';
+import { SaveButton } from './SaveButton';
 
 export const fields = [
   { label: 'Produkt', name: 'name', type: 'text' },
@@ -30,7 +30,7 @@ type FormProps = {
   data?: FormValues;
 };
 
-const Form = ({ handleButtonClick, data }: FormProps) => {
+export function Form({ handleButtonClick, data }: FormProps) {
   const { handleSubmit, register, getValues, reset } = useForm<FormValues>({
     defaultValues: data
   });
@@ -90,6 +90,4 @@ const Form = ({ handleButtonClick, data }: FormProps) => {
       </form>
     </Card>
   );
-};
-
-export default Form;
+}
