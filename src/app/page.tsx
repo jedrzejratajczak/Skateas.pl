@@ -13,7 +13,6 @@ import {
 export default function HomePage() {
   return (
     <>
-      <Navbar />
       <FirstSection />
       <SecondSection />
       <ThirdSection />
