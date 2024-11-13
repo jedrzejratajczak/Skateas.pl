@@ -1,4 +1,5 @@
 import { Dropdown } from '../Dropdown';
+import SectionContainer from '../SectionContainer';
 import { Title } from '../Title';
 
 const colors = [
@@ -29,7 +30,7 @@ const questions = [
 
 export function FifthSection() {
   return (
-    <div className="flex flex-col gap-5 p-5">
+    <SectionContainer className="flex flex-col gap-5">
       <Title
         title="FAQ"
         titleClassName="text-white md:text-[3.8rem] lg:text-[4.5rem] xl:text-[5rem]"
@@ -45,6 +46,6 @@ export function FifthSection() {
           />
         ))}
       </div>
-    </div>
+    </SectionContainer>
   );
 }
