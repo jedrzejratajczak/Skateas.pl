@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { DoubleGreaterThanMark } from './DoubleGreaterThanMark';
+
 type OfferProps = {
   containerClassName: string;
   img: string;
@@ -44,12 +46,10 @@ export function Offer({
           {text}
         </p>
       </div>
-      <div
-        className="mr-3 font-poetsen-one text-[32px] text-transparent md:mr-0 md:h-10 md:-translate-y-5 md:text-[50px] md:font-semibold xl:h-16 xl:-translate-y-8 xl:text-[64px]"
-        style={{ WebkitTextStroke: `2px ${primaryColor}` }}
-      >
-        &gt;&gt;
-      </div>
+      <DoubleGreaterThanMark
+        markColor={primaryColor}
+        className="mr-3 text-[32px] md:mr-0 md:h-10 md:-translate-y-5 md:justify-self-center md:text-[50px] md:font-semibold xl:h-16 xl:-translate-y-8 xl:text-[64px]"
+      />
     </Link>
   );
 }

@@ -8,7 +8,7 @@ type GalleryPillProps = {
 export function GalleryPill({ className, src }: GalleryPillProps) {
   return (
     <div
-      className={`relative h-[280px] w-full overflow-hidden rounded-t-full bg-[#6FADE2] sm:h-[350px] md:h-[400px] ${className}`}
+      className={`relative h-full w-full overflow-hidden rounded-t-full bg-[#6FADE2] ${className}`}
     >
       <Image
         layout="fill"
