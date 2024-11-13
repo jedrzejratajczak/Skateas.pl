@@ -4,7 +4,7 @@ import SectionContainer from '../SectionContainer';
 
 export function SeventhSection() {
   return (
-    <SectionContainer className="flex flex-col gap-2.5 pb-0 text-xs text-white sm:pb-0 sm:text-base lg:pb-0 xl:text-xl">
+    <SectionContainer className="flex flex-col gap-2.5 pb-0 text-xs text-white sm:pb-0 sm:text-base md:gap-8 lg:pb-0 xl:text-xl">
       <p className="font-poetsen-one">Zobacz, jak świetnie się bawimy</p>
       <p className="font-roboto">
         Cześć! Mam na imię Adam i&nbsp;
