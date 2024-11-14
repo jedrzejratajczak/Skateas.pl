@@ -1,3 +1,4 @@
+export { Button } from './Button';
 export { Dropdown } from './Dropdown';
 export { ExclamationMark } from './ExclamationMark';
 export { Footer } from './Footer/Footer';

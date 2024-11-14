@@ -3,12 +3,12 @@
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { IconType } from 'react-icons';
-import { IoLogoFacebook, IoLogoInstagram, IoLogoTiktok } from 'react-icons/io5';
+import { IoLogoFacebook, IoLogoInstagram } from 'react-icons/io5';
 
 import NavbarBrand from './NavbarBrand';
+import NavbarDesktopMenu from './NavbarDesktopMenu';
 import NavbarMenu from './NavbarMenu';
 import NavbarToggle from './NavbarToggle';
-import NavbarDesktopMenu from './NavbarDesktopMenu';
 
 export type NavbarItemType = {
   id: number;
