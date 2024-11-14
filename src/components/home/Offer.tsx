@@ -32,7 +32,7 @@ export function Offer({
           layout="fill"
           objectFit="cover"
           objectPosition="center"
-          className="rounded-full"
+          className="pointer-events-none rounded-full"
         />
       </div>
       <div className="gap-3 md:flex md:max-w-[200px] md:flex-col">

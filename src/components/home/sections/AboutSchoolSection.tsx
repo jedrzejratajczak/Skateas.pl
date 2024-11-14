@@ -38,6 +38,7 @@ function Skateboards() {
           alt="Dekoracyjny obrazek deskorolki"
           layout="fill"
           objectFit="cover"
+          className="pointer-events-none"
         />
       </div>
       <div className="absolute -right-[80px] bottom-[60px] h-[130px] w-[130px] -rotate-12 scale-x-[-1] min-[375px]:bottom-[40px] sm:-right-[100px] sm:bottom-[20px] sm:h-[200px] sm:w-[200px] lg:-bottom-[30px] lg:-right-[130px] lg:h-[300px] lg:w-[300px] min-[2000px]:right-0">
@@ -46,6 +47,7 @@ function Skateboards() {
           alt="Dekoracyjny obrazek deskorolki"
           layout="fill"
           objectFit="cover"
+          className="pointer-events-none"
         />
       </div>
     </>

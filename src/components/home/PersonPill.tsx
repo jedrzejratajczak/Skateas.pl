@@ -26,6 +26,7 @@ export function PersonPill({
             alt=""
             layout="fill"
             objectFit="contain"
+            className="pointer-events-none"
           />
         </div>
       </div>

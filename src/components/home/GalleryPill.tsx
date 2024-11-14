@@ -16,6 +16,7 @@ export function GalleryPill({ className, src }: GalleryPillProps) {
         objectPosition="top"
         src={src}
         alt=""
+        className="pointer-events-none"
       />
     </div>
   );

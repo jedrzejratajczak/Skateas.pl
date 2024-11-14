@@ -30,14 +30,8 @@ export function CommentsSection() {
       <div className="relative mt-9 pb-12">
         <Carousel
           responsive={{
-            desktop: {
-              breakpoint: { max: 3000, min: 1024 },
-              items: 3
-            },
-            tablet: {
-              breakpoint: { max: 1024, min: 464 },
-              items: 2
-            },
+            desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
+            tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
             mobile: { breakpoint: { max: 464, min: 0 }, items: 1 }
           }}
           arrows={false}
@@ -64,7 +58,7 @@ export function CommentsSection() {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="h-auto w-full rounded-3xl"
+                  className="pointer-events-none h-auto w-full rounded-3xl"
                 />
               ))}
             </div>

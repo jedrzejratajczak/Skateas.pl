@@ -39,7 +39,7 @@ function RightSide() {
       <Image
         src="/home/skate.webp"
         alt="Adam skaczący na deskorolce"
-        className="rounded-s-full"
+        className="pointer-events-none rounded-s-full"
         layout="fill"
         objectFit="cover"
         objectPosition="left"

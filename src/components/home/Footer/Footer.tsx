@@ -132,7 +132,7 @@ export function Footer() {
               alt="Logo Akademii Skateboardingu"
               width={20}
               height={20}
-              className="lg:scale-150"
+              className="pointer-events-none lg:scale-150"
             />
             <p className="py-1 text-end font-poetsen-one text-sm text-white lg:text-xl">
               Akademia Skateboardingu
