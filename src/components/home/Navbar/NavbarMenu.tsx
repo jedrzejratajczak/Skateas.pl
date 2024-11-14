@@ -12,13 +12,15 @@ type NavbarMenuProps = {
   menuElements: NavbarElementType[];
   menuIcons?: NavbarIconType[];
   navbarMenuClassName?: string;
+  closeMenu: () => void;
 };
 
 export default function NavbarMenu({
   isOpen,
   currentPathname,
   menuElements,
-  menuIcons
+  menuIcons,
+  closeMenu
 }: NavbarMenuProps) {
   return (
     <Transition
@@ -47,6 +49,7 @@ export default function NavbarMenu({
             } else {
               return (
                 <NavbarItem
+                  closeMenu={closeMenu}
                   key={item.id}
                   href={item.href}
                   isActive={currentPathname === item.href}

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 type NavbarItemProps = {
+  closeMenu?: () => void;
   href: string;
   children: string;
   isActive: boolean;
@@ -8,6 +9,7 @@ type NavbarItemProps = {
 };
 
 export default function NavbarItem({
+  closeMenu,
   children,
   href,
   isActive,
@@ -17,7 +19,11 @@ export default function NavbarItem({
     <li
       className={`font-roboto text-xs font-bold uppercase leading-5 tracking-widest hover:bg-purple-400 hover:text-neutral-700 ${isActive ? 'bg-purple-600 text-white' : 'bg-inherit text-white'}`}
     >
-      <Link href={href} className={`block px-5 py-3 ${className}`}>
+      <Link
+        href={href}
+        className={`block px-5 py-3 ${className}`}
+        onClick={closeMenu}
+      >
         {children}
       </Link>
     </li>

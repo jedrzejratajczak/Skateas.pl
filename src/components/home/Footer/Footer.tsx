@@ -8,7 +8,7 @@ import { FooterTitle } from './FooterTitle';
 export function Footer() {
   return (
     <footer className="w-full bg-black text-white">
-      <div className="flex flex-col justify-between gap-5 px-5 py-6 sm:flex-row sm:flex-wrap sm:px-12 md:px-12 lg:px-16">
+      <div className="m-auto flex max-w-[2000px] flex-col justify-between gap-5 px-5 py-6 sm:flex-row sm:flex-wrap sm:px-12 md:px-12 lg:px-16">
         <div>
           <FooterTitle>Menu</FooterTitle>
           <ul className="flex flex-col gap-2">
@@ -34,6 +34,7 @@ export function Footer() {
             <FooterItem href="/#instruktor">Instruktor</FooterItem>
             <FooterItem href="/#opinie">Opinie</FooterItem>
             <FooterItem href="/galeria">Galeria</FooterItem>
+            <FooterItem href="/kontakt">Kontakt</FooterItem>
           </ul>
         </div>
         {/* <div className="flex flex-col">
@@ -45,13 +46,12 @@ export function Footer() {
           </ul>
         </div> */}
         <div className="flex flex-col">
-          <FooterTitle>Regulaminy</FooterTitle>
+          <FooterTitle>Dokumenty</FooterTitle>
           <ul className="flex flex-col gap-2">
-            <FooterItem href="#/polityka-prywatnosci">
+            <FooterItem href="/polityka-prywatnosci">
               Polityka prywatności
             </FooterItem>
-            <FooterItem href="#/regulamin">Regulamin</FooterItem>
-            <FooterItem href="#/ciasteczka">Ciasteczka</FooterItem>
+            <FooterItem href="/regulamin">Regulamin</FooterItem>
           </ul>
         </div>
         <div className="flex w-full flex-col items-end lg:w-fit">
