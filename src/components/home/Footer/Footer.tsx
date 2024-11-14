@@ -129,7 +129,7 @@ export function Footer() {
         <div className="flex w-full flex-col items-end lg:w-fit">
           <div className="flex items-center gap-2 lg:gap-4">
             <Image
-              src="/images/homepage/logo.png"
+              src="/home/logo.webp"
               alt="Logo Akademii Skateboardingu"
               width={20}
               height={20}

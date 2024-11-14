@@ -1,6 +1,6 @@
-import photoMain_1 from '/public/images/photo_Main_1.png';
-import photoMain_2 from '/public/images/photo_Main_2.png';
-import photoMain_3 from '/public/images/photo_Main_3.png';
+import photoMain_1 from '/public/shop/photo_Main_1.png';
+import photoMain_2 from '/public/shop/photo_Main_2.png';
+import photoMain_3 from '/public/shop/photo_Main_3.png';
 
 import { Blog } from './Blog';
 import { ImagesCarousel } from './ImagesCarousel';

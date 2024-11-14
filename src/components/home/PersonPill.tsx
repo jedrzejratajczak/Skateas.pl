@@ -22,7 +22,7 @@ export function PersonPill({
         </p>
         <div className="relative top-3 h-[200px] md:top-4 md:min-h-[77%]">
           <Image
-            src="/images/adam.png"
+            src="/home/adam.webp"
             alt=""
             layout="fill"
             objectFit="contain"

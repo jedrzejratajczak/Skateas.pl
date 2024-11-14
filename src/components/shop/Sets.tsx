@@ -1,7 +1,7 @@
 import { StaticImageData } from 'next/image';
 
-import photoMain_1 from '/public/images/photo_Main_1.png';
-import photoMain_2 from '/public/images/photo_Main_2.png';
+import photoMain_1 from '/public/shop/photo_Main_1.png';
+import photoMain_2 from '/public/shop/photo_Main_2.png';
 
 import { ImageButton } from './ImageButton';
 import { Title } from './Title';

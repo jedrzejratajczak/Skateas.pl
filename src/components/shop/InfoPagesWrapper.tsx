@@ -9,20 +9,20 @@ const items = [
     alt: 'Skater na deskorolce',
     key: 'baner1',
     message: 'Poznajmy się!',
-    src: '/images/skate_cut.png'
+    src: '/shop/skate_cut.png'
   },
   {
     alt: 'Skater na deskorolce',
     key: 'baner2',
     message: 'bądźmy',
-    src: '/images/skate_cut.png',
+    src: '/shop/skate_cut.png',
     subMessage: 'w kontakcie!'
   },
   {
     alt: 'Skater na deskorolce',
     key: 'baner3',
     message: 'inni',
-    src: '/images/skate_cut.png',
+    src: '/shop/skate_cut.png',
     subMessage: 'pytali o...'
   }
 ];

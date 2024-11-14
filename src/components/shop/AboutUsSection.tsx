@@ -45,7 +45,7 @@ export function AboutUsSection() {
           </span>
         </p>
         <Image
-          src="/images/placeholder.png"
+          src="/shop/placeholder.png"
           height={384}
           width={574}
           alt="about us image"

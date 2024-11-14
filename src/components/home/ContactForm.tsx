@@ -39,7 +39,6 @@ export default function ContactForm() {
   } = useForm<ContactFormInput>({ resolver: yupResolver(validationSchema) });
   const onSubmit: SubmitHandler<ContactFormInput> = data => {
     try {
-      // TODO: Send data to the server
       console.log(data);
     } catch (error) {
       console.error(error);
@@ -80,22 +79,13 @@ export default function ContactForm() {
         name="rules"
         label="Zapoznałem/am się z treścią"
         labelLinkText="regulaminu"
-        labelLinkHref="#" //TODO: Add link to the rules
+        labelLinkHref="#"
         required
         register={register}
         errorMessage={errors.rules?.message}
       />
-      <Checkbox
-        name="rules2"
-        label="Zapoznałem/am się z treścią"
-        labelLinkText="regulaminu"
-        labelLinkHref="#" // TODO: Add link to the rules
-        required
-        register={register}
-        errorMessage={errors.rules2?.message}
-      />
       <p className="self-start font-roboto text-xs text-white lg:text-sm">
-        *pole obowiązkowe
+        * pola obowiązkowe
       </p>
       <Button color="pink">Wyślij wiadomość &gt;&gt;</Button>
     </form>

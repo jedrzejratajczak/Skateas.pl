@@ -6,13 +6,12 @@ import Carousel from 'react-multi-carousel';
 
 import SectionContainer from '../SectionContainer';
 import { Title } from '../Title';
-import { TripleExclamationMark } from '../TripleExclamationMark';
 
 const commentPairs = [
-  ['/images/comment.png', '/images/comment.png'],
-  ['/images/comment.png', '/images/comment.png'],
-  ['/images/comment.png', '/images/comment.png'],
-  ['/images/comment.png']
+  ['/home/comments/comment5.webp', '/home/comments/comment2.webp'],
+  ['/home/comments/comment8.webp', '/home/comments/comment4.webp'],
+  ['/home/comments/comment6.webp', '/home/comments/comment3.webp'],
+  ['/home/comments/comment7.webp', '/home/comments/comment1.webp']
 ];
 
 export function CommentsSection() {
@@ -20,10 +19,13 @@ export function CommentsSection() {
     <SectionContainer className="flex flex-col">
       <div className="relative">
         <Title
-          title="Poznaj nasze opinie"
-          titleClassName="text-[#88DBB6] md:text-[3.8rem] lg:text-[4.5rem] xl:text-[5rem]"
+          titleClassName="text-[#5EE9D3] md:-left-16"
+          subtitleClassName="-top-1 left-3.5 md:left-10"
+          title="Poznaj opinie"
+          subtitle="o akademii"
+          decorationClassName="-top-[12px] sm:-top-[20px] left-[calc(50%+120px)]"
+          withExclamations
         />
-        <TripleExclamationMark className="-top-[12px] left-[calc(50%+110px)] min-[371px]:left-[calc(50%+170px)] md:-top-[30px] md:left-[calc(50%+280px)] lg:left-[calc(50%+340px)] xl:left-[calc(50%+380px)]" />
       </div>
       <div className="relative mt-9 pb-12">
         <Carousel
@@ -45,10 +47,15 @@ export function CommentsSection() {
           className="m-auto"
           containerClass="container"
           renderDotsOutside
+          autoPlaySpeed={10000}
+          autoPlay
           showDots
         >
           {commentPairs.map(comments => (
-            <div key={comments[0]} className="flex flex-col gap-4 p-2">
+            <div
+              key={comments[0]}
+              className="flex h-full flex-col justify-center gap-4 p-2"
+            >
               {comments.map(src => (
                 <Image
                   key={src}

@@ -46,7 +46,7 @@ export function Footer() {
         <Image
           alt="Akademia Skate"
           height={82}
-          src="/images/as-black-logo.svg"
+          src="/home/logos/as-black-logo.svg"
           width={82}
           className="mb-2.5"
         />

@@ -5,7 +5,7 @@ import { Quote } from '../Quote';
 import SectionContainer from '../SectionContainer';
 import { Title } from '../Title';
 
-export function FourthSection() {
+export function AboutTeacherSection() {
   return (
     <SectionContainer className="flex flex-col items-center justify-center gap-5">
       <Title

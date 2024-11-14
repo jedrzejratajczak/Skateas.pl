@@ -37,7 +37,7 @@ function RightSide() {
   return (
     <div className="relative -right-5 h-[300px] w-[150px] min-[425px]:w-[200px] sm:-right-10 sm:h-[400px] sm:w-[250px] md:-right-16 md:h-[400px] md:w-[300px] lg:h-[450px] lg:w-[400px] xl:absolute xl:right-0 xl:h-[550px] xl:w-[450px] 2xl:w-[500px] min-[2000px]:w-[700px] min-[2300px]:w-[800px]">
       <Image
-        src="/images/skate.webp"
+        src="/home/skate.webp"
         alt="Adam skaczący na deskorolce"
         className="rounded-s-full"
         layout="fill"
@@ -48,7 +48,7 @@ function RightSide() {
   );
 }
 
-export function FirstSection() {
+export function WelcomeSection() {
   return (
     <SectionContainer className="grid grid-cols-[2fr,1fr] items-center">
       <LeftSide />

@@ -8,7 +8,7 @@ export function OurValuesSection() {
         <div className="mb-[72px] mr-[144px] flex flex-row">
           <div className=" mr-[84px] flex flex-row">
             <Image
-              src="/images/placeholder.png"
+              src="/shop/placeholder.png"
               height={160}
               width={200}
               alt="avalues image"
@@ -26,7 +26,7 @@ export function OurValuesSection() {
           </div>
           <div className="flex flex-row">
             <Image
-              src="/images/placeholder.png"
+              src="/shop/placeholder.png"
               height={160}
               width={200}
               alt="avalues image"
@@ -46,7 +46,7 @@ export function OurValuesSection() {
         <div className="ml-[144px] flex flex-row">
           <div className="mr-[84px] flex flex-row">
             <Image
-              src="/images/placeholder.png"
+              src="/shop/placeholder.png"
               height={160}
               width={200}
               alt="avalues image"
@@ -64,7 +64,7 @@ export function OurValuesSection() {
           </div>
           <div className="flex flex-row">
             <Image
-              src="/images/placeholder.png"
+              src="/shop/placeholder.png"
               height={160}
               width={200}
               alt="avalues image"

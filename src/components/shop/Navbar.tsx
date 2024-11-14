@@ -26,7 +26,7 @@ export function Navbar() {
           <Image
             alt="Akademia Skate shop"
             height={80}
-            src="/images/as-white-logo.svg"
+            src="/home/logos/as-white-logo.svg"
             width={80}
           />
           <h1 className="text-[1.563rem] text-white">

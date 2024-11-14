@@ -1,8 +1,10 @@
 const colors = {
-  green: 'border-[#2DD3BE] bg-[#5EE9D3]',
-  orange: 'border-[#FABE24] bg-[#FBD24D]',
-  pink: 'border-[#BF83FB] bg-[#D7B3FD]',
-  blue: 'border-[#4A90E2] bg-[#6FADE2]'
+  pink: 'bg-[#D7B3FD] border-[#BF83FB] hover:bg-[#BF83FB] hover:border-[#A755F6]',
+  blue: 'bg-[#7DD2FB] border-[#38BCF7] hover:bg-[#38BCF7] hover:border-[#0EA4E8]',
+  orange:
+    'bg-[#FBD24D] border-[#FABE24] hover:bg-[#FABE24] hover:border-[#F49D0B]',
+  green:
+    'bg-[#5EE9D3] border-[#2DD3BE] hover:bg-[#2DD3BE] hover:border-[#14B7A5]'
 };
 
 type ButtonProps = {
@@ -14,7 +16,7 @@ type ButtonProps = {
 export function Button({ children, className, color }: ButtonProps) {
   return (
     <button
-      className={`rounded-[50px] border px-4 py-1 text-sm text-[#404040] md:text-lg xl:px-7 xl:py-2 xl:text-2xl ${colors[color]} ${className}`}
+      className={`rounded-[50px] border px-4 py-1 text-sm text-[#404040] transition-colors md:text-lg xl:px-7 xl:py-2 xl:text-2xl ${colors[color]} ${className}`}
     >
       {children}
     </button>

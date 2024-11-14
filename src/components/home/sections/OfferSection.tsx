@@ -7,9 +7,7 @@ function Pills() {
     <div className="grid gap-y-4 md:grid-cols-2 md:place-items-center md:gap-y-10 lg:grid-cols-4 lg:gap-x-4">
       <Offer
         containerClassName="border-[#2DD3BE] bg-[#5EE9D3]"
-        // TODO - too small - need bigger images
-        // img="/images/offer1.png"
-        img="/images/pill_test_photo.jpg"
+        img="/home/offers/offer1.webp"
         primaryColor="#134E4A"
         text="Spersonalizowana nauka na lekcjach indywidualnych"
         title="Zajęcia indywidualne"
@@ -17,9 +15,7 @@ function Pills() {
       />
       <Offer
         containerClassName="border-[#FABE24] bg-[#FBD24D] md:translate-y-32"
-        // TODO - too small - need bigger images
-        // img="/images/offer2.png"
-        img="/images/pill_test_photo.jpg"
+        img="/home/offers/offer2.webp"
         primaryColor="#78350F"
         text="Wspólny rozwój i zabawa w grupie"
         title="Zajęcia grupowe"
@@ -27,9 +23,7 @@ function Pills() {
       />
       <Offer
         containerClassName="border-[#38BCF7] bg-[#7DD2FB]"
-        // TODO - too small - need bigger images
-        // img="/images/offer3.png"
-        img="/images/pill_test_photo.jpg"
+        img="/home/offers/offer3.webp"
         primaryColor="#0C4A6E"
         text="Jednodniowe wypady pełne wrażeń i ekspresowej nauki"
         title="Wyjazdy"
@@ -37,9 +31,7 @@ function Pills() {
       />
       <Offer
         containerClassName="border-[#BF83FB] bg-[#D7B3FD] md:translate-y-32"
-        // TODO - too small - need bigger images
-        // img="/images/offer4.png"
-        img="/images/pill_test_photo.jpg"
+        img="/home/offers/offer4.webp"
         primaryColor="#581C86"
         text="Przeprowadzenie warsztatów deskorolkowych dla grup"
         title="Warsztaty"
@@ -64,7 +56,7 @@ function BottomPart() {
   );
 }
 
-export function ThirdSection() {
+export function OfferSection() {
   return (
     <SectionContainer
       className="flex flex-col gap-6 md:gap-12"

@@ -22,7 +22,7 @@ export function ContactSection() {
           </span>
         </div>
         <Image
-          src="/images/placeholder.png"
+          src="/shop/placeholder.png"
           height={296}
           width={649}
           alt="about us image"
@@ -32,7 +32,7 @@ export function ContactSection() {
       <h3 className="m-[48px] text-[36px] font-black">MASZ PYTANIA?</h3>
       <div className="flex w-full flex-row justify-between">
         <Image
-          src="/images/placeholder.png"
+          src="/shop/placeholder.png"
           height={705}
           width={592}
           alt="about us image"

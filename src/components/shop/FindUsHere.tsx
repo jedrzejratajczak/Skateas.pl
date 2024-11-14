@@ -11,7 +11,7 @@ export function FindUsHere() {
           <Image
             alt="Facebook icon"
             height={82}
-            src="/images/Facebook.svg"
+            src="/home/social-icons/Facebook.svg"
             width={82}
             className="mb-[32px]"
           />
@@ -21,7 +21,7 @@ export function FindUsHere() {
           <Image
             alt="Instagram icon"
             height={82}
-            src="/images/Instagram.svg"
+            src="/home/social-icons/Instagram.svg"
             width={82}
             className="mb-[32px]"
           />
@@ -31,7 +31,7 @@ export function FindUsHere() {
           <Image
             alt="Youtube icon"
             height={82}
-            src="/images/Youtube.svg"
+            src="/home/social-icons/Youtube.svg"
             width={82}
             className="mb-[32px]"
           />
@@ -41,7 +41,7 @@ export function FindUsHere() {
           <Image
             alt="Tiktok icon"
             height={82}
-            src="/images/Tiktok.svg"
+            src="/home/social-icons/Tiktok.svg"
             width={82}
             className="mb-[32px]"
           />

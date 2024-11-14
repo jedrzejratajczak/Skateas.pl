@@ -1,6 +1,6 @@
 import { QuestionMark } from './QuestionMark';
 
-type TripleQuestionnMarkProps = { side?: 'left' | 'right' };
+type TripleQuestionnMarkProps = { side?: 'left' | 'right' | 'center' };
 
 export function TripleQuestionMark({
   side = 'left'
@@ -65,9 +65,40 @@ export function TripleQuestionMark({
     }
   ];
 
+  const centerMarks = [
+    {
+      position: {
+        top: '-top-[30px] md:-top-[36px]',
+        left: 'left-[calc(50%-160px)] md:left-[calc(50%-195px)]'
+      },
+      rotation: '-rotate-[40deg]',
+      size: 'text-3xl',
+      mdSize: 'hidden sm:block md:text-4xl'
+    },
+    {
+      position: {
+        top: '-top-[26px] md:-top-[30px]',
+        left: 'left-[calc(50%-185px)] md:left-[calc(50%-230px)]'
+      },
+      rotation: '-rotate-[60deg]',
+      size: 'text-5xl',
+      mdSize: 'hidden sm:block md:text-6xl'
+    },
+    {
+      position: {
+        top: 'top-[4px] md:top-[16px]',
+        left: 'left-[calc(50%-185px)] md:left-[calc(50%-230px)]'
+      },
+      rotation: '-rotate-[80deg]',
+      size: 'text-3xl',
+      mdSize: 'hidden sm:block md:text-4xl'
+    }
+  ];
+
   const sides = {
     left: leftMarks,
-    right: rightMarks
+    right: rightMarks,
+    center: centerMarks
   };
 
   const marks = sides[side];

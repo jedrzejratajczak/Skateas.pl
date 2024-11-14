@@ -34,7 +34,7 @@ function Skateboards() {
     <>
       <div className="absolute -left-[120px] top-0 h-[200px] w-[200px] scale-x-[-1] min-[375px]:-left-[70px] min-[375px]:-top-[30px] sm:-left-[130px] sm:-top-[60px] sm:h-[300px] sm:w-[300px] lg:-left-[150px] lg:-top-[80px] lg:h-[400px] lg:w-[400px] min-[2000px]:-top-[130px] min-[2000px]:left-0 min-[2000px]:rotate-12">
         <Image
-          src="/images/homepage/board1.png"
+          src="/home/board1.webp"
           alt="Dekoracyjny obrazek deskorolki"
           layout="fill"
           objectFit="cover"
@@ -42,7 +42,7 @@ function Skateboards() {
       </div>
       <div className="absolute -right-[80px] bottom-[60px] h-[130px] w-[130px] -rotate-12 scale-x-[-1] min-[375px]:bottom-[40px] sm:-right-[100px] sm:bottom-[20px] sm:h-[200px] sm:w-[200px] lg:-bottom-[30px] lg:-right-[130px] lg:h-[300px] lg:w-[300px] min-[2000px]:right-0">
         <Image
-          src="/images/homepage/board2.png"
+          src="/home/board2.webp"
           alt="Dekoracyjny obrazek deskorolki"
           layout="fill"
           objectFit="cover"
@@ -52,7 +52,7 @@ function Skateboards() {
   );
 }
 
-export function SecondSection() {
+export function AboutSchoolSection() {
   return (
     <SectionContainer className="relative flex flex-col gap-2.5 md:gap-8">
       <Title
@@ -60,6 +60,7 @@ export function SecondSection() {
         subtitleClassName="-top-1 left-3.5 md:left-10"
         title="Akademia"
         subtitle="Skateboardingu"
+        decorationClassName="left-[calc(50%+88px)] top-0 md:-top-3 md:left-[calc(50%+130px)]"
         withExclamations
       />
       <MainContent />

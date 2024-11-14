@@ -1,26 +1,25 @@
 import {
+  AboutSchoolSection,
+  AboutTeacherSection,
   CommentsSection,
-  FifthSection,
-  FirstSection,
-  FourthSection,
-  Navbar,
-  SecondSection,
-  SeventhSection,
-  SixthSection,
-  ThirdSection
+  FAQSection,
+  GallerySection,
+  OfferSection,
+  QuestionFormSection,
+  WelcomeSection
 } from '@/home';
 
 export default function HomePage() {
   return (
     <>
-      <FirstSection />
-      <SecondSection />
-      <ThirdSection />
-      <FourthSection />
+      <WelcomeSection />
+      <AboutSchoolSection />
+      <OfferSection />
+      <AboutTeacherSection />
       <CommentsSection />
-      <FifthSection />
-      <SixthSection />
-      <SeventhSection />
+      <FAQSection />
+      <QuestionFormSection />
+      <GallerySection />
     </>
   );
 }
