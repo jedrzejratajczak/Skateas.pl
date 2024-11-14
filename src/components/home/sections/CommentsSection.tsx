@@ -19,6 +19,7 @@ export function CommentsSection() {
     <SectionContainer className="flex flex-col">
       <div className="relative">
         <Title
+          id="opinie"
           titleClassName="text-[#5EE9D3] md:-left-16"
           subtitleClassName="-top-1 left-3.5 md:left-10"
           title="Poznaj opinie"

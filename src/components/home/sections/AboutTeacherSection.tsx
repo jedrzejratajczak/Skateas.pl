@@ -9,7 +9,7 @@ export function AboutTeacherSection() {
   return (
     <SectionContainer className="flex flex-col items-center justify-center gap-5">
       <Title
-        className="md:hidden"
+        id="instruktor"
         titleClassName="text-[#FBD24D] -left-[10px]"
         subtitleClassName="-top-1 left-[70px]"
         title="Kilka słów"
@@ -17,11 +17,6 @@ export function AboutTeacherSection() {
       />
       <div className="flex items-center gap-4 lg:gap-10">
         <div className="flex flex-col gap-4 font-roboto text-xs text-white sm:text-base xl:text-xl">
-          <Title
-            className="hidden md:block"
-            titleClassName="md:text-[3.8rem] lg:text-[4.5rem] xl:text-[5rem] mb-11"
-            title="Kilka słów o mnie"
-          />
           <p>
             Cześć!{' '}
             <span className="text-[#FFC600]">

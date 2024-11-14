@@ -29,7 +29,8 @@
       // Client
       "@/admin": ["./src/components/admin/index"],
       "@/home": ["./src/components/home/index"],
-      "@/shop": ["./src/components/shop/index"]
+      "@/shop": ["./src/components/shop/index"],
+      "@/components/home": ["./src/components/home/index"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

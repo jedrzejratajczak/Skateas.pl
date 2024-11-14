@@ -66,6 +66,7 @@ export function AboutSchoolSection() {
         subtitle="Skateboardingu"
         decorationClassName="left-[calc(50%+88px)] top-0 md:-top-3 md:left-[calc(50%+130px)]"
         withExclamations
+        id="akademia"
       />
       <MainContent />
       <NextSectionButton sectionId="thirdSection" />

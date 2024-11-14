@@ -4,6 +4,8 @@ export { Footer } from './Footer/Footer';
 export { Navbar } from './Navbar/Navbar';
 export { NextSectionButton } from './NextSectionButton';
 export { Offer } from './Offer';
+export { PhoneNumber } from './PhoneNumber';
+export { default as SectionContainer } from './SectionContainer';
 export { AboutSchoolSection } from './sections/AboutSchoolSection';
 export { AboutTeacherSection } from './sections/AboutTeacherSection';
 export { CommentsSection } from './sections/CommentsSection';

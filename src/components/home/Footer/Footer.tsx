@@ -5,124 +5,53 @@ import { IoLogoFacebook, IoLogoInstagram } from 'react-icons/io5';
 import { FooterItem } from './FooterItem';
 import { FooterTitle } from './FooterTitle';
 
-const footerElements = {
-  firstList: {
-    id: 0,
-    title: 'Menu',
-    items: [
-      { id: 0, name: 'Strona główna', href: '/' },
-      {
-        id: 1,
-        name: 'Oferta',
-        href: '#/oferta',
-        sublist: [
-          { id: 10, name: 'Zajęcia grupowe', href: '#/oferta/zajecia-grupowe' },
-          {
-            id: 11,
-            name: 'Zajęcia indywidualne',
-            href: '#/oferta/zajecia-indywidualne'
-          },
-          { id: 12, name: 'Warsztaty', href: '#/oferta/warsztaty' },
-          { id: 13, name: 'Eventy', href: '#/oferta/eventy' },
-          { id: 14, name: 'Współpraca', href: '#/oferta/wspolpraca' }
-        ]
-      },
-      { id: 2, name: 'Akademia', href: '#/akademia' },
-      { id: 3, name: 'Cennik', href: '#/cennik' },
-      { id: 4, name: 'Instruktor', href: '#/instruktor' },
-      { id: 5, name: 'Opinie', href: '#/opinie' },
-      { id: 6, name: 'Galeria', href: '#/galeria' }
-    ]
-  },
-  secondList: {
-    id: 1,
-    title: 'Sklep AS',
-    items: [
-      { id: 0, name: 'Deski', href: '#/sklep/deski' },
-      { id: 1, name: ' Decki', href: '#/sklep/decki' },
-      { id: 2, name: 'Akcesoria', href: '#/sklep/akcesoria' }
-    ]
-  },
-  thirdList: {
-    id: 2,
-    title: 'Regulaminy',
-    items: [
-      { id: 0, name: 'Polityka prywatności', href: '#/polityka-prywatnosci' },
-      { id: 1, name: 'Regulamin', href: '#/regulamin' },
-      { id: 2, name: 'Ciasteczka', href: '#/ciasteczka' }
-    ]
-  }
-};
-
-const footerIcons = [
-  {
-    id: 0,
-    iconComponent: IoLogoFacebook,
-    href: 'https://www.facebook.com/SkateAcademy.Wro',
-    aria: 'Go to Facebook'
-  },
-  {
-    id: 1,
-    iconComponent: IoLogoInstagram,
-    href: 'https://www.instagram.com/akademiaskateboardingu/profilecard/',
-    aria: 'Go to Instagram'
-  }
-];
-
 export function Footer() {
   return (
     <footer className="w-full bg-black text-white">
       <div className="flex flex-col justify-between gap-5 px-5 py-6 sm:flex-row sm:flex-wrap sm:px-12 md:px-12 lg:px-16">
         <div>
-          <FooterTitle>{footerElements.firstList.title}</FooterTitle>
+          <FooterTitle>Menu</FooterTitle>
           <ul className="flex flex-col gap-2">
-            {footerElements.firstList.items.map(item => {
-              if (item.sublist) {
-                return (
-                  <li
-                    className="max-w-fit font-roboto text-xs lg:text-base "
-                    key={item.id}
-                  >
-                    <Link href={item.href} className="hover:text-purple-400">
-                      {item.name}
-                    </Link>
-                    <ul className="mt-2 flex flex-col gap-2 pl-4">
-                      {item.sublist.map(subitem => (
-                        <FooterItem href={subitem.href} key={subitem.id}>
-                          {subitem.name}
-                        </FooterItem>
-                      ))}
-                    </ul>
-                  </li>
-                );
-              } else {
-                return (
-                  <FooterItem href={item.href} key={item.id}>
-                    {item.name}
-                  </FooterItem>
-                );
-              }
-            })}
+            <FooterItem href="/">Strona główna</FooterItem>
+            {/* <li className="max-w-fit font-roboto text-xs lg:text-base">
+              <Link href="#/oferta" className="hover:text-purple-400">
+                Oferta
+              </Link>
+              <ul className="mt-2 flex flex-col gap-2 pl-4">
+                <FooterItem href="#/oferta/zajecia-grupowe">
+                  Zajęcia grupowe
+                </FooterItem>
+                <FooterItem href="#/oferta/zajecia-indywidualne">
+                  Zajęcia indywidualne
+                </FooterItem>
+                <FooterItem href="#/oferta/warsztaty">Warsztaty</FooterItem>
+                <FooterItem href="#/oferta/eventy">Eventy</FooterItem>
+                <FooterItem href="#/oferta/wspolpraca">Współpraca</FooterItem>
+              </ul>
+            </li> */}
+            <FooterItem href="/#akademia">Akademia</FooterItem>
+            <FooterItem href="/cennik">Cennik</FooterItem>
+            <FooterItem href="/#instruktor">Instruktor</FooterItem>
+            <FooterItem href="/#opinie">Opinie</FooterItem>
+            <FooterItem href="/galeria">Galeria</FooterItem>
           </ul>
         </div>
-        <div className="flex flex-col">
-          <FooterTitle>{footerElements.secondList.title}</FooterTitle>
+        {/* <div className="flex flex-col">
+          <FooterTitle>Sklep AS</FooterTitle>
           <ul className="flex flex-col gap-2">
-            {footerElements.secondList.items.map(item => (
-              <FooterItem href={item.href} key={item.id}>
-                {item.name}
-              </FooterItem>
-            ))}
+            <FooterItem href="#/sklep/deski">Deski</FooterItem>
+            <FooterItem href="#/sklep/decki">Decki</FooterItem>
+            <FooterItem href="#/sklep/akcesoria">Akcesoria</FooterItem>
           </ul>
-        </div>
+        </div> */}
         <div className="flex flex-col">
-          <FooterTitle>{footerElements.thirdList.title}</FooterTitle>
+          <FooterTitle>Regulaminy</FooterTitle>
           <ul className="flex flex-col gap-2">
-            {footerElements.thirdList.items.map(item => (
-              <FooterItem href={item.href} key={item.id}>
-                {item.name}
-              </FooterItem>
-            ))}
+            <FooterItem href="#/polityka-prywatnosci">
+              Polityka prywatności
+            </FooterItem>
+            <FooterItem href="#/regulamin">Regulamin</FooterItem>
+            <FooterItem href="#/ciasteczka">Ciasteczka</FooterItem>
           </ul>
         </div>
         <div className="flex w-full flex-col items-end lg:w-fit">
@@ -143,18 +72,26 @@ export function Footer() {
             Jeździj z nami!
           </p>
           <ul className="flex gap-2 pt-2 lg:gap-4 lg:text-sm">
-            {footerIcons.map(icon => (
-              <li key={icon.id} className="hover:text-purple-400">
-                <a
-                  href={icon.href}
-                  aria-label={icon.aria}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <icon.iconComponent size={16} className="lg:scale-150" />
-                </a>
-              </li>
-            ))}
+            <li className="hover:text-purple-400">
+              <a
+                href="https://www.facebook.com/SkateAcademy.Wro"
+                aria-label="Go to Facebook"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <IoLogoFacebook size={16} className="lg:scale-150" />
+              </a>
+            </li>
+            <li className="hover:text-purple-400">
+              <a
+                href="https://www.instagram.com/akademiaskateboardingu/profilecard/"
+                aria-label="Go to Instagram"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <IoLogoInstagram size={16} className="lg:scale-150" />
+              </a>
+            </li>
           </ul>
         </div>
       </div>

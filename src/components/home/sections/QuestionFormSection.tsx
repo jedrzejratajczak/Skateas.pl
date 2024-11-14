@@ -6,6 +6,7 @@ export function QuestionFormSection() {
   return (
     <SectionContainer className="flex flex-col gap-5 overflow-hidden">
       <Title
+        id="pytania"
         subtitle="Napisz do mnie!"
         subtitleClassName="left-14"
         title="Masz pytania?"

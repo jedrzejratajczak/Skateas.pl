@@ -19,7 +19,7 @@ function LeftSide() {
         </p>
       </div>
       <p className="font-roboto text-xs text-white sm:text-base xl:text-xl">
-        Efektowny sport? Atrakcyjna aktywność na&nbsp;powietrzu? Nowa pasja?
+        Szukasz zajawki? Atrakcyjna aktywność na&nbsp;powietrzu? Nowa pasja?
         Jesteś w&nbsp;dobrym miejscu! Akademia Skateboardingu gwarantuje rozwój
         umiejętności, bezpieczną aktywność fizyczną, zdobywanie pewności siebie,
         przełamywanie barier i&nbsp;poznawanie nowych przyjaciół. Zapoznaj się

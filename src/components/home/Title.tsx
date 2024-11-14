@@ -4,6 +4,7 @@ import { TripleQuestionMark } from './TripleQuestionMark';
 type TitleProps = {
   className?: string;
   decorationClassName?: string;
+  id?: string;
   subtitle?: string;
   subtitleClassName?: string;
   title: string;
@@ -16,6 +17,7 @@ type TitleProps = {
 export function Title({
   className,
   decorationClassName,
+  id,
   subtitle,
   subtitleClassName,
   title,
@@ -28,6 +30,7 @@ export function Title({
     <div
       className={`relative text-center font-poetsen-one text-white ${className}`}
     >
+      <div className="absolute -top-[100px]" id={id} />
       {withQuestions && <TripleQuestionMark side="left" />}
       <p className={`relative text-4xl md:text-5xl ${titleClassName}`}>
         {title}
