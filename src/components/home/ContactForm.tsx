@@ -79,7 +79,7 @@ export default function ContactForm() {
         name="rules"
         label="Zapoznałem/am się z treścią"
         labelLinkText="regulaminu"
-        labelLinkHref="#"
+        labelLinkHref="/regulamin"
         required
         register={register}
         errorMessage={errors.rules?.message}
