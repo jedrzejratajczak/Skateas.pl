@@ -88,13 +88,16 @@ const menuElements = [
 ];
 
 const menuIcons = [
-  { id: 0, iconComponent: IoLogoFacebook, href: '#facebook' },
+  {
+    id: 0,
+    iconComponent: IoLogoFacebook,
+    href: 'https://www.facebook.com/SkateAcademy.Wro'
+  },
   {
     id: 1,
     iconComponent: IoLogoInstagram,
-    href: '#instagram'
-  },
-  { id: 2, iconComponent: IoLogoTiktok, href: '#tiktok' }
+    href: 'https://www.instagram.com/akademiaskateboardingu/profilecard/'
+  }
 ];
 
 export function Navbar() {

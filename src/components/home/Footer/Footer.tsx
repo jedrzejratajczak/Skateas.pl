@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { IoLogoFacebook, IoLogoInstagram, IoLogoTiktok } from 'react-icons/io5';
+import { IoLogoFacebook, IoLogoInstagram } from 'react-icons/io5';
 
 import { FooterItem } from './FooterItem';
 import { FooterTitle } from './FooterTitle';
@@ -58,16 +58,15 @@ const footerIcons = [
   {
     id: 0,
     iconComponent: IoLogoFacebook,
-    href: '#facebook',
+    href: 'https://www.facebook.com/SkateAcademy.Wro',
     aria: 'Go to Facebook'
   },
   {
     id: 1,
     iconComponent: IoLogoInstagram,
-    href: '#instagram',
+    href: 'https://www.instagram.com/akademiaskateboardingu/profilecard/',
     aria: 'Go to Instagram'
-  },
-  { id: 2, iconComponent: IoLogoTiktok, href: '#tiktok', aria: 'Go to TikTok' }
+  }
 ];
 
 export function Footer() {
@@ -145,9 +144,14 @@ export function Footer() {
           <ul className="flex gap-2 pt-2 lg:gap-4 lg:text-sm">
             {footerIcons.map(icon => (
               <li key={icon.id} className="hover:text-purple-400">
-                <Link href={icon.href} aria-label={icon.aria}>
+                <a
+                  href={icon.href}
+                  aria-label={icon.aria}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <icon.iconComponent size={16} className="lg:scale-150" />
-                </Link>
+                </a>
               </li>
             ))}
           </ul>

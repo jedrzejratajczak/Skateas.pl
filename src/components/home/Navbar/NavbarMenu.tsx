@@ -61,9 +61,9 @@ export default function NavbarMenu({
           {menuIcons &&
             menuIcons.map(icon => (
               <li key={icon.id} className="text-white hover:text-purple-400">
-                <Link href={icon.href}>
+                <a href={icon.href} target="_blank" rel="noreferrer noopener">
                   <icon.iconComponent size={24} />
-                </Link>
+                </a>
               </li>
             ))}
         </ul>
