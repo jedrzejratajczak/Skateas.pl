@@ -41,6 +41,7 @@ function RightSide() {
         alt="Adam skaczący na deskorolce"
         className="pointer-events-none rounded-s-full"
         fill
+        priority
         sizes="100vw"
         style={{ objectFit: 'cover', objectPosition: 'left' }}
       />
