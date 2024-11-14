@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { ImageButtonProps } from './Sets';
@@ -10,7 +10,11 @@ export function Post({ href, src, alt }: BlogPostsTypes) {
     <div className="h-567">
       <Link href={href}>
         {/* <Title/> */}
-        <Image src={src} alt={alt} />
+        <Image
+          src={src}
+          alt={alt}
+          style={{ maxWidth: '100%', height: 'auto' }}
+        />
         {/* <Button/> */}
       </Link>
     </div>

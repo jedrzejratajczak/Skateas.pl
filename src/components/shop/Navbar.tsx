@@ -1,5 +1,5 @@
 'use client';
-import Image from "next/legacy/image";
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { MdShoppingCart } from 'react-icons/md';
 
@@ -28,6 +28,7 @@ export function Navbar() {
             height={80}
             src="/home/logos/as-white-logo.svg"
             width={80}
+            style={{ maxWidth: '100%', height: 'auto' }}
           />
           <h1 className="text-[1.563rem] text-white">
             Akademia Skate <i>shop</i>

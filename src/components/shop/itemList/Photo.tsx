@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/image';
 
 type PhotoTypes = {
   src: string;
@@ -6,5 +6,7 @@ type PhotoTypes = {
 };
 
 export function Photo({ src, alt }: PhotoTypes) {
-  return <Image src={src} alt={alt} />;
+  return (
+    <Image src={src} alt={alt} style={{ maxWidth: '100%', height: 'auto' }} />
+  );
 }

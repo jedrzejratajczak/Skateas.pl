@@ -1,4 +1,4 @@
-import { StaticImageData } from "next/legacy/image";
+import { StaticImageData } from 'next/image';
 
 import photoMain_1 from '/public/shop/photo_Main_1.png';
 import photoMain_2 from '/public/shop/photo_Main_2.png';

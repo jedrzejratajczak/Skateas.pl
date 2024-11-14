@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/image';
 
 import { ContactForm } from './ContactForm';
 import { FindUsHere } from './FindUsHere';
@@ -27,6 +27,7 @@ export function ContactSection() {
           width={649}
           alt="about us image"
           className="h-[296px] w-[649px] "
+          style={{ maxWidth: '100%', height: 'auto' }}
         />
       </div>
       <h3 className="m-[48px] text-[36px] font-black">MASZ PYTANIA?</h3>
@@ -37,6 +38,7 @@ export function ContactSection() {
           width={592}
           alt="about us image"
           className="h-[705px] w-[592px] "
+          style={{ maxWidth: '100%', height: 'auto' }}
         />
         <ContactForm />
       </div>

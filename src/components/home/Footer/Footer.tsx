@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/image';
 import Link from 'next/link';
 import { IoLogoFacebook, IoLogoInstagram } from 'react-icons/io5';
 
@@ -133,6 +133,7 @@ export function Footer() {
               width={20}
               height={20}
               className="pointer-events-none lg:scale-150"
+              style={{ maxWidth: '100%', height: 'auto' }}
             />
             <p className="py-1 text-end font-poetsen-one text-sm text-white lg:text-xl">
               Akademia Skateboardingu

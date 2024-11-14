@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/image';
 
 import { TripleExclamationMark } from './TripleExclamationMark';
 
@@ -24,9 +24,10 @@ export function PersonPill({
           <Image
             src="/home/adam.webp"
             alt=""
-            layout="fill"
-            objectFit="contain"
             className="pointer-events-none"
+            fill
+            sizes="100vw"
+            style={{ objectFit: 'contain' }}
           />
         </div>
       </div>

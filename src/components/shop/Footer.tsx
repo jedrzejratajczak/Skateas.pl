@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/image';
 import Link from 'next/link';
 
 const skateAcademyLinks = [
@@ -49,6 +49,7 @@ export function Footer() {
           src="/home/logos/as-black-logo.svg"
           width={82}
           className="mb-2.5"
+          style={{ maxWidth: '100%', height: 'auto' }}
         />
         <h5 className="font-bold">AKADEMIA SKATEBOARDINGU</h5>
         <p className="text-sm">Jeździj z nami!</p>

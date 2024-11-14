@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/image';
 
 export function AboutUsSection() {
   return (
@@ -50,6 +50,7 @@ export function AboutUsSection() {
           width={574}
           alt="about us image"
           className="mx-auto"
+          style={{ maxWidth: '100%', height: 'auto' }}
         />
       </div>
     </section>

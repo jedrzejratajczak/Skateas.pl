@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/image';
 
 export function OurValuesSection() {
   return (
@@ -13,6 +13,7 @@ export function OurValuesSection() {
               width={200}
               alt="avalues image"
               className="mr-[62px]"
+              style={{ maxWidth: '100%', height: 'auto' }}
             />
             <span className="text-[12px]">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -31,6 +32,7 @@ export function OurValuesSection() {
               width={200}
               alt="avalues image"
               className="mr-[62px]"
+              style={{ maxWidth: '100%', height: 'auto' }}
             />
             <span className="text-[12px]">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -51,6 +53,7 @@ export function OurValuesSection() {
               width={200}
               alt="avalues image"
               className="mr-[62px]"
+              style={{ maxWidth: '100%', height: 'auto' }}
             />
             <span className="text-[12px]">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -69,6 +72,7 @@ export function OurValuesSection() {
               width={200}
               alt="avalues image"
               className="mr-[62px]"
+              style={{ maxWidth: '100%', height: 'auto' }}
             />
             <span className="text-[12px]">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem

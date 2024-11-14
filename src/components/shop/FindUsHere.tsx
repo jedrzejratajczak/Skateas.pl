@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/image';
 
 export function FindUsHere() {
   return (
@@ -14,6 +14,7 @@ export function FindUsHere() {
             src="/home/social-icons/Facebook.svg"
             width={82}
             className="mb-[32px]"
+            style={{ maxWidth: '100%', height: 'auto' }}
           />
           <span className="text-[16px] font-semibold">FACEBOOK</span>
         </div>
@@ -24,6 +25,7 @@ export function FindUsHere() {
             src="/home/social-icons/Instagram.svg"
             width={82}
             className="mb-[32px]"
+            style={{ maxWidth: '100%', height: 'auto' }}
           />
           <span className="text-[16px] font-semibold">INSTAGRAM</span>
         </div>
@@ -34,6 +36,7 @@ export function FindUsHere() {
             src="/home/social-icons/Youtube.svg"
             width={82}
             className="mb-[32px]"
+            style={{ maxWidth: '100%', height: 'auto' }}
           />
           <span className="text-[16px] font-semibold">YOUTUBE</span>
         </div>
@@ -44,6 +47,7 @@ export function FindUsHere() {
             src="/home/social-icons/Tiktok.svg"
             width={82}
             className="mb-[32px]"
+            style={{ maxWidth: '100%', height: 'auto' }}
           />
           <span className="text-[16px] font-semibold">TIKTOK</span>
         </div>

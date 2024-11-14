@@ -2,7 +2,7 @@
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import Image, { StaticImageData } from "next/legacy/image";
+import Image, { StaticImageData } from 'next/image';
 import { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 
@@ -50,7 +50,11 @@ export function ImagesCarousel({ images }: { images: StaticImageData[] }) {
             key={image.blurDataURL}
             className="flex items-center justify-center"
           >
-            <Image src={image} alt={`photo-${index + 1}`} />
+            <Image
+              src={image}
+              alt={`photo-${index + 1}`}
+              style={{ maxWidth: '100%', height: 'auto' }}
+            />
           </div>
         ))}
       </Carousel>

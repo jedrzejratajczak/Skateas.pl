@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { DoubleGreaterThanMark } from './DoubleGreaterThanMark';
@@ -29,10 +29,10 @@ export function Offer({
         <Image
           src={img}
           alt=""
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
           className="pointer-events-none rounded-full"
+          fill
+          sizes="100vw"
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
         />
       </div>
       <div className="gap-3 md:flex md:max-w-[200px] md:flex-col">

@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/image';
 
 export default function NavbarBrand() {
   return (
@@ -9,6 +9,7 @@ export default function NavbarBrand() {
         alt=""
         width={32}
         height={32}
+        style={{ maxWidth: '100%', height: 'auto' }}
       />
       <p className="p-2 font-poetsen-one text-base text-white">
         Akademia Skateboardingu

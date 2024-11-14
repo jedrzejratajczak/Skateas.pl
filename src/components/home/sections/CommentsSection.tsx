@@ -1,7 +1,7 @@
 'use client';
 import 'react-multi-carousel/lib/styles.css';
 
-import Image from "next/legacy/image";
+import Image from 'next/image';
 import Carousel from 'react-multi-carousel';
 
 import SectionContainer from '../SectionContainer';
@@ -57,8 +57,9 @@ export function CommentsSection() {
                   alt=""
                   width="0"
                   height="0"
-                  sizes="100vw"
                   className="pointer-events-none h-auto w-full rounded-3xl"
+                  sizes="100vw"
+                  style={{ maxWidth: '100%', height: 'auto' }}
                 />
               ))}
             </div>

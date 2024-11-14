@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/image';
 
 import { Button } from '../Button';
 import { ExclamationMark } from '../ExclamationMark';
@@ -40,9 +40,9 @@ function RightSide() {
         src="/home/skate.webp"
         alt="Adam skaczący na deskorolce"
         className="pointer-events-none rounded-s-full"
-        layout="fill"
-        objectFit="cover"
-        objectPosition="left"
+        fill
+        sizes="100vw"
+        style={{ objectFit: 'cover', objectPosition: 'left' }}
       />
     </div>
   );

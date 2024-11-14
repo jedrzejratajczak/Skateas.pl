@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/image';
 
 import { colorVariants, ProductBadge } from './ProductBadge';
 
@@ -26,7 +26,13 @@ export function ProductCard({
   return (
     <div className="flex max-w-[359px] flex-col items-center rounded-[10px] border border-black bg-white px-[1.438rem] pb-[1.688rem] pt-7">
       <div className="relative">
-        <Image width={313} height={325} alt={alt} src={src} />
+        <Image
+          width={313}
+          height={325}
+          alt={alt}
+          src={src}
+          style={{ maxWidth: '100%', height: 'auto' }}
+        />
         <div className="absolute right-0 top-0">
           <ProductBadge text={badgeText} variant={badgeVariant} />
         </div>
