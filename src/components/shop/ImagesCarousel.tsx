@@ -2,7 +2,7 @@
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import Image, { StaticImageData } from 'next/image';
+import Image, { StaticImageData } from "next/legacy/image";
 import { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 

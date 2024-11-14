@@ -1,7 +1,7 @@
 'use client';
 import 'react-multi-carousel/lib/styles.css';
 
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Carousel from 'react-multi-carousel';
 
 import SectionContainer from '../SectionContainer';
