@@ -28,7 +28,7 @@ export function AboutTeacherSection() {
             świata, poznałem dużo wspaniałych ludzi i&nbsp;odwiedziłem wiele
             ciekawych miejsc.{' '}
             <span className="text-[#FFC600]">
-              A&nbsp;teraz chce się&nbsp;tym&nbsp;dzielić z&nbsp;innymi!
+              A&nbsp;teraz chcę się&nbsp;tym&nbsp;dzielić z&nbsp;innymi!
             </span>
           </p>
           <p>
