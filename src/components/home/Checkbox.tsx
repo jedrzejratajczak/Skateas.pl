@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { UseFormRegister } from 'react-hook-form';
 
 type CheckboxProps = {
@@ -36,9 +35,14 @@ export default function Checkbox({
         <label htmlFor={name}>
           {label}{' '}
           {labelLinkHref && (
-            <Link href={labelLinkHref} className="font-medium text-[#FFC600]">
+            <a
+              href={labelLinkHref}
+              className="font-medium text-[#FFC600]"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
               {labelLinkText}
-            </Link>
+            </a>
           )}{' '}
           {required && '*'}
         </label>

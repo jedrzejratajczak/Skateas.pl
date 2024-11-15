@@ -14,7 +14,6 @@ type ContactFormInput = {
   email: string;
   message: string;
   rules: boolean;
-  rules2: boolean;
 };
 
 const validationSchema = Yup.object().shape({
@@ -24,9 +23,6 @@ const validationSchema = Yup.object().shape({
     .required('E-mail jest wymagany'),
   message: Yup.string().required('Wiadomość jest wymagana'),
   rules: Yup.boolean()
-    .oneOf([true], 'Wymagana jest zgoda na regulamin')
-    .required('Wymagana jest zgoda na regulamin'),
-  rules2: Yup.boolean()
     .oneOf([true], 'Wymagana jest zgoda na regulamin')
     .required('Wymagana jest zgoda na regulamin')
 });
@@ -79,7 +75,7 @@ export default function ContactForm() {
         name="rules"
         label="Zapoznałem/am się z treścią"
         labelLinkText="regulaminu"
-        labelLinkHref="/regulamin"
+        labelLinkHref="/home/docs/regulamin.pdf"
         required
         register={register}
         errorMessage={errors.rules?.message}

@@ -5,15 +5,20 @@ import { ExclamationMark } from '../ExclamationMark';
 import SectionContainer from '../SectionContainer';
 
 function LeftSide() {
+  const startOfTheYear = new Date().getMonth() + 1 <= 6;
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className="flex max-w-[180px] flex-col gap-2.5 py-3 pr-1 min-[375px]:max-w-none md:gap-8">
       <div>
         <p className="text-nowrap font-poetsen-one text-4xl text-[#FBD24D] sm:text-5xl xl:text-8xl">
-          Sezon 2025
+          Sezon {currentYear}
         </p>
-        <p className="relative -top-6 left-[70px] font-poetsen-one xl:-top-10 xl:left-[130px]">
+        <p
+          className={`relative -top-6 font-poetsen-one xl:-top-10 ${startOfTheYear ? 'left-[70px] xl:left-[130px]' : 'left-[140px] sm:left-[180px] xl:left-[350px]'}`}
+        >
           <span className="text-2xl text-white sm:text-4xl xl:text-7xl">
-            rozpoczęty
+            {startOfTheYear ? 'rozpoczęty' : 'trwa'}
           </span>
           <ExclamationMark className="text-4xl sm:text-5xl xl:text-8xl" />
         </p>

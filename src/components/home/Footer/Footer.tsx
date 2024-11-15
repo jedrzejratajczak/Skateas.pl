@@ -51,7 +51,30 @@ export function Footer() {
             <FooterItem href="/polityka-prywatnosci">
               Polityka prywatności
             </FooterItem>
-            <FooterItem href="/regulamin">Regulamin</FooterItem>
+            <FooterItem
+              href="/home/docs/regulamin.pdf"
+              linkProps={{ target: '_blank', rel: 'noreferrer noopener' }}
+            >
+              Regulamin
+            </FooterItem>
+            <FooterItem
+              href="/home/docs/zgoda-na-udzial-w-zajeciach.pdf"
+              linkProps={{ target: '_blank', rel: 'noreferrer noopener' }}
+            >
+              Zgoda na udział w zajęciach
+            </FooterItem>
+            <FooterItem
+              href="/home/docs/cennik.pdf"
+              linkProps={{ target: '_blank', rel: 'noreferrer noopener' }}
+            >
+              Cennik
+            </FooterItem>
+            <FooterItem
+              href="/home/docs/zgoda-na-wycieczke.pdf"
+              linkProps={{ target: '_blank', rel: 'noreferrer noopener' }}
+            >
+              Zgoda na wycieczkę
+            </FooterItem>
           </ul>
         </div>
         <div className="flex w-full flex-col items-end lg:w-fit">
