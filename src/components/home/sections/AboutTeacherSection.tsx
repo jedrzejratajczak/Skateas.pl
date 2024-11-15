@@ -20,7 +20,7 @@ export function AboutTeacherSection() {
           <p>
             Cześć!{' '}
             <span className="text-[#FFC600]">
-              Na deskorolce jeżdzę już od&nbsp;14&nbsp;lat.{' '}
+              Na deskorolce jeżdzę już od&nbsp;2009&nbsp;roku.{' '}
             </span>
             To,&nbsp;co&nbsp;zaczęło się&nbsp;jako prosta zajawka, stało
             się&nbsp;nieodłączną częścią mojego życia. Deskorolka daje
@@ -32,7 +32,7 @@ export function AboutTeacherSection() {
             </span>
           </p>
           <p>
-            Zajęcia prowadzę od ponad 3 lat. Posiadam{' '}
+            Zajęcia prowadzę od 2021 roku. Posiadam{' '}
             <Link href="TODO" className="text-[#FFC600]">
               certyfikat licencjonowanego instruktora Polish Skate Federation.{' '}
             </Link>

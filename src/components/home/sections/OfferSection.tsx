@@ -46,7 +46,7 @@ function BottomPart() {
     <>
       <p className="m-auto max-w-[800px] text-center font-roboto text-xs text-white sm:text-base md:mt-32 xl:text-xl">
         Spraw, aby Twoje wydarzenie było wyjątkowe! Zorganizuję zajęcia, pokazy
-        lub warsztaty skateaboardingu. Skontaktuj się ze mną i porozmawiajmy o
+        lub warsztaty skateboardingu. Skontaktuj się ze mną i porozmawiajmy o
         współpracy B2B.
       </p>
       <ButtonLink href="" color="green" className="m-auto">

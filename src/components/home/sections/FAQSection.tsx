@@ -12,7 +12,7 @@ const colors = [
 const questions = [
   {
     title: 'Czy skateboarding jest bezpieczny?',
-    text: 'Tak, dbamy o bezpieczeństwo! Każdy uczestnik ma obowiązek noszenia kasku oraz ochraniaczy na kolana i łokcie, a instruktorzy pilnują, by wszystko odbywało się w kontrolowanych warunkach. Bezpieczeństwo jest dla nas priorytetem, więc możesz być spokojny!'
+    text: 'Tak, dbamy o bezpieczeństwo! Każdy uczestnik ma obowiązek noszenia kasku oraz ochraniaczy na kolana i łokcie, a instruktorzy pilnują, by wszystko odbywało się w kontrolowanych warunkach. Bezpieczeństwo jest dla nas priorytetem, więc możesz być spokojny! Już na początku przygody uczymy się kontrolowanych upadków.'
   },
   {
     title: 'Nigdy nie jeździłem(-am) na desce – dam radę?',
