@@ -45,7 +45,10 @@ export function Footer() {
         <div className="flex flex-col">
           <FooterTitle>Dokumenty</FooterTitle>
           <ul className="flex flex-col gap-2">
-            <FooterItem href="/polityka-prywatnosci">
+            <FooterItem
+              href="/home/docs/polityka-prywatnosci.pdf"
+              linkProps={{ target: '_blank', rel: 'noreferrer noopener' }}
+            >
               Polityka prywatności
             </FooterItem>
             <FooterItem

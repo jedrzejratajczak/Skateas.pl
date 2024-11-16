@@ -31,7 +31,7 @@ function LeftSide() {
         z&nbsp;ofertą i&nbsp;postaw na&nbsp;nową, wspaniałą przygodę
         na&nbsp;deskorolce!
       </p>
-      <Button color="orange" className="m-auto mt-5">
+      <Button color="orange" className="m-auto mt-5" type="button">
         Zapisy na zajęcia &gt;&gt;
       </Button>
     </div>

@@ -1,9 +1,7 @@
 import { UseFormRegister } from 'react-hook-form';
 
 type CheckboxProps = {
-  label: string;
-  labelLinkHref: string;
-  labelLinkText?: string;
+  children: React.ReactNode;
   name: string;
   placeholder?: string;
   required?: boolean;
@@ -13,9 +11,7 @@ type CheckboxProps = {
 };
 
 export default function Checkbox({
-  label,
-  labelLinkHref,
-  labelLinkText,
+  children,
   name,
   required = false,
   register,
@@ -33,18 +29,8 @@ export default function Checkbox({
           {...register(name, { required })}
         />
         <label htmlFor={name}>
-          {label}{' '}
-          {labelLinkHref && (
-            <a
-              href={labelLinkHref}
-              className="font-medium text-[#FFC600]"
-              rel="noreferrer noopener"
-              target="_blank"
-            >
-              {labelLinkText}
-            </a>
-          )}{' '}
-          {required && '*'}
+          {children}
+          {required && ' *'}
         </label>
       </div>
       {errorMessage && (

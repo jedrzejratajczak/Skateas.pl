@@ -14,9 +14,16 @@ type ButtonProps = {
   className?: string;
   color: keyof typeof colors;
   href?: string;
+  type?: 'button' | 'submit' | 'reset';
 };
 
-export function Button({ children, className, color, href }: ButtonProps) {
+export function Button({
+  children,
+  className,
+  color,
+  href,
+  type
+}: ButtonProps) {
   return href ? (
     <a
       href={href}
@@ -28,7 +35,7 @@ export function Button({ children, className, color, href }: ButtonProps) {
     </a>
   ) : (
     <button
-      type="button"
+      type={type}
       className={`rounded-[50px] border px-4 py-1 text-sm text-[#404040] transition-colors md:text-lg xl:px-7 xl:py-2 xl:text-2xl ${colors[color]} ${className}`}
     >
       {children}
