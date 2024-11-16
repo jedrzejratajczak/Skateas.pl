@@ -33,7 +33,12 @@ export function AboutTeacherSection() {
           </p>
           <p>
             Zajęcia prowadzę od 2021 roku. Posiadam{' '}
-            <Link href="TODO" className="text-[#FFC600]">
+            <Link
+              href="/home/docs/certyfikat.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="text-[#FFC600]"
+            >
               certyfikat licencjonowanego instruktora Polish Skate Federation.{' '}
             </Link>
             Współpracuję z największymi obozami deskorolkowymi w Europie -{' '}

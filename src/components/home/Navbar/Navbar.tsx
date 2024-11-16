@@ -50,39 +50,33 @@ const menuElements = [
   // },
   {
     id: 2,
-    name: 'Akademia',
-    href: '/#akademia',
-    skipOnDesktop: true
-  },
-  {
-    id: 3,
-    name: 'Cennik',
-    href: '/cennik'
-  },
-  {
-    id: 4,
     name: 'Instruktor',
     href: '/#instruktor',
     skipOnDesktop: true
   },
   {
-    id: 5,
+    id: 3,
     name: 'Opinie',
     href: '/#opinie',
     skipOnDesktop: true
   },
   {
-    id: 6,
+    id: 4,
+    name: 'Dokumenty',
+    href: '/dokumenty'
+  },
+  {
+    id: 5,
     name: 'Galeria',
     href: '/galeria'
   },
   {
-    id: 7,
+    id: 6,
     name: 'Kontakt',
     href: '/kontakt'
   }
   // {
-  //   id: 8,
+  //   id: 7,
   //   name: 'Skateshop',
   //   sublist: [
   //     { id: 80, name: 'Deski', href: '#/skateshop/deski' },

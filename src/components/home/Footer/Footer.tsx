@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { IoLogoFacebook, IoLogoInstagram } from 'react-icons/io5';
 
 import { FooterItem } from './FooterItem';
@@ -29,8 +28,6 @@ export function Footer() {
                 <FooterItem href="#/oferta/wspolpraca">Współpraca</FooterItem>
               </ul>
             </li> */}
-            <FooterItem href="/#akademia">Akademia</FooterItem>
-            <FooterItem href="/cennik">Cennik</FooterItem>
             <FooterItem href="/#instruktor">Instruktor</FooterItem>
             <FooterItem href="/#opinie">Opinie</FooterItem>
             <FooterItem href="/galeria">Galeria</FooterItem>

@@ -20,6 +20,8 @@ export function Button({ children, className, color, href }: ButtonProps) {
   return href ? (
     <a
       href={href}
+      rel="noreferrer noopener"
+      target="_blank"
       className={`rounded-[50px] border px-4 py-1 text-sm text-[#404040] transition-colors md:text-lg xl:px-7 xl:py-2 xl:text-2xl ${colors[color]} ${className}`}
     >
       {children}

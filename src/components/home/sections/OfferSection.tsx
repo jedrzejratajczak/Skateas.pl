@@ -49,7 +49,7 @@ function BottomPart() {
         lub warsztaty skateboardingu. Skontaktuj się ze mną i porozmawiajmy o
         współpracy B2B.
       </p>
-      <ButtonLink href="" color="green" className="m-auto">
+      <ButtonLink href="/kontakt" color="green" className="m-auto">
         Dowiedz się więcej &gt;&gt;
       </ButtonLink>
     </>
