@@ -5,7 +5,7 @@ export const POST = async (req: NextRequest) => {
   try {
     const data = await req.json();
 
-    const res = await axios.post(
+    await axios.post(
       'https://api.sendinblue.com/v3/smtp/email',
       {
         sender: destination,
