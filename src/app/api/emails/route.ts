@@ -29,7 +29,7 @@ const apiKey = process.env.EMAIL_API_KEY;
 
 const destination = {
   email: 'akademiaskateboardingu@gmail.com',
-  name: 'Adam Szulc'
+  name: 'Akademia Skateboardingu'
 };
 
 const headers = {
