@@ -11,7 +11,7 @@ function Pills() {
         primaryColor="#134E4A"
         text="Spersonalizowana nauka na lekcjach indywidualnych"
         title="Zajęcia indywidualne"
-        href="/indywidualne"
+        href="/oferta/indywidualne"
       />
       <Offer
         containerClassName="border-[#FABE24] bg-[#FBD24D] md:translate-y-32"
@@ -19,7 +19,7 @@ function Pills() {
         primaryColor="#78350F"
         text="Wspólny rozwój i zabawa w grupie"
         title="Zajęcia grupowe"
-        href="/grupowe"
+        href="/oferta/grupowe"
       />
       <Offer
         containerClassName="border-[#38BCF7] bg-[#7DD2FB]"
@@ -27,7 +27,7 @@ function Pills() {
         primaryColor="#0C4A6E"
         text="Jednodniowe wypady pełne wrażeń i ekspresowej nauki"
         title="Wyjazdy"
-        href="/wyjazdy"
+        href="/oferta/wyjazdy"
       />
       <Offer
         containerClassName="border-[#BF83FB] bg-[#D7B3FD] md:translate-y-32"
@@ -35,7 +35,7 @@ function Pills() {
         primaryColor="#581C86"
         text="Przeprowadzenie warsztatów deskorolkowych dla grup"
         title="Warsztaty"
-        href="/warsztaty"
+        href="/oferta/warsztaty"
       />
     </div>
   );
@@ -49,7 +49,7 @@ function BottomPart() {
         lub warsztaty skateboardingu. Skontaktuj się ze mną i porozmawiajmy o
         współpracy B2B.
       </p>
-      <ButtonLink href="/wspolpraca" color="green" className="m-auto">
+      <ButtonLink href="/oferta/wspolpraca" color="green" className="m-auto">
         Dowiedz się więcej &gt;&gt;
       </ButtonLink>
     </>
