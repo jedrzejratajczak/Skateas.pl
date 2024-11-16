@@ -54,7 +54,10 @@ export default function Gallery() {
         </p>
         <div className="grid grid-cols-2 gap-3 sm:gap-5">
           {photos.map((photo, index) => (
-            <div key={photo} className={`relative ${fotoConfig[index]}`}>
+            <div
+              key={photo}
+              className={`relative bg-[#6FADE2] ${fotoConfig[index]}`}
+            >
               <Image
                 src={photo}
                 alt=""

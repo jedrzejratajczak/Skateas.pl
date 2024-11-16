@@ -8,7 +8,7 @@ export default function Contact() {
         <Title title="Kontakt" titleClassName="text-[#7DD2FB]" />
         <div>
           <p className="mb-2">
-            Number konta do przelewu znajdziesz w{' '}
+            Numer konta do przelewu znajdziesz w{' '}
             <a
               href="/home/docs/regulamin.pdf"
               rel="noopener noreferrer"
