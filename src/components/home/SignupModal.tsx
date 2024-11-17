@@ -2,7 +2,7 @@
 
 import { yupResolver } from '@hookform/resolvers/yup';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import * as Yup from 'yup';
@@ -44,6 +44,7 @@ const validationSchema = Yup.object().shape({
 });
 
 function Modal({ open, setOpen }: ModalProps) {
+  const ref = useRef<HTMLDivElement>(null);
   const [openConfirmation, setOpenConfirmation] = useState(false);
   const [openError, setOpenError] = useState(false);
 
@@ -81,11 +82,25 @@ function Modal({ open, setOpen }: ModalProps) {
     }
   };
 
+  useEffect(() => {
+    const onClickOutside = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node))
+        setOpen(false);
+    };
+
+    window.addEventListener('mousedown', onClickOutside);
+
+    return () => window.removeEventListener('mousedown', onClickOutside);
+  }, [setOpen]);
+
   return (
     <div
-      className={`fixed inset-0 z-40 bg-white/10 font-roboto text-xs sm:text-base xl:text-xl ${open ? 'block' : 'hidden'}`}
+      className={`fixed inset-0 z-40 bg-white/10 font-roboto ${open ? 'block' : 'hidden'}`}
     >
-      <div className="absolute left-1/2 top-1/2 flex w-[300px] -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-5 rounded-[25px] bg-black p-5 sm:w-[400px] xl:w-[500px]">
+      <div
+        ref={ref}
+        className="absolute left-1/2 top-1/2 flex max-h-[calc(100vh-50px)] w-[calc(100%-20px)] max-w-[700px] -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-5 overflow-auto rounded-[25px] bg-black p-5"
+      >
         <div>
           <button
             type="button"
