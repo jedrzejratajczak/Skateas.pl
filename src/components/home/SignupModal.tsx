@@ -86,22 +86,24 @@ function Modal({ open, setOpen }: ModalProps) {
       className={`fixed inset-0 z-40 bg-white/10 font-roboto text-xs sm:text-base xl:text-xl ${open ? 'block' : 'hidden'}`}
     >
       <div className="absolute left-1/2 top-1/2 flex w-[300px] -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-5 rounded-[25px] bg-black p-5 sm:w-[400px] xl:w-[500px]">
-        <button
-          type="button"
-          onClick={() => setOpen(false)}
-          className="relative ml-auto h-8 w-8 rounded-full border-[2px] border-white"
-        >
-          <div className="absolute left-1/2 top-1/2 h-5 w-[2px] -translate-x-1/2 -translate-y-1/2 rotate-45 rounded bg-white" />
-          <div className="absolute left-1/2 top-1/2 h-5 w-[2px] -translate-x-1/2 -translate-y-1/2 -rotate-45 rounded bg-white" />
-        </button>
-        <Title
-          title="Zapisz się"
-          subtitle="na zajęcia!"
-          titleClassName="text-[#FBD24D] -left-6"
-          subtitleClassName="left-4"
-        />
+        <div>
+          <button
+            type="button"
+            onClick={() => setOpen(false)}
+            className="absolute right-4 h-8 w-8 rounded-full border-[2px] border-white"
+          >
+            <div className="absolute left-1/2 top-1/2 h-5 w-[2px] -translate-x-1/2 -translate-y-1/2 rotate-45 rounded bg-white" />
+            <div className="absolute left-1/2 top-1/2 h-5 w-[2px] -translate-x-1/2 -translate-y-1/2 -rotate-45 rounded bg-white" />
+          </button>
+          <Title
+            title="Zapisz się"
+            subtitle="na zajęcia!"
+            titleClassName="text-[#FBD24D] -left-6"
+            subtitleClassName="left-4"
+          />
+        </div>
         <form
-          className="mx-auto flex w-full flex-col items-center justify-center gap-4 py-3"
+          className="mx-auto flex w-full flex-col items-center justify-center gap-2"
           onSubmit={handleSubmit(onSubmit)}
         >
           <SignupConfirmationModal
@@ -109,48 +111,56 @@ function Modal({ open, setOpen }: ModalProps) {
             setOpen={setOpenConfirmation}
           />
           <ErrorModal open={openError} setOpen={setOpenError} />
-          <Input
-            name="name2"
-            label="Imię i nazwisko"
-            placeholder="Wpisz imię i nazwisko"
-            required
-            register={register}
-            errorMessage={errors.name2?.message}
-          />
-          <Input
-            name="email2"
-            label="E-mail"
-            placeholder="Wpisz adres e-mail"
-            required
-            register={register}
-            errorMessage={errors.email2?.message}
-          />
-          <Input
-            name="phone2"
-            label="Numer telefonu"
-            placeholder="Wpisz numer telefonu"
-            required
-            register={register}
-            errorMessage={errors.phone2?.message}
-          />
-
-          <Input
-            name="childName2"
-            label="Imię i nazwisko"
-            placeholder="Wpisz imię i nazwisko"
-            required
-            register={register}
-            errorMessage={errors.childName2?.message}
-          />
-          <Select
-            name="lessons2"
-            label="Zajęcia"
-            placeholder="Wybierz zajęcia"
-            required
-            register={register}
-            errorMessage={errors.lessons2?.message}
-          />
-
+          <p className="relative left-5 top-2 self-start rounded-bl-[50px] rounded-tl-[50px] rounded-tr-[50px] bg-[#FBD24D] px-[17.5px] py-1">
+            Dane rodzica/opiekuna
+          </p>
+          <div className="relative flex w-full flex-col gap-2 rounded-[15px] border-[2px] border-[#FBD24D] p-5">
+            <Input
+              name="name2"
+              label="Imię i nazwisko"
+              placeholder="Wpisz imię i nazwisko"
+              required
+              register={register}
+              errorMessage={errors.name2?.message}
+            />
+            <Input
+              name="email2"
+              label="E-mail"
+              placeholder="Wpisz adres e-mail"
+              required
+              register={register}
+              errorMessage={errors.email2?.message}
+            />
+            <Input
+              name="phone2"
+              label="Numer telefonu"
+              placeholder="Wpisz numer telefonu"
+              required
+              register={register}
+              errorMessage={errors.phone2?.message}
+            />
+          </div>
+          <p className="relative left-5 top-2 self-start rounded-bl-[50px] rounded-tl-[50px] rounded-tr-[50px] bg-[#FBD24D] px-[17.5px] py-1">
+            Dane dziecka
+          </p>
+          <div className="relative flex w-full flex-col gap-2 rounded-[15px] border-[2px] border-[#FBD24D] p-5">
+            <Input
+              name="childName2"
+              label="Imię i nazwisko"
+              placeholder="Wpisz imię i nazwisko"
+              required
+              register={register}
+              errorMessage={errors.childName2?.message}
+            />
+            <Select
+              name="lessons2"
+              label="Zajęcia"
+              placeholder="Wybierz zajęcia"
+              required
+              register={register}
+              errorMessage={errors.lessons2?.message}
+            />
+          </div>
           <Checkbox
             name="rules2"
             required
