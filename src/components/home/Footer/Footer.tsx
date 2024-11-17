@@ -2,48 +2,39 @@ import Image from 'next/image';
 import { IoLogoFacebook, IoLogoInstagram } from 'react-icons/io5';
 
 import { FooterItem } from './FooterItem';
-import { FooterTitle } from './FooterTitle';
 
 export function Footer() {
   return (
     <footer className="w-full bg-black text-white">
       <div className="m-auto flex max-w-[2000px] flex-col justify-between gap-5 px-5 py-6 sm:flex-row sm:flex-wrap sm:px-12 md:px-12 lg:px-16">
         <div>
-          <FooterTitle>Menu</FooterTitle>
+          <h3 className="mb-2 max-w-fit border-b border-amber-300 pb-2 font-poetsen-one text-base lg:text-xl">
+            Menu
+          </h3>
           <ul className="flex flex-col gap-2">
             <FooterItem href="/">Strona główna</FooterItem>
-            {/* <li className="max-w-fit font-roboto text-xs lg:text-base">
-              <Link href="#/oferta" className="hover:text-purple-400">
-                Oferta
-              </Link>
+            <li className="max-w-fit font-roboto text-xs lg:text-base">
+              <p>Oferta</p>
               <ul className="mt-2 flex flex-col gap-2 pl-4">
-                <FooterItem href="#/oferta/zajecia-grupowe">
-                  Zajęcia grupowe
-                </FooterItem>
-                <FooterItem href="#/oferta/zajecia-indywidualne">
+                <FooterItem href="/oferta/grupowe">Zajęcia grupowe</FooterItem>
+                <FooterItem href="/oferta/indywidualne">
                   Zajęcia indywidualne
                 </FooterItem>
-                <FooterItem href="#/oferta/warsztaty">Warsztaty</FooterItem>
-                <FooterItem href="#/oferta/eventy">Eventy</FooterItem>
-                <FooterItem href="#/oferta/wspolpraca">Współpraca</FooterItem>
+                <FooterItem href="/oferta/wyjazdy">Wyjazdy</FooterItem>
+                <FooterItem href="/oferta/warsztaty">Warsztaty</FooterItem>
+                <FooterItem href="/oferta/wspolpraca">Współpraca</FooterItem>
               </ul>
-            </li> */}
+            </li>
             <FooterItem href="/#instruktor">Instruktor</FooterItem>
             <FooterItem href="/#opinie">Opinie</FooterItem>
             <FooterItem href="/galeria">Galeria</FooterItem>
             <FooterItem href="/kontakt">Kontakt</FooterItem>
           </ul>
         </div>
-        {/* <div className="flex flex-col">
-          <FooterTitle>Sklep AS</FooterTitle>
-          <ul className="flex flex-col gap-2">
-            <FooterItem href="#/sklep/deski">Deski</FooterItem>
-            <FooterItem href="#/sklep/decki">Decki</FooterItem>
-            <FooterItem href="#/sklep/akcesoria">Akcesoria</FooterItem>
-          </ul>
-        </div> */}
         <div className="flex flex-col">
-          <FooterTitle>Dokumenty</FooterTitle>
+          <h3 className="mb-2 max-w-fit border-b border-amber-300 pb-2 font-poetsen-one text-base lg:text-xl">
+            Menu
+          </h3>
           <ul className="flex flex-col gap-2">
             <FooterItem
               href="/home/docs/polityka-prywatnosci.pdf"
