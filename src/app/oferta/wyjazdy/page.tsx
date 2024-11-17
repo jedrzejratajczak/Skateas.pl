@@ -2,13 +2,9 @@ import Image from 'next/image';
 import { IoLogoFacebook, IoLogoInstagram } from 'react-icons/io5';
 
 import {
-  Button,
-  Locations,
   PhoneNumber,
   QuestionFormSection,
-  ScrollToButton,
   SectionContainer,
-  SignupModalButton,
   Title
 } from '@/components/home';
 
