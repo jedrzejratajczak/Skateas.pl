@@ -33,7 +33,7 @@ export function Footer() {
         </div>
         <div className="flex flex-col">
           <h3 className="mb-2 max-w-fit border-b border-amber-300 pb-2 font-poetsen-one text-base lg:text-xl">
-            Menu
+            Dokumenty
           </h3>
           <ul className="flex flex-col gap-2">
             <FooterItem
