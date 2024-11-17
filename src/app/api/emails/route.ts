@@ -62,7 +62,7 @@ const renderTemplate = (data: { template: 'contact' | 'group' | 'solo' }) => {
           <p>Wiek dziecka: ${data.age}</p>
           <p>Umiejętności dziecka: ${data.skills}</p>
           <p>Wybrane zajęcia: ${data.lessons}</p>
-          <p>Wiadomość dodatkowa: ${data.lessons}</p>
+          <p>Wiadomość dodatkowa: ${data.message}</p>
         </body>
       </html>`;
     },
@@ -77,7 +77,7 @@ const renderTemplate = (data: { template: 'contact' | 'group' | 'solo' }) => {
           <p>Wiek dziecka: ${data.age}</p>
           <p>Umiejętności dziecka: ${data.skills}</p>
           <p>Wybrane zajęcia: ${data.lessons}</p>
-          <p>Wiadomość dodatkowa: ${data.lessons}</p>
+          <p>Wiadomość dodatkowa: ${data.message}</p>
         </body>
       </html>`;
     }
