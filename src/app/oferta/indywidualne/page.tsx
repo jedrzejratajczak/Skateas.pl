@@ -117,7 +117,7 @@ export default function Individual() {
         </p>
         <Locations />
       </SectionContainer>
-      <SectionContainer className="relative flex flex-col gap-6 md:gap-8 lg:gap-10">
+      <SectionContainer className="relative flex flex-col gap-6 text-xs text-white sm:text-base md:gap-8 lg:gap-10 xl:text-xl">
         <Title
           id="terminy"
           titleClassName="text-[#7DD2FB] -left-10 md:-left-16"
@@ -125,20 +125,20 @@ export default function Individual() {
           subtitle="zajęć indywidualnych"
           subtitleClassName="left-6"
         />
-        <p className="text-center font-roboto text-xs text-white sm:text-base xl:text-xl">
+        <p className="text-center font-roboto">
           Terminy zajęć indywidualnych są&nbsp;ustalane elastycznie,
           aby&nbsp;dopasować się&nbsp;do&nbsp;Twojego grafiku. Aby&nbsp;zapisać
           dziecko, skontaktuj się&nbsp;z&nbsp;nami przez WhatsApp:
         </p>
         <PhoneNumber />
-        <p className="text-center font-roboto text-xs text-white sm:text-base xl:text-xl">
+        <p className="text-center font-roboto">
           lub wypełnij formularz, który znajduje się&nbsp;na&nbsp;dole strony
           albo klikając w&nbsp;poniższy przycisk:
         </p>
         <SignupModalButton color="blue" type="individual" className="m-auto">
           Zapisz na zajęcia &gt;&gt;
         </SignupModalButton>
-        <p className="text-center font-roboto text-xs text-white sm:text-base xl:text-xl">
+        <p className="text-center font-roboto">
           W wiadomości prosimy o&nbsp;podanie preferowanych dni, abyśmy mogli
           jak najlepiej dostosować termin zajęć do Waszych potrzeb.
         </p>
