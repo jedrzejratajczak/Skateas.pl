@@ -38,7 +38,7 @@ const headers = {
   accept: 'application/json'
 };
 
-const renderTemplate = (data: { template: 'contact' | 'other' }) => {
+const renderTemplate = (data: { template: 'contact' | 'signup' }) => {
   const templates = {
     contact: (data: any) => {
       return `<html>
@@ -51,7 +51,7 @@ const renderTemplate = (data: { template: 'contact' | 'other' }) => {
         </body>
       </html>`;
     },
-    other: (data: any) => {
+    signup: (data: any) => {
       return `<html>
         <head></head>
         <body>
@@ -59,8 +59,7 @@ const renderTemplate = (data: { template: 'contact' | 'other' }) => {
           <p>Dziecko: ${data.childName}</p>
           <p>Email: ${data.email}</p>
           <p>Telefon: ${data.phone}</p>
-          <p>Wiek dziecka: ${data.age}</p>
-          <p>Dzień i godzina: ${data.time}</p>
+          <p>Zajęcia: ${data.lessons}</p>
         </body>
       </html>`;
     }

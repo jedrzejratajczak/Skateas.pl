@@ -49,7 +49,7 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="fixed z-50 flex w-full flex-col items-center justify-between border-b border-[#3C3C3C] bg-[#171717]">
+      <nav className="fixed z-40 flex w-full flex-col items-center justify-between border-b border-[#3C3C3C] bg-[#171717]">
         <div className="m-auto flex w-full max-w-[2000px] justify-between px-5 py-2">
           <Brand />
           <BurgerMenu open={open} toggle={() => setOpen(!open)} />

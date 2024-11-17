@@ -15,6 +15,7 @@ type ButtonProps = {
   color: keyof typeof colors;
   href?: string;
   type?: 'button' | 'submit' | 'reset';
+  onClick?: () => void;
 };
 
 export function Button({
@@ -22,7 +23,8 @@ export function Button({
   className,
   color,
   href,
-  type
+  type,
+  onClick
 }: ButtonProps) {
   return href ? (
     <a
@@ -35,6 +37,7 @@ export function Button({
     </a>
   ) : (
     <button
+      onClick={onClick}
       type={type}
       className={`rounded-[50px] border px-4 py-1 text-sm text-[#404040] transition-colors md:text-lg xl:px-7 xl:py-2 xl:text-2xl ${colors[color]} ${className}`}
     >
