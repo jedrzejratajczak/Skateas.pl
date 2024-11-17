@@ -38,7 +38,7 @@ const headers = {
   accept: 'application/json'
 };
 
-const renderTemplate = (data: { template: 'contact' | 'signup' }) => {
+const renderTemplate = (data: { template: 'contact' | 'group' | 'solo' }) => {
   const templates = {
     contact: (data: any) => {
       return `<html>
@@ -51,15 +51,33 @@ const renderTemplate = (data: { template: 'contact' | 'signup' }) => {
         </body>
       </html>`;
     },
-    signup: (data: any) => {
+    group: (data: any) => {
       return `<html>
         <head></head>
         <body>
           <p>Opiekun: ${data.name}</p>
-          <p>Dziecko: ${data.childName}</p>
           <p>Email: ${data.email}</p>
           <p>Telefon: ${data.phone}</p>
-          <p>Zajęcia: ${data.lessons}</p>
+          <p>Dziecko: ${data.childName}</p>
+          <p>Wiek dziecka: ${data.age}</p>
+          <p>Umiejętności dziecka: ${data.skills}</p>
+          <p>Wybrane zajęcia: ${data.lessons}</p>
+          <p>Wiadomość dodatkowa: ${data.lessons}</p>
+        </body>
+      </html>`;
+    },
+    solo: (data: any) => {
+      return `<html>
+        <head></head>
+        <body>
+          <p>Opiekun: ${data.name}</p>
+          <p>Email: ${data.email}</p>
+          <p>Telefon: ${data.phone}</p>
+          <p>Dziecko: ${data.childName}</p>
+          <p>Wiek dziecka: ${data.age}</p>
+          <p>Umiejętności dziecka: ${data.skills}</p>
+          <p>Wybrane zajęcia: ${data.lessons}</p>
+          <p>Wiadomość dodatkowa: ${data.lessons}</p>
         </body>
       </html>`;
     }

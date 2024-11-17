@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
 import { ExclamationMark } from '../ExclamationMark';
+import { ScrollToButton } from '../ScrollToButton';
 import SectionContainer from '../SectionContainer';
-import SignupModalButton from '../SignupModalButton';
 
 function LeftSide() {
   const startOfTheYear = new Date().getMonth() + 1 <= 6;
@@ -31,7 +31,13 @@ function LeftSide() {
         z&nbsp;ofertą i&nbsp;postaw na&nbsp;nową, wspaniałą przygodę
         na&nbsp;deskorolce!
       </p>
-      <SignupModalButton />
+      <ScrollToButton
+        sectionId="thirdSection"
+        color="orange"
+        className="m-auto mt-5"
+      >
+        Zapisy na zajęcia &gt;&gt;
+      </ScrollToButton>
     </div>
   );
 }

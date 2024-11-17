@@ -31,7 +31,7 @@ export default function Textarea({
         placeholder={placeholder}
         rows={rows}
         disabled={isDisabled}
-        className={`rounded-2xl border border-white bg-transparent px-3 py-2.5 text-sm placeholder:text-neutral-400 focus:border-transparent focus:ring-2 focus:ring-amber-300 lg:text-base ${errorMessage ? 'border-0 ring-2 ring-red-500' : ''} ${isDisabled ? 'cursor-not-allowed border-neutral-400' : ''}`}
+        className={`rounded-2xl border border-white bg-transparent px-3 py-2.5 text-sm placeholder:text-neutral-400 focus:border-transparent focus:ring-2 focus:ring-amber-300 lg:text-base ${errorMessage ? 'border-0 ring-2 ring-red-500' : ''} ${isDisabled ? 'cursor-not-allowed border-neutral-400 text-neutral-400' : ''}`}
         {...register(name, { required })}
       />
       {errorMessage && (

@@ -1,6 +1,6 @@
 'use client';
 
-const colors = {
+export const colors = {
   pink: 'bg-[#D7B3FD] border-[#BF83FB] hover:bg-[#BF83FB] hover:border-[#A755F6]',
   blue: 'bg-[#7DD2FB] border-[#38BCF7] hover:bg-[#38BCF7] hover:border-[#0EA4E8]',
   orange:

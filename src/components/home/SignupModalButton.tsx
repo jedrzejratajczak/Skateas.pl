@@ -2,22 +2,36 @@
 
 import { useState } from 'react';
 
-import { Button } from './Button';
+import { Button, type colors } from './Button';
 import { SignupModal } from './SignupModal';
 
-export default function SignupModalButton() {
+type SignupModalButtonProps = {
+  color: keyof typeof colors;
+  children: string;
+  className?: string;
+  type: string;
+  group?: string;
+};
+
+export function SignupModalButton({
+  color,
+  children,
+  className,
+  type,
+  group
+}: SignupModalButtonProps) {
   const [open, setOpen] = useState(false);
 
   return (
     <>
-      <SignupModal setOpen={setOpen} open={open} />
+      <SignupModal setOpen={setOpen} open={open} type={type} group={group} />
       <Button
-        color="orange"
-        className="m-auto mt-5"
+        color={color}
         type="button"
+        className={className}
         onClick={() => setOpen(true)}
       >
-        Zapisy na zajęcia &gt;&gt;
+        {children}
       </Button>
     </>
   );

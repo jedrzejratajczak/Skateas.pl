@@ -12,14 +12,14 @@ export function PhoneNumber() {
   return showNumber ? (
     <a
       href="tel:+48732427072"
-      className="font-bold text-[#FBD24D] hover:text-[#FABE24]"
+      className="m-auto font-bold text-[#FBD24D] hover:text-[#FABE24]"
     >
       +48 732 427 072
     </a>
   ) : (
     <button
       onClick={handleShowNumber}
-      className="font-bold text-[#FBD24D] hover:text-[#FABE24]"
+      className="m-auto font-bold text-[#FBD24D] hover:text-[#FABE24]"
     >
       Kliknij, aby zobaczyć numer telefonu
     </button>
