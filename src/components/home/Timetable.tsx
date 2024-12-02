@@ -6,7 +6,7 @@ export function Timetable() {
   return (
     <div className="flex flex-col gap-3 font-roboto text-xs text-white sm:text-base xl:gap-5 xl:text-xl">
       <div className="m-auto grid w-full max-w-[700px] grid-cols-[max-content_1fr_min-content] items-center gap-4 rounded-[50px] bg-[#262626] px-4 py-3 sm:gap-6 sm:px-8 sm:py-6">
-        <p className="flex max-w-36 flex-col items-center text-center text-[#5EE9D3]">
+        <p className="flex max-w-36 flex-col items-center text-center text-[#FBD24D]">
           <Image
             alt=""
             src="/home/icons/poeple-yellow.svg"
@@ -29,7 +29,7 @@ export function Timetable() {
         </SignupModalButton>
       </div>
       <div className="m-auto grid w-full max-w-[700px] grid-cols-[max-content_1fr_min-content] items-center gap-4 rounded-[50px] bg-[#262626] px-4 py-3 sm:gap-6 sm:px-8 sm:py-6">
-        <p className="flex max-w-36 flex-col items-center text-center text-[#FBD24D]">
+        <p className="flex max-w-36 flex-col items-center text-center text-[#5EE9D3]">
           <Image
             alt=""
             src="/home/icons/people-green.svg"
