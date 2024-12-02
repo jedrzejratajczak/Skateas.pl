@@ -9,7 +9,7 @@ export function Timetable() {
         <p className="flex max-w-36 flex-col items-center text-center text-[#FBD24D]">
           <Image
             alt=""
-            src="/home/icons/poeple-yellow.svg"
+            src="/home/icons/people-yellow.svg"
             width={20}
             height={16.41}
             className="m-auto sm:mb-2 sm:scale-150 lg:mb-4 lg:scale-[2]"
@@ -32,7 +32,7 @@ export function Timetable() {
         <p className="flex max-w-36 flex-col items-center text-center text-[#5EE9D3]">
           <Image
             alt=""
-            src="/home/icons/people-green.svg"
+            src="/home/icons/poeple-green.svg"
             width={24}
             height={19.69}
             className="m-auto sm:mb-2 sm:scale-150 lg:mb-4 lg:scale-[2]"
