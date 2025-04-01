@@ -5,7 +5,7 @@ import { ScrollToButton } from '../ScrollToButton';
 import SectionContainer from '../SectionContainer';
 
 function LeftSide() {
-  const startOfTheYear = new Date().getMonth() + 1 <= 3;
+  const startOfTheYear = new Date().getMonth() + 1 <= 4;
   const currentYear = new Date().getFullYear();
 
   return (
