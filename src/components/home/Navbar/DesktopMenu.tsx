@@ -65,9 +65,12 @@ function Dropdown({ children, sublist }: DropdownProps) {
   );
 }
 
-type DesktopMenuProps = { elements: Element[] };
+type DesktopMenuProps = { elements: Element[]; onSpecialClick?: () => void };
 
-export default function DesktopMenu({ elements }: DesktopMenuProps) {
+export default function DesktopMenu({
+  elements,
+  onSpecialClick
+}: DesktopMenuProps) {
   const pathname = usePathname();
 
   return (
@@ -77,6 +80,22 @@ export default function DesktopMenu({ elements }: DesktopMenuProps) {
           <Dropdown key={item.name} sublist={item.sublist}>
             {item.name}
           </Dropdown>
+        ) : 'special' in item ? (
+          <li key={item.name}>
+            <button
+              type="button"
+              onClick={onSpecialClick}
+              className="animate-gradient-x bg-gradient-to-r from-[#5EE9D3] via-[#FBD24D] to-[#5EE9D3] bg-[length:200%_200%] bg-clip-text px-5 py-3 font-roboto text-xs font-bold uppercase leading-5 tracking-widest text-transparent transition-all hover:animate-pulse lg:text-sm"
+              style={{
+                backgroundImage:
+                  'linear-gradient(45deg, #5EE9D3, #FBD24D, #7DD2FB)',
+                backgroundSize: '300% 300%',
+                animation: 'gradientShift 3s ease infinite'
+              }}
+            >
+              {item.name}
+            </button>
+          </li>
         ) : (
           <li
             key={item.href}
