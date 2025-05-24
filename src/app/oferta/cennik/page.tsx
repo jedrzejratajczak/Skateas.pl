@@ -42,7 +42,7 @@ export default function Cennik() {
               Zajęcia grupowe
             </h3>
             <div className="mb-4 font-roboto text-white">
-              <p className="mb-2 text-sm md:text-base">Jedna lekcja (90 min)</p>
+              <p className="mb-2 text-sm md:text-base">Jedna lekcja (60 min)</p>
               <p className="text-xl font-bold text-[#D7B3FD] md:text-2xl">
                 80 zł
               </p>
