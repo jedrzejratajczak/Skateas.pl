@@ -1,5 +1,6 @@
 import {
   Button,
+  ButtonLink,
   QuestionFormSection,
   SectionContainer,
   Title
@@ -31,9 +32,9 @@ export default function Documents() {
 
         <div className="flex flex-col items-center justify-center gap-4 md:gap-8">
           <Title title="Cennik" titleClassName="text-[#FBD24D]" />
-          <Button color="orange" href="/home/docs/cennik.pdf">
-            Pobierz cennik &gt;&gt;
-          </Button>
+          <ButtonLink color="orange" href="/oferta/cennik">
+            Zobacz cennik &gt;&gt;
+          </ButtonLink>
         </div>
 
         <div className="flex flex-col items-center justify-center gap-4 md:gap-8">

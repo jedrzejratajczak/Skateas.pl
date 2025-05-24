@@ -54,12 +54,7 @@ export function Footer() {
             >
               Zgoda na udział w zajęciach
             </FooterItem>
-            <FooterItem
-              href="/home/docs/cennik.pdf"
-              linkProps={{ target: '_blank', rel: 'noreferrer noopener' }}
-            >
-              Cennik
-            </FooterItem>
+            <FooterItem href="/oferta/cennik">Cennik</FooterItem>
             <FooterItem
               href="/home/docs/zgoda-na-wycieczke.pdf"
               linkProps={{ target: '_blank', rel: 'noreferrer noopener' }}

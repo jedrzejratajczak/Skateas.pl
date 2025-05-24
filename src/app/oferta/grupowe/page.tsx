@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import {
-  Button,
+  ButtonLink,
   Locations,
   QuestionFormSection,
   ScrollToButton,
@@ -137,9 +137,9 @@ export default function Group() {
           <ScrollToButton color="blue" sectionId="terminy">
             Zapisz na zajęcia &gt;&gt;
           </ScrollToButton>
-          <Button color="orange" href="/home/docs/cennik.pdf">
+          <ButtonLink color="orange" href="/oferta/cennik">
             Cennik
-          </Button>
+          </ButtonLink>
         </div>
       </SectionContainer>
       <SectionContainer className="relative flex flex-col gap-6 md:gap-8 lg:gap-10">

@@ -1,4 +1,5 @@
 export { Button } from './Button';
+export { ButtonLink } from './ButtonLink';
 export { Dropdown } from './Dropdown';
 export { ExclamationMark } from './ExclamationMark';
 export { Footer } from './Footer/Footer';

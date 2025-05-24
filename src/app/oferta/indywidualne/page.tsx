@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import {
   Button,
+  ButtonLink,
   Locations,
   PhoneNumber,
   QuestionFormSection,
@@ -97,9 +98,9 @@ export default function Individual() {
           <ScrollToButton color="orange" sectionId="terminy">
             Zapisz na zajęcia &gt;&gt;
           </ScrollToButton>
-          <Button color="green" href="/home/docs/cennik.pdf">
+          <ButtonLink color="green" href="/oferta/cennik">
             Cennik
-          </Button>
+          </ButtonLink>
         </div>
       </SectionContainer>
       <SectionContainer className="relative flex flex-col gap-6 md:gap-8 lg:gap-10">
