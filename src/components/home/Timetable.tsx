@@ -17,13 +17,13 @@ export function Timetable() {
           <span>Każdy wiek</span>
         </p>
         <div className="flex flex-col justify-center gap-2">
-          <p>Grupa średnio zaawansowana</p>
-          <p>Wtorki 16:30 - 18:00</p>
+          <p>Grupa open</p>
+          <p>Wtorek 18:00-19:30, Sołtysowice</p>
         </div>
         <SignupModalButton
           color="orange"
           type="group"
-          group="Grupa średnio zaawansowana, wtorki 16:30 - 18:00"
+          group="Grupa open, Wtorek 18:00-19:30, Sołtysowice"
         >
           Zapisz
         </SignupModalButton>
@@ -41,12 +41,12 @@ export function Timetable() {
         </p>
         <div className="flex flex-col justify-center gap-2">
           <p>Grupa open</p>
-          <p>Soboty 11:00 - 13:00</p>
+          <p>Środa 16:30-18:00, Biskupin</p>
         </div>
         <SignupModalButton
           color="green"
           type="group"
-          group="Grupa open, soboty 11:00 - 13:00"
+          group="Grupa open, Środa 16:30-18:00, Biskupin"
         >
           Zapisz
         </SignupModalButton>
