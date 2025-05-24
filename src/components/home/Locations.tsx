@@ -5,10 +5,6 @@ import { Button } from './Button';
 export function Locations() {
   const locations = [
     {
-      name: 'Final Bowl, Fabryczna',
-      mapUrl: 'https://maps.app.goo.gl/wSc5ecE7UBjG7eY28'
-    },
-    {
       name: 'Skatepark Biskupin',
       mapUrl: 'https://maps.app.goo.gl/4fUBW6XspahSZbU37'
     },
