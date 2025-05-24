@@ -30,28 +30,21 @@ export function CourseAnnouncement({ onClose }: CourseAnnouncementProps) {
       <h3 className="mb-2 font-poetsen-one text-base text-[#FBD24D] sm:text-lg">
         Wakacyjne kursy skateboardingu
       </h3>
-      <p className="mb-3 font-roboto text-xs text-white sm:text-sm">
+      <p className="font-roboto text-xs text-white sm:text-sm">
         Lipiec i sierpień 2025 w dwóch lokalizacjach:
       </p>
-      <div className="mb-3 grid grid-cols-1 gap-2 text-xs sm:grid-cols-2 sm:text-sm">
-        <div className="rounded-[10px] bg-[#1a1a1a] p-2">
-          <p className="font-bold text-[#7DD2FB]">Skatepark Sołtysowice</p>
-        </div>
-        <div className="rounded-[10px] bg-[#1a1a1a] p-2">
-          <p className="font-bold text-[#7DD2FB]">Skatepark Biskupin</p>
+      <p className="mb-3 font-roboto text-xs text-white sm:text-sm">
+        Skatepark Biskupin i Skatepark Sołtysowice.
+      </p>
+      <div className="mb-3 flex justify-center text-xs sm:text-sm">
+        <div className="rounded-[10px] bg-[#1a1a1a] px-4 py-2">
+          <p className="font-bold text-[#7DD2FB] hover:text-[#a1e0ff]">
+            <Link href="/oferta/grupowe#terminy" onClick={onClose}>
+              Zapisz się na kurs!
+            </Link>
+          </p>
         </div>
       </div>
-      <p className="mb-2 font-roboto text-xs text-white sm:text-sm">
-        Po więcej informacji{' '}
-        <Link
-          className="text-[#5EE9D3] hover:text-[#2DD3BE]"
-          href="/kontakt"
-          onClick={onClose}
-        >
-          skontaktuj się z nami
-        </Link>
-        .
-      </p>
     </div>
   );
 }
