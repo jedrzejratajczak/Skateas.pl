@@ -121,10 +121,16 @@ function Modal({ open, setOpen, group, type }: ModalProps) {
         setOpen(false);
     };
 
-    window.addEventListener('mousedown', onClickOutside);
+    if (open) {
+      window.addEventListener('mousedown', onClickOutside);
+      document.body.style.overflow = 'hidden';
+    }
 
-    return () => window.removeEventListener('mousedown', onClickOutside);
-  }, [setOpen]);
+    return () => {
+      window.removeEventListener('mousedown', onClickOutside);
+      document.body.style.overflow = 'auto';
+    };
+  }, [setOpen, open]);
 
   return (
     <div
