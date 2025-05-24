@@ -6,7 +6,9 @@ export const colors = {
   orange:
     'bg-[#FBD24D] border-[#FABE24] hover:bg-[#FABE24] hover:border-[#F49D0B]',
   green:
-    'bg-[#5EE9D3] border-[#2DD3BE] hover:bg-[#2DD3BE] hover:border-[#14B7A5]'
+    'bg-[#5EE9D3] border-[#2DD3BE] hover:bg-[#2DD3BE] hover:border-[#14B7A5]',
+  gradient:
+    'bg-gradient-to-r from-[#5EE9D3] via-[#FBD24D] to-[#5EE9D3] bg-[length:300%_300%] border-transparent hover:opacity-90'
 };
 
 type ButtonProps = {
