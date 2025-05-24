@@ -44,7 +44,7 @@ function Dropdown({ children, sublist }: DropdownProps) {
         <IoCaretDown size={12} color="#FFFFFF" />
       </button>
       <ul
-        className={`absolute left-0 top-[55px] flex w-max flex-col gap-3 overflow-hidden border-[#3C3C3C] bg-[#171717] transition-all ${open ? 'max-h-[170px] border p-2' : 'max-h-0 border-0 p-0'}`}
+        className={`absolute left-0 top-[55px] flex w-max flex-col gap-3 overflow-hidden border-[#3C3C3C] bg-[#171717] transition-all ${open ? 'max-h-[220px] border p-2' : 'max-h-0 border-0 p-0'}`}
       >
         {sublist.map(({ href, name }) => (
           <li

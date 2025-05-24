@@ -23,7 +23,8 @@ const elements = [
       { name: 'Zajęcia indywidualne', href: '/oferta/indywidualne' },
       { name: 'Wyjazdy', href: '/oferta/wyjazdy' },
       { name: 'Warsztaty', href: '/oferta/warsztaty' },
-      { name: 'Współpraca', href: '/oferta/wspolpraca' }
+      { name: 'Współpraca', href: '/oferta/wspolpraca' },
+      { name: 'Cennik', href: '/oferta/cennik' }
     ]
   },
   { name: 'Dokumenty', href: '/dokumenty' },
