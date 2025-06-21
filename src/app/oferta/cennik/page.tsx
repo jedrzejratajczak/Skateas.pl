@@ -3,6 +3,16 @@ import {
   SectionContainer,
   Title
 } from '@/components/home';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title:
+    'Cennik zajęć z deskorolki dla dzieci Wrocław | Akademia Skateboardingu',
+  description:
+    'Cennik zajęć z deskorolki dla dzieci we Wrocławiu. Zajęcia indywidualne i grupowe, nauka jazdy na deskorolce. Sprawdź ceny i zapisz dziecko!',
+  keywords:
+    'cennik zajęcia deskorolka, cena nauka jazdy deskorolka, zajęcia z deskorolki dla dzieci Wrocław, szkoła deskorolki cennik'
+};
 
 export default function Cennik() {
   return (

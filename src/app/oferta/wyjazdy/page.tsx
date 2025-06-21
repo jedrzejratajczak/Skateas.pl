@@ -1,5 +1,15 @@
 import Image from 'next/image';
 import { IoLogoFacebook, IoLogoInstagram } from 'react-icons/io5';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title:
+    'Wyjazdy jednodniowe na skateparki | Zajęcia z deskorolki dla dzieci Wrocław',
+  description:
+    'Wyjazdy jednodniowe na skateparki w Polsce dla młodych skaterów. Zwiedzaj nowe miejsca i rozwijaj umiejętności na deskorolce. Aktywność na świeżym powietrzu.',
+  keywords:
+    'wyjazdy skateboard, skateparki Polska, zajęcia z deskorolki dla dzieci, aktywność na świeżym powietrzu, nauka jazdy na deskorolce'
+};
 
 import {
   PhoneNumber,
@@ -20,12 +30,12 @@ export default function Trips() {
             subtitleClassName="min-[425px]:left-6 md:left-10"
           />
           <p className="font-roboto text-xs text-white sm:text-base xl:text-xl">
-            Co jakiś czas organizujemy tripy – jednodniowe wyjazdy na
-            skateparków różnych miastach, takich jak Rawicz, Leszno, Opole i
-            wiele innych. To doskonała okazja dla młodych skaterów, aby odkrywać
-            nowe miejsca, doskonalić swoje umiejętnościna różnych rampach i
-            przeszkodach, oraz spędzać czas w gronie pasjonatów deskorolki.
-            Dołącz do nas i przeżyj niezapomniane skateboardingowe przygody!
+            Co jakiś czas organizujemy tripy – jednodniowe wyjazdy na skateparki
+            w różnych miastach, takich jak Rawicz, Leszno, Opole i wiele innych.
+            To doskonała okazja dla młodych skaterów, aby odkrywać nowe miejsca,
+            doskonalić swoje umiejętności na różnych rampach i przeszkodach,
+            oraz spędzać czas w gronie pasjonatów deskorolki. Dołącz do nas i
+            przeżyj niezapomniane skateboardingowe przygody!
           </p>
         </div>
         <div className="relative -right-5 h-[300px] w-[150px] min-[425px]:w-[200px] sm:-right-10 sm:h-[400px] sm:w-[250px] md:-right-16 md:h-[400px] md:w-[300px] lg:h-[450px] lg:w-[400px] xl:absolute xl:right-0">

@@ -1,5 +1,15 @@
 import { PhoneNumber, SectionContainer } from '@/components/home';
 import { NextSectionButton, QuestionFormSection, Title } from '@/home';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title:
+    'Kontakt - Zajęcia z deskorolki dla dzieci Wrocław | Akademia Skateboardingu',
+  description:
+    'Skontaktuj się z Akademią Skateboardingu. Zajęcia z deskorolki dla dzieci we Wrocławiu. Zapytaj o terminy, ceny i dostępność miejsc.',
+  keywords:
+    'kontakt szkoła deskorolki, zajęcia z deskorolki dla dzieci Wrocław, skateboard instruktor kontakt'
+};
 
 export default function Contact() {
   return (

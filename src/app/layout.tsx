@@ -11,6 +11,38 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pl">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'LocalBusiness',
+              name: 'Akademia Skateboardingu',
+              description:
+                'Profesjonalna szkoła deskorolki dla dzieci we Wrocławiu',
+              url: 'https://skateas.pl',
+              telephone: '+48 123 456 789',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Wrocław',
+                addressCountry: 'PL'
+              },
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: '51.1079',
+                longitude: '17.0385'
+              },
+              openingHours: 'Mo-Su 09:00-18:00',
+              priceRange: '80-200 PLN',
+              areaServed: 'Wrocław',
+              serviceType: 'Zajęcia z deskorolki dla dzieci',
+              keywords:
+                'zajęcia z deskorolki dla dzieci Wrocław, szkoła deskorolki dla dzieci, nauka jazdy na deskorolce dla dzieci, aktywność na świeżym powietrzu'
+            })
+          }}
+        />
+      </head>
       <body className="bg-[#171717] font-inter">
         <Navbar />
         {children}
@@ -21,8 +53,19 @@ export default function RootLayout({
 }
 
 export const metadata: Metadata = {
-  title: 'Akademia Skateboardingu',
-  description: 'Nauka jazdy na deskorolce we Wrocławiu',
+  title: 'Zajęcia z deskorolki dla dzieci Wrocław | Akademia Skateboardingu',
+  description:
+    'Profesjonalna szkoła deskorolki dla dzieci we Wrocławiu. Zajęcia z deskorolki, nauka jazdy na deskorolce, aktywność na świeżym powietrzu. Zapisz dziecko na zajęcia!',
+  keywords:
+    'zajęcia z deskorolki dla dzieci Wrocław, szkoła deskorolki dla dzieci, nauka jazdy na deskorolce dla dzieci, aktywność na świeżym powietrzu, skateboard Wrocław',
+  openGraph: {
+    title: 'Zajęcia z deskorolki dla dzieci Wrocław | Akademia Skateboardingu',
+    description:
+      'Profesjonalna szkoła deskorolki dla dzieci we Wrocławiu. Zapisz dziecko na zajęcia z deskorolki!',
+    type: 'website',
+    locale: 'pl_PL',
+    siteName: 'Akademia Skateboardingu'
+  },
   icons: {
     icon: [
       {
