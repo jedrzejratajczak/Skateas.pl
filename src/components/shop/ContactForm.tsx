@@ -34,7 +34,7 @@ export function ContactForm() {
   };
 
   return (
-    (<form className="flex flex-col " onSubmit={handleSubmit(onSubmit)}>
+    <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
       <label>IMIĘ *</label>
       <input
         {...register('name', {
@@ -129,6 +129,6 @@ export function ContactForm() {
       >
         Wyślij
       </button>
-    </form>)
+    </form>
   );
 }

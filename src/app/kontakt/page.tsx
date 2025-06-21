@@ -1,6 +1,7 @@
+import type { Metadata } from 'next';
+
 import { PhoneNumber, SectionContainer } from '@/components/home';
 import { NextSectionButton, QuestionFormSection, Title } from '@/home';
-import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title:

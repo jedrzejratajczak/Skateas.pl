@@ -14,7 +14,7 @@ export function CourseAnnouncement({ onClose }: CourseAnnouncementProps) {
           alt="Wakacyjne kursy deskorolki we Wrocławiu - SKATE.AS"
           width={800}
           height={1200}
-          className="w-full h-auto max-h-[70vh] object-contain rounded-lg"
+          className="h-auto max-h-[70vh] w-full rounded-lg object-contain"
           priority
         />
       </div>

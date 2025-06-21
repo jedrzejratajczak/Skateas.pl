@@ -1,9 +1,10 @@
+import type { Metadata } from 'next';
+
 import {
   QuestionFormSection,
   SectionContainer,
   Title
 } from '@/components/home';
-import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title:

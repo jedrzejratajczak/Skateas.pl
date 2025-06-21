@@ -3,11 +3,11 @@
 import Image from 'next/image';
 import { useState } from 'react';
 
+import { Button } from '../Button';
 import { CourseModal } from '../CourseModal';
 import { ExclamationMark } from '../ExclamationMark';
 import { ScrollToButton } from '../ScrollToButton';
 import SectionContainer from '../SectionContainer';
-import { Button } from '../Button';
 
 function LeftSide({ onOpenModal }: { onOpenModal: () => void }) {
   const startOfTheYear = new Date().getMonth() + 1 <= 4;
