@@ -1,10 +1,15 @@
-import Image from 'next/image';
+'use client';
 
+import Image from 'next/image';
+import { useState } from 'react';
+
+import { CourseModal } from '../CourseModal';
 import { ExclamationMark } from '../ExclamationMark';
 import { ScrollToButton } from '../ScrollToButton';
 import SectionContainer from '../SectionContainer';
+import { Button } from '../Button';
 
-function LeftSide() {
+function LeftSide({ onOpenModal }: { onOpenModal: () => void }) {
   const startOfTheYear = new Date().getMonth() + 1 <= 4;
   const currentYear = new Date().getFullYear();
 
@@ -31,13 +36,14 @@ function LeftSide() {
         z&nbsp;ofertą i&nbsp;postaw na&nbsp;nową, wspaniałą przygodę
         na&nbsp;deskorolce!
       </p>
-      <ScrollToButton
-        sectionId="thirdSection"
-        color="orange"
-        className="m-auto mt-5"
-      >
-        Zapisy na zajęcia &gt;&gt;
-      </ScrollToButton>
+      <div className="mt-5 flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
+        <ScrollToButton sectionId="thirdSection" color="orange">
+          Zapisy na zajęcia &gt;&gt;
+        </ScrollToButton>
+        <Button onClick={onOpenModal} color="gradient" type="button">
+          Kursy 2025
+        </Button>
+      </div>
     </div>
   );
 }
@@ -59,10 +65,15 @@ function RightSide() {
 }
 
 export function WelcomeSection() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
-    <SectionContainer className="grid grid-cols-[2fr,1fr] items-center">
-      <LeftSide />
-      <RightSide />
-    </SectionContainer>
+    <>
+      <SectionContainer className="grid grid-cols-[2fr,1fr] items-center">
+        <LeftSide onOpenModal={() => setModalOpen(true)} />
+        <RightSide />
+      </SectionContainer>
+      <CourseModal open={modalOpen} setOpen={setModalOpen} />
+    </>
   );
 }

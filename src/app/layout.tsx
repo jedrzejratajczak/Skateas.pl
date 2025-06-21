@@ -53,6 +53,7 @@ export default function RootLayout({
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://skateas.pl'),
   title: 'Zajęcia z deskorolki dla dzieci Wrocław | Akademia Skateboardingu',
   description:
     'Profesjonalna szkoła deskorolki dla dzieci we Wrocławiu. Zajęcia z deskorolki, nauka jazdy na deskorolce, aktywność na świeżym powietrzu. Zapisz dziecko na zajęcia!',

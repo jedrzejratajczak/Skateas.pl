@@ -15,7 +15,7 @@ export type Dropdown = { name: string; sublist: Sublist[] };
 export type Special = { name: string; special: 'gradient' };
 
 const elements = [
-  { name: 'NOWOŚĆ', special: 'gradient' as const },
+  { name: 'Kursy 2025', special: 'gradient' as const },
   {
     name: 'Oferta',
     sublist: [
