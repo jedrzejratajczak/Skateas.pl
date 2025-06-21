@@ -48,9 +48,14 @@ export default function Trips() {
           withQuestionsLeft
         />
         <p className="text-center font-roboto text-xs text-white sm:text-base xl:text-xl">
-          Na wyjazd może zapisać się każdy, kto chce nauczyć się jeździć na
-          deskorolce lub ulepszyć swojego skilla, przyjść po jakieś wskazówki
-          lub po prostu dla zajawy pośmigać razem.
+          Nasze wyjazdy jednodniowe są{' '}
+          <span className="font-bold">otwarte dla każdego</span>, kto chce
+          aktywnie spędzić czas,{' '}
+          <span className="font-bold">zwiedzić ciekawe miejsca w Polsce</span> i{' '}
+          <span className="font-bold">
+            rozwijać swoje umiejętności na różnych skateparkach
+          </span>
+          .
         </p>
         <div className="p-3 text-center font-poetsen-one text-xs sm:text-base xl:text-xl">
           <div className="m-auto max-w-36 text-[#FBD24D]">

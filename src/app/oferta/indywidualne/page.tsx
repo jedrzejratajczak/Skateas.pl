@@ -54,38 +54,68 @@ export default function Individual() {
           withQuestionsLeft
         />
         <div className="text-center font-roboto text-xs text-white sm:text-base xl:text-xl">
-          <p className="mb-4 text-center font-bold">
-            Dlaczego warto jeździć na deskorolce?
-          </p>
-          <div className="text-left space-y-4 max-w-4xl mx-auto">
+          <div className="mx-auto flex max-w-4xl flex-col gap-4 text-left">
+            <p>
+              Nasze lekcje są&nbsp;idealne zarówno dla&nbsp;początkujących,
+              którzy dopiero stawiają pierwsze kroki na&nbsp;deskorolce,
+              jak&nbsp;i&nbsp;dla&nbsp;zaawansowanych skaterów, którzy chcą
+              doskonalić swoje umiejętności i&nbsp;czyć się&nbsp;nowych trików.
+            </p>
+            <p>
+              Dzięki indywidualnemu podejściu instruktora, każdy uczestnik może
+              liczyć na&nbsp;dostosowany do&nbsp;swoich potrzeb program nauki,
+              który pomoże mu&nbsp;osiągnąć zamierzone cele.
+            </p>
+            <p>
+              Niezależnie od&nbsp;poziomu umiejętności, nasze zajęcia będą
+              idealnym wyborem!
+            </p>
+            <p className="mb-4 mt-8 font-bold">
+              Dlaczego warto jeździć na deskorolce?
+            </p>
             <div>
-              <p className="font-bold mb-2">1. Rozwój fizyczny</p>
+              <p className="mb-2 font-bold">1. Rozwój fizyczny</p>
               <p>
-                Skateboarding to świetny sposób na poprawę koordynacji ruchowej, równowagi i ogólnej sprawności fizycznej. Ludzie uczą się kontrolować swoje ciało w ruchu, co pozytywnie wpływa na inne dziedziny życia i sportu.
+                Skateboarding to świetny sposób na poprawę koordynacji ruchowej,
+                równowagi i ogólnej sprawności fizycznej. Ludzie uczą się
+                kontrolować swoje ciało w ruchu, co pozytywnie wpływa na inne
+                dziedziny życia i sportu.
               </p>
             </div>
             <div>
-              <p className="font-bold mb-2">2. Wzmacnianie pewności siebie</p>
+              <p className="mb-2 font-bold">2. Wzmacnianie pewności siebie</p>
               <p>
-                Każdy opanowany trik, każda pokonana przeszkoda buduje w człowieku poczucie własnej wartości i odwagę do podejmowania nowych wyzwań — na deskorolce i poza nią.
+                Każdy opanowany trik, każda pokonana przeszkoda buduje w
+                człowieku poczucie własnej wartości i odwagę do podejmowania
+                nowych wyzwań — na deskorolce i poza nią.
               </p>
             </div>
             <div>
-              <p className="font-bold mb-2">3. Nauka cierpliwości i wytrwałości</p>
+              <p className="mb-2 font-bold">
+                3. Nauka cierpliwości i wytrwałości
+              </p>
               <p>
-                Postępy w skateboardingu wymagają czasu, co uczy ludzi cierpliwości, systematyczności i niepoddawania się po pierwszych niepowodzeniach.
+                Postępy w skateboardingu wymagają czasu, co uczy ludzi
+                cierpliwości, systematyczności i niepoddawania się po pierwszych
+                niepowodzeniach.
               </p>
             </div>
             <div>
-              <p className="font-bold mb-2">4. Kreatywność i swoboda wyrażania siebie</p>
+              <p className="mb-2 font-bold">
+                4. Kreatywność i swoboda wyrażania siebie
+              </p>
               <p>
-                Skateboarding to nie tylko sport – to również forma ekspresji. Każdy może wypracować własny styl jazdy, własne kombinacje trików i poczuć się twórcą.
+                Skateboarding to nie tylko sport – to również forma ekspresji.
+                Każdy może wypracować własny styl jazdy, własne kombinacje
+                trików i poczuć się twórcą.
               </p>
             </div>
             <div>
-              <p className="font-bold mb-2">5. Integracja społeczna</p>
+              <p className="mb-2 font-bold">5. Integracja społeczna</p>
               <p>
-                Zajęcia w grupie sprzyjają nawiązywaniu nowych znajomości, uczą współpracy i szacunku dla innych – niezależnie od poziomu umiejętności.
+                Zajęcia w grupie sprzyjają nawiązywaniu nowych znajomości, uczą
+                współpracy i szacunku dla innych – niezależnie od poziomu
+                umiejętności.
               </p>
             </div>
           </div>
