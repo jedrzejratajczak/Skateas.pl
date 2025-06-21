@@ -49,51 +49,47 @@ export default function Individual() {
       <SectionContainer className="relative flex flex-col gap-5 md:gap-8">
         <Title
           titleClassName="text-[#FBD24D]"
-          title="Dla kogo?"
+          title="Dlaczego warto"
           decorationClassName="left-[calc(50%+88px)] top-0 md:-top-3 md:left-[calc(50%+130px)]"
           withQuestionsLeft
         />
-        <p className="text-center font-roboto text-xs text-white sm:text-base xl:text-xl">
-          Zajęcia indywidualne są&nbsp;przeznaczone dla&nbsp;każdego
-          w&nbsp;przedziale wiekowym 6-17&nbsp;lat, niezależnie od&nbsp;poziomu
-          umiejętności.
-        </p>
-        <div className="p-3 text-center font-poetsen-one text-xs sm:text-base xl:text-xl">
-          <div className="m-auto max-w-36 text-[#5EE9D3]">
-            <div className="flex justify-center gap-2 sm:gap-4 lg:gap-8">
-              <Image
-                alt=""
-                src="/home/icons/poeple-green.svg"
-                width={20}
-                height={16.41}
-                className="sm:mb-2 sm:scale-150 lg:mb-4 lg:scale-[2]"
-              />
-              <Image
-                alt=""
-                src="/home/icons/people-pink.svg"
-                width={32}
-                height={26.26}
-                className="sm:mb-2 sm:scale-150 lg:mb-4 lg:scale-[2]"
-              />
+        <div className="text-center font-roboto text-xs text-white sm:text-base xl:text-xl">
+          <p className="mb-4 text-center font-bold">
+            Dlaczego warto jeździć na deskorolce?
+          </p>
+          <div className="text-left space-y-4 max-w-4xl mx-auto">
+            <div>
+              <p className="font-bold mb-2">1. Rozwój fizyczny</p>
+              <p>
+                Skateboarding to świetny sposób na poprawę koordynacji ruchowej, równowagi i ogólnej sprawności fizycznej. Ludzie uczą się kontrolować swoje ciało w ruchu, co pozytywnie wpływa na inne dziedziny życia i sportu.
+              </p>
             </div>
-            6-<span className="text-[#D7B3FD]">17 lat</span>
+            <div>
+              <p className="font-bold mb-2">2. Wzmacnianie pewności siebie</p>
+              <p>
+                Każdy opanowany trik, każda pokonana przeszkoda buduje w człowieku poczucie własnej wartości i odwagę do podejmowania nowych wyzwań — na deskorolce i poza nią.
+              </p>
+            </div>
+            <div>
+              <p className="font-bold mb-2">3. Nauka cierpliwości i wytrwałości</p>
+              <p>
+                Postępy w skateboardingu wymagają czasu, co uczy ludzi cierpliwości, systematyczności i niepoddawania się po pierwszych niepowodzeniach.
+              </p>
+            </div>
+            <div>
+              <p className="font-bold mb-2">4. Kreatywność i swoboda wyrażania siebie</p>
+              <p>
+                Skateboarding to nie tylko sport – to również forma ekspresji. Każdy może wypracować własny styl jazdy, własne kombinacje trików i poczuć się twórcą.
+              </p>
+            </div>
+            <div>
+              <p className="font-bold mb-2">5. Integracja społeczna</p>
+              <p>
+                Zajęcia w grupie sprzyjają nawiązywaniu nowych znajomości, uczą współpracy i szacunku dla innych – niezależnie od poziomu umiejętności.
+              </p>
+            </div>
           </div>
         </div>
-        <p className="text-center font-roboto text-xs text-white sm:text-base xl:text-xl">
-          Nasze lekcje są&nbsp;idealne zarówno dla&nbsp;początkujących, którzy
-          dopiero stawiają pierwsze kroki na&nbsp;deskorolce,
-          jak&nbsp;i&nbsp;dla&nbsp;zaawansowanych skaterów, którzy chcą
-          doskonalić swoje umiejętności i&nbsp;czyć się&nbsp;nowych trików.
-        </p>
-        <p className="text-center font-roboto text-xs text-white sm:text-base xl:text-xl">
-          Dzięki indywidualnemu podejściu instruktora, każdy uczestnik może
-          liczyć na&nbsp;dostosowany do&nbsp;swoich potrzeb program nauki, który
-          pomoże mu&nbsp;osiągnąć zamierzone cele.
-        </p>
-        <p className="text-center font-roboto text-xs font-bold text-white sm:text-base xl:text-xl">
-          Niezależnie od&nbsp;poziomu umiejętności, nasze zajęcia będą idealnym
-          wyborem!
-        </p>
         <div className="m-auto my-4 flex gap-4">
           <ScrollToButton color="orange" sectionId="terminy">
             Zapisz na zajęcia &gt;&gt;
