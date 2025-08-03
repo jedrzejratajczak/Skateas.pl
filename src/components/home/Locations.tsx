@@ -11,6 +11,10 @@ export function Locations() {
     {
       name: 'Skatepark Sołtysowice',
       mapUrl: 'https://maps.app.goo.gl/m6DicHhEUSfzjzN86'
+    },
+    {
+      name: 'Rawicz',
+      mapUrl: 'https://maps.app.goo.gl/iK298kSJBpJaA4kM8'
     }
   ];
 
