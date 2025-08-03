@@ -41,8 +41,6 @@ export function AboutTeacherSection() {
             >
               certyfikat licencjonowanego instruktora Polish Skate Federation.{' '}
             </Link>
-            Współpracuję z największymi obozami deskorolkowymi w Europie -{' '}
-            <span className="text-[#FFC600]">Woodcamp.</span>
           </p>
           <div>
             <p>W mojej ofercie znajdziesz:</p>
