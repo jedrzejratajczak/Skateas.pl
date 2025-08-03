@@ -42,15 +42,13 @@ type NavbarMenuProps = {
   elements: Element[];
   open: boolean;
   socials: { Icon: IconType; href: string }[];
-  onSpecialClick?: () => void;
 };
 
 export default function MobileMenu({
   close,
   elements,
   open,
-  socials,
-  onSpecialClick
+  socials
 }: NavbarMenuProps) {
   const pathname = usePathname();
 
@@ -64,25 +62,6 @@ export default function MobileMenu({
             <Dropdown key={item.name} sublist={item.sublist} close={close}>
               {item.name}
             </Dropdown>
-          ) : 'special' in item ? (
-            <li key={item.name}>
-              <button
-                type="button"
-                onClick={() => {
-                  onSpecialClick?.();
-                  close();
-                }}
-                className="block w-full bg-gradient-to-r from-[#5EE9D3] via-[#FBD24D] to-[#5EE9D3] bg-[length:200%_200%] bg-clip-text px-5 py-3 text-left font-roboto text-xs font-bold uppercase leading-5 tracking-widest text-transparent"
-                style={{
-                  backgroundImage:
-                    'linear-gradient(45deg, #5EE9D3, #FBD24D, #7DD2FB)',
-                  backgroundSize: '300% 300%',
-                  animation: 'gradientShift 3s ease infinite'
-                }}
-              >
-                {item.name}
-              </button>
-            </li>
           ) : (
             <li
               key={item.href}

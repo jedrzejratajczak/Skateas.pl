@@ -1,15 +1,12 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
 
-import { Button } from '../Button';
-import { CourseModal } from '../CourseModal';
 import { ExclamationMark } from '../ExclamationMark';
 import { ScrollToButton } from '../ScrollToButton';
 import SectionContainer from '../SectionContainer';
 
-function LeftSide({ onOpenModal }: { onOpenModal: () => void }) {
+function LeftSide() {
   const startOfTheYear = new Date().getMonth() + 1 <= 4;
   const currentYear = new Date().getFullYear();
 
@@ -40,9 +37,6 @@ function LeftSide({ onOpenModal }: { onOpenModal: () => void }) {
         <ScrollToButton sectionId="thirdSection" color="orange">
           Zapisy na zajęcia &gt;&gt;
         </ScrollToButton>
-        <Button onClick={onOpenModal} color="gradient" type="button">
-          Kursy 2025
-        </Button>
       </div>
     </div>
   );
@@ -65,15 +59,10 @@ function RightSide() {
 }
 
 export function WelcomeSection() {
-  const [modalOpen, setModalOpen] = useState(false);
-
   return (
-    <>
-      <SectionContainer className="grid grid-cols-[2fr,1fr] items-center">
-        <LeftSide onOpenModal={() => setModalOpen(true)} />
-        <RightSide />
-      </SectionContainer>
-      <CourseModal open={modalOpen} setOpen={setModalOpen} />
-    </>
+    <SectionContainer className="grid grid-cols-[2fr,1fr] items-center">
+      <LeftSide />
+      <RightSide />
+    </SectionContainer>
   );
 }

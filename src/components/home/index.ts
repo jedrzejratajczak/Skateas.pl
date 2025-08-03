@@ -1,11 +1,8 @@
 export { Button } from './Button';
 export { ButtonLink } from './ButtonLink';
-export { CourseAnnouncement } from './CourseAnnouncement';
-export { CourseModal } from './CourseModal';
 export { Dropdown } from './Dropdown';
 export { ExclamationMark } from './ExclamationMark';
 export { Footer } from './Footer/Footer';
-export { HolidayCourseTerms } from './HolidayCourseTerms';
 export { Locations } from './Locations';
 export { Navbar } from './Navbar/Navbar';
 export { NextSectionButton } from './NextSectionButton';

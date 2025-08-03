@@ -9,7 +9,6 @@ import * as Yup from 'yup';
 
 import { Button } from './Button';
 import Checkbox from './Checkbox';
-import { HolidayCourseTerms } from './HolidayCourseTerms';
 import Input from './Input';
 import { ErrorModal, SignupConfirmationModal } from './Modal';
 import RadioGroup from './Radio';
@@ -31,7 +30,6 @@ type FormData = {
   age2: string;
   skills2: string;
   lessons2: string;
-  holidayCourseTerms?: string[];
   message2?: string;
   rules2: boolean;
 };
@@ -48,11 +46,6 @@ const validationSchema = Yup.object().shape({
   age2: Yup.string().required('Musisz podać wiek dziecka'),
   skills2: Yup.string().required('Musisz wybrać opis umiejętności dziecka'),
   lessons2: Yup.string().required('Wybrane zajęcia są wymagane'),
-  holidayCourseTerms: Yup.array().when('lessons2', {
-    is: 'Wakacyjny Kurs Skateboardingu, Lipiec/Sierpień 2025',
-    then: schema => schema.min(1, 'Wybierz przynajmniej jeden termin kursu'),
-    otherwise: schema => schema.notRequired()
-  }),
   message2: Yup.string(),
   rules2: Yup.boolean()
     .oneOf([true], 'Wymagana jest zgoda na przetwarzanie danych osobowych')
@@ -84,15 +77,9 @@ function Modal({ open, setOpen, group, type }: ModalProps) {
     age2,
     skills2,
     lessons2,
-    holidayCourseTerms,
     message2
   }) => {
     try {
-      const finalMessage =
-        type === 'holiday'
-          ? `${message2 || ''}\n\nWybrane terminy kursu wakacyjnego: ${holidayCourseTerms?.join(', ')}`
-          : message2;
-
       await axios.post(`${window.location.origin}/api/emails`, {
         name: name2,
         email: email2,
@@ -101,7 +88,7 @@ function Modal({ open, setOpen, group, type }: ModalProps) {
         age: age2,
         skills: skills2,
         lessons: lessons2,
-        message: finalMessage,
+        message: message2,
         template: type === 'individual' ? 'solo' : 'group'
       });
 
@@ -245,13 +232,6 @@ function Modal({ open, setOpen, group, type }: ModalProps) {
               register={register}
               errorMessage={errors.lessons2?.message}
             />
-            {type === 'holiday' && (
-              <HolidayCourseTerms
-                register={register}
-                errorMessage={errors.holidayCourseTerms?.message}
-                required
-              />
-            )}
             <Textarea
               name="message2"
               label="Wiadomość (opcjonalnie)"
