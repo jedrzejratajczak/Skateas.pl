@@ -72,7 +72,7 @@ export default function Trips() {
             <div className="flex justify-center gap-2 sm:gap-4 lg:gap-8">
               <Image
                 alt=""
-                src="/home/icons/poeple-green.svg"
+                src="/home/icons/people-green.svg"
                 width={20}
                 height={16.41}
                 className="sm:mb-2 sm:scale-150 lg:mb-4 lg:scale-[2]"
