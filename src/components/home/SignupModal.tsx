@@ -14,6 +14,7 @@ import { ErrorModal, SignupConfirmationModal } from './Modal';
 import RadioGroup from './Radio';
 import Textarea from './Textarea';
 import { Title } from './Title';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 type ModalProps = {
   open: boolean;
@@ -56,6 +57,7 @@ function Modal({ open, setOpen, group, type }: ModalProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [openConfirmation, setOpenConfirmation] = useState(false);
   const [openError, setOpenError] = useState(false);
+  const [token, setToken] = useState('');
 
   const {
     register,
@@ -81,6 +83,7 @@ function Modal({ open, setOpen, group, type }: ModalProps) {
   }) => {
     try {
       await axios.post(`${window.location.origin}/api/emails`, {
+        token,
         name: name2,
         email: email2,
         phone: phone2,
@@ -265,7 +268,16 @@ function Modal({ open, setOpen, group, type }: ModalProps) {
           <p className="self-start font-roboto text-xs text-white lg:text-sm">
             * pola obowiązkowe
           </p>
-          <Button color="orange">Zapisz &gt;&gt;</Button>
+          <HCaptcha
+            sitekey="7432de0e-7a54-47ea-9a6a-14d8cab4230e"
+            languageOverride="pl"
+            theme="dark"
+            onVerify={token => setToken(token)}
+            onExpire={() => setToken('')}
+          />
+          <Button color="orange" disabled={!token}>
+            Zapisz &gt;&gt;
+          </Button>
         </form>
       </div>
     </div>

@@ -1,9 +1,20 @@
 import axios from 'axios';
 import { NextRequest, NextResponse } from 'next/server';
+import { verify } from 'hcaptcha';
 
 export const POST = async (req: NextRequest) => {
   try {
     const data = await req.json();
+
+    if (!data.token) {
+      return NextResponse.json(null, { status: 500 });
+    }
+
+    const { success } = await verify(hcaptchaSecret, data.token);
+
+    if (!success) {
+      return NextResponse.json(null, { status: 500 });
+    }
 
     await axios.post(
       'https://api.sendinblue.com/v3/smtp/email',
@@ -25,7 +36,8 @@ export const POST = async (req: NextRequest) => {
   }
 };
 
-const apiKey = process.env.EMAIL_API_KEY;
+const hcaptchaSecret = process.env.HCAPTCHA_SECRET as string;
+const apiKey = process.env.EMAIL_API_KEY as string;
 
 const destination = {
   email: 'akademiaskateboardingu@gmail.com',

@@ -11,6 +11,7 @@ import Checkbox from './Checkbox';
 import Input from './Input';
 import { ErrorModal, SignupConfirmationModal } from './Modal';
 import Textarea from './Textarea';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 type ContactFormInput = {
   name: string;
@@ -33,6 +34,7 @@ const validationSchema = Yup.object().shape({
 export default function ContactForm() {
   const [open, setOpen] = useState(false);
   const [openError, setOpenError] = useState(false);
+  const [token, setToken] = useState('');
 
   const {
     register,
@@ -48,6 +50,7 @@ export default function ContactForm() {
   }) => {
     try {
       await axios.post(`${window.location.origin}/api/emails`, {
+        token,
         email,
         message,
         name,
@@ -115,7 +118,16 @@ export default function ContactForm() {
       <p className="self-start font-roboto text-xs text-white lg:text-sm">
         * pola obowiązkowe
       </p>
-      <Button color="pink">Wyślij wiadomość &gt;&gt;</Button>
+      <HCaptcha
+        sitekey="7432de0e-7a54-47ea-9a6a-14d8cab4230e"
+        languageOverride="pl"
+        theme="dark"
+        onVerify={token => setToken(token)}
+        onExpire={() => setToken('')}
+      />
+      <Button color="pink" disabled={!token}>
+        Wyślij wiadomość &gt;&gt;
+      </Button>
     </form>
   );
 }

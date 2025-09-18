@@ -18,6 +18,7 @@ type ButtonProps = {
   href?: string;
   type?: 'button' | 'submit' | 'reset';
   onClick?: () => void;
+  disabled?: boolean;
 };
 
 export function Button({
@@ -26,7 +27,8 @@ export function Button({
   color,
   href,
   type,
-  onClick
+  onClick,
+  disabled
 }: ButtonProps) {
   return href ? (
     <a
@@ -39,9 +41,10 @@ export function Button({
     </a>
   ) : (
     <button
+      disabled={disabled}
       onClick={onClick}
       type={type}
-      className={`rounded-[50px] border px-4 py-1 text-sm text-[#404040] transition-colors md:text-lg xl:px-7 xl:py-2 xl:text-2xl ${colors[color]} ${className}`}
+      className={`rounded-[50px] border px-4 py-1 text-sm text-[#404040] transition-colors disabled:cursor-not-allowed disabled:opacity-50 md:text-lg xl:px-7 xl:py-2 xl:text-2xl ${colors[color]} ${className}`}
     >
       {children}
     </button>
