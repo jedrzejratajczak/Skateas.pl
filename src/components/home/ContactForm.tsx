@@ -1,5 +1,6 @@
 'use client';
 
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 import { yupResolver } from '@hookform/resolvers/yup';
 import axios from 'axios';
 import { useState } from 'react';
@@ -11,7 +12,6 @@ import Checkbox from './Checkbox';
 import Input from './Input';
 import { ErrorModal, SignupConfirmationModal } from './Modal';
 import Textarea from './Textarea';
-import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 type ContactFormInput = {
   name: string;

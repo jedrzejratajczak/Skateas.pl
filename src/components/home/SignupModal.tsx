@@ -1,5 +1,6 @@
 'use client';
 
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 import { yupResolver } from '@hookform/resolvers/yup';
 import axios from 'axios';
 import { useEffect, useRef, useState } from 'react';
@@ -14,7 +15,6 @@ import { ErrorModal, SignupConfirmationModal } from './Modal';
 import RadioGroup from './Radio';
 import Textarea from './Textarea';
 import { Title } from './Title';
-import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 type ModalProps = {
   open: boolean;

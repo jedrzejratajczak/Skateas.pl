@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { NextRequest, NextResponse } from 'next/server';
 import { verify } from 'hcaptcha';
+import { NextRequest, NextResponse } from 'next/server';
 
 export const POST = async (req: NextRequest) => {
   try {
