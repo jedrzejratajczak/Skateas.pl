@@ -1,0 +1,37 @@
+{
+  "sessions": [
+    {
+      "ageGroup": "Każdy wiek",
+      "ageGroupColor": "#FBD24D",
+      "icon": "/home/icons/people-yellow.svg",
+      "iconWidth": 24,
+      "iconHeight": 19.69,
+      "title": "Grupa od podstaw",
+      "schedule": "Wtorek 16:30, Skatepark Sołtysowice",
+      "buttonColor": "orange",
+      "type": "group"
+    },
+    {
+      "ageGroup": "Każdy wiek",
+      "ageGroupColor": "#7DD2FB",
+      "icon": "/home/icons/people-blue.svg",
+      "iconWidth": 24,
+      "iconHeight": 19.69,
+      "title": "Grupa początkująca",
+      "schedule": "Środa 16:00, Biskupin",
+      "buttonColor": "blue",
+      "type": "group"
+    },
+    {
+      "ageGroup": "Każdy wiek",
+      "ageGroupColor": "#5EE9D3",
+      "icon": "/home/icons/people-green.svg",
+      "iconWidth": 20,
+      "iconHeight": 16.41,
+      "title": "Open dla każdego",
+      "schedule": "Czwartek 16:30, Sołtysowice",
+      "buttonColor": "green",
+      "type": "group"
+    }
+  ]
+}
