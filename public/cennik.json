@@ -1,0 +1,57 @@
+{
+  "pricingCards": [
+    {
+      "title": "Zajęcia indywidualne",
+      "borderColor": "#5EE9D3",
+      "pricePoints": [
+        {
+          "description": "Jedna lekcja (60 min)",
+          "price": "120 zł"
+        },
+        {
+          "description": "Jedna lekcja 2-osoby (60 min)",
+          "price": "200 zł"
+        }
+      ],
+      "features": [
+        "Spersonalizowana nauka",
+        "Pełna uwaga instruktora",
+        "Elastyczne terminy",
+        "Dostosowany program"
+      ]
+    },
+    {
+      "title": "Zajęcia grupowe",
+      "borderColor": "#FBD24D",
+      "pricePoints": [
+        {
+          "description": "Jedna lekcja (75 min)",
+          "price": "80 zł"
+        }
+      ],
+      "features": [
+        "Nauka w grupie rówieśników",
+        "Rozwój umiejętności społecznych",
+        "Regularne terminy",
+        "Podział na grupy wiekowe"
+      ]
+    },
+    {
+      "title": "Warsztaty w Twoim mieście",
+      "borderColor": "#D7B3FD",
+      "pricePoints": [
+        {
+          "description": null,
+          "price": "Wycena indywidualna"
+        }
+      ],
+      "features": [
+        "Kompletny sprzęt",
+        "Profesjonalna opieka",
+        "Dostosowany program",
+        "Przeszkody i rampy",
+        "Pokazy"
+      ]
+    }
+  ]
+}

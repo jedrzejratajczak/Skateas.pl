@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import cennikData from '@/../../public/cennik.json';
 import {
   QuestionFormSection,
   SectionContainer,
@@ -22,67 +23,48 @@ export default function Cennik() {
         <Title title="Cennik zajęć" titleClassName="text-[#FBD24D]" />
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div className="flex flex-col justify-between rounded-[20px] border-2 border-[#5EE9D3] bg-[#262626] p-6 text-center">
-            <h3 className="mb-4 font-poetsen-one text-xl text-[#FBD24D] md:text-3xl">
-              Zajęcia indywidualne
-            </h3>
-            <div className="mb-4 font-roboto text-white">
-              <p className="mb-2 text-sm md:text-base">Jedna lekcja (60 min)</p>
-              <p className="text-xl font-bold text-[#D7B3FD] md:text-2xl">
-                120 zł
-              </p>
-            </div>
-            <div className="mb-4 font-roboto text-white">
-              <p className="mb-2 text-sm md:text-base">
-                Jedna lekcja 2-osoby (60 min)
-              </p>
-              <p className="text-xl font-bold text-[#D7B3FD] md:text-2xl">
-                200 zł
-              </p>
-            </div>
-            <ul className="space-y-2 text-left font-roboto text-xs text-white md:text-sm">
-              <li>• Spersonalizowana nauka</li>
-              <li>• Pełna uwaga instruktora</li>
-              <li>• Elastyczne terminy</li>
-              <li>• Dostosowany program</li>
-            </ul>
-          </div>
+          {cennikData.pricingCards.map(card => {
+            const hasCustomPricing = card.pricePoints.some(
+              pp => !pp.description
+            );
+            const gridSpanClass = hasCustomPricing
+              ? 'md:col-span-2 lg:col-span-1'
+              : '';
 
-          <div className="flex flex-col justify-between rounded-[20px] border-2 border-[#FBD24D] bg-[#262626] p-6 text-center">
-            <h3 className="mb-4 font-poetsen-one text-xl text-[#FBD24D] md:text-3xl">
-              Zajęcia grupowe
-            </h3>
-            <div className="mb-4 font-roboto text-white">
-              <p className="mb-2 text-sm md:text-base">Jedna lekcja (75 min)</p>
-              <p className="text-xl font-bold text-[#D7B3FD] md:text-2xl">
-                80 zł
-              </p>
-            </div>
-            <ul className="space-y-2 text-left font-roboto text-xs text-white md:text-sm">
-              <li>• Nauka w grupie rówieśników</li>
-              <li>• Rozwój umiejętności społecznych</li>
-              <li>• Regularne terminy</li>
-              <li>• Podział na grupy wiekowe</li>
-            </ul>
-          </div>
+            return (
+              <div
+                key={card.title}
+                className={`flex flex-col justify-between rounded-[20px] border-2 bg-[#262626] p-6 text-center ${gridSpanClass}`}
+                style={{ borderColor: card.borderColor }}
+              >
+                <h3 className="mb-4 font-poetsen-one text-xl text-[#FBD24D] md:text-3xl">
+                  {card.title}
+                </h3>
 
-          <div className="flex flex-col justify-between rounded-[20px] border-2 border-[#D7B3FD] bg-[#262626] p-6 text-center md:col-span-2 lg:col-span-1">
-            <h3 className="mb-4 font-poetsen-one text-xl text-[#FBD24D] md:text-3xl">
-              Warsztaty w Twoim mieście
-            </h3>
-            <div className="mb-4 font-roboto text-white">
-              <p className="text-xl font-bold text-[#D7B3FD] md:text-2xl">
-                Wycena indywidualna
-              </p>
-            </div>
-            <ul className="space-y-2 text-left font-roboto text-xs text-white md:text-sm">
-              <li>• Kompletny sprzęt</li>
-              <li>• Profesjonalna opieka</li>
-              <li>• Dostosowany program</li>
-              <li>• Przeszkody i rampy</li>
-              <li>• Pokazy</li>
-            </ul>
-          </div>
+                {card.pricePoints.map(pricePoint => (
+                  <div
+                    key={`${pricePoint.description}-${pricePoint.price}`}
+                    className="mb-4 font-roboto text-white"
+                  >
+                    {pricePoint.description && (
+                      <p className="mb-2 text-sm md:text-base">
+                        {pricePoint.description}
+                      </p>
+                    )}
+                    <p className="text-xl font-bold text-[#D7B3FD] md:text-2xl">
+                      {pricePoint.price}
+                    </p>
+                  </div>
+                ))}
+
+                <ul className="space-y-2 text-left font-roboto text-xs text-white md:text-sm">
+                  {card.features.map(feature => (
+                    <li key={feature}>• {feature}</li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
         </div>
       </SectionContainer>
 
