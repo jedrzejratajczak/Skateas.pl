@@ -1,22 +1,10 @@
 import Image from 'next/image';
 
+import locationsData from '../../../public/locations.json';
 import { Button } from './Button';
 
 export function Locations() {
-  const locations = [
-    {
-      name: 'Skatepark Biskupin',
-      mapUrl: 'https://maps.app.goo.gl/4fUBW6XspahSZbU37'
-    },
-    {
-      name: 'Skatepark Sołtysowice',
-      mapUrl: 'https://maps.app.goo.gl/m6DicHhEUSfzjzN86'
-    },
-    {
-      name: 'Rawicz',
-      mapUrl: 'https://maps.app.goo.gl/iK298kSJBpJaA4kM8'
-    }
-  ];
+  const { locations } = locationsData;
 
   return (
     <div className="m-auto flex w-full max-w-[1000px] flex-wrap justify-center gap-4">
