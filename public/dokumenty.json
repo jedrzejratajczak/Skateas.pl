@@ -1,0 +1,29 @@
+{
+  "docs": [
+    {
+      "title": "Regulamin",
+      "color": "pink",
+      "href": "/home/docs/regulamin.pdf",
+      "buttonText": "Pobierz regulamin >>"
+    },
+    {
+      "title": "Zgoda na udział w zajęciach",
+      "color": "blue",
+      "href": "/home/docs/zgoda-na-udzial-w-zajeciach.pdf",
+      "buttonText": "Pobierz zgodę >>"
+    },
+    {
+      "title": "Cennik",
+      "color": "orange",
+      "href": "/home/docs/oferta/cennik",
+      "buttonText": "Zobacz cennik >>",
+      "isLink": true
+    },
+    {
+      "title": "Zgoda na wycieczkę",
+      "color": "green",
+      "href": "/home/docs/zgoda-na-wycieczke.pdf",
+      "buttonText": "Pobierz zgodę >>"
+    }
+  ]
+}

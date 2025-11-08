@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 
-import cennikData from '@/../../public/cennik.json';
 import {
   QuestionFormSection,
   SectionContainer,
   Title
 } from '@/components/home';
+
+import cennikData from '../../../../public/cennik.json';
 
 export const metadata: Metadata = {
   title:
