@@ -1,4 +1,5 @@
 export { Button } from './Button';
+export { CampModal } from './CampModal';
 export { ButtonLink } from './ButtonLink';
 export { Dropdown } from './Dropdown';
 export { ExclamationMark } from './ExclamationMark';

@@ -2,11 +2,15 @@
 
 import Image from 'next/image';
 
+import { useState } from 'react';
+import { Button } from '../Button';
+import { CampModal } from '../CampModal';
 import { ExclamationMark } from '../ExclamationMark';
 import { ScrollToButton } from '../ScrollToButton';
 import SectionContainer from '../SectionContainer';
 
 function LeftSide() {
+  const [isCampModalOpen, setIsCampModalOpen] = useState(false);
   const startOfTheYear = new Date().getMonth() + 1 <= 4;
   const currentYear = new Date().getFullYear();
 
@@ -34,10 +38,18 @@ function LeftSide() {
         na&nbsp;deskorolce!
       </p>
       <div className="mt-5 flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
+        <Button
+          color="gradient"
+          onClick={() => setIsCampModalOpen(true)}
+          className="animate-gradient-x"
+        >
+          WAKACJE 2026 SPRAWDZAJ TO!
+        </Button>
         <ScrollToButton sectionId="thirdSection" color="orange">
           Zapisy na zajęcia &gt;&gt;
         </ScrollToButton>
       </div>
+      <CampModal open={isCampModalOpen} setOpen={setIsCampModalOpen} />
     </div>
   );
 }
