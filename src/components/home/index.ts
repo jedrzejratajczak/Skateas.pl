@@ -20,6 +20,7 @@ export { OfferSection } from './sections/OfferSection';
 export { QuestionFormSection } from './sections/QuestionFormSection';
 export { WelcomeSection } from './sections/WelcomeSection';
 export { SignupModalButton } from './SignupModalButton';
+export { STCSignupModal } from './STCSignupModal';
 export { Timetable } from './Timetable';
 export { Title } from './Title';
 export { TripleExclamationMark } from './TripleExclamationMark';

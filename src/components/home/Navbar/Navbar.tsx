@@ -19,6 +19,7 @@ const elements = [
       { name: 'Zajęcia grupowe', href: '/oferta/grupowe' },
       { name: 'Zajęcia indywidualne', href: '/oferta/indywidualne' },
       { name: 'Wyjazdy', href: '/oferta/wyjazdy' },
+      { name: 'Skate Trip Camp', href: '/oferta/stc' },
       { name: 'Warsztaty', href: '/oferta/warsztaty' },
       { name: 'Współpraca', href: '/oferta/wspolpraca' },
       { name: 'Cennik', href: '/oferta/cennik' }

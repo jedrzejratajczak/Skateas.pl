@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type CampModalProps = {
     open: boolean;
@@ -127,8 +128,8 @@ function CampModalContent({ setOpen }: { setOpen: (open: boolean) => void }) {
                                 key={idx}
                                 onClick={() => setCurrentIndex(idx)}
                                 className={`h-3 w-3 rounded-full transition-all ${currentIndex === idx
-                                        ? 'w-8 bg-[#FBD24D]'
-                                        : 'bg-neutral-600 hover:bg-neutral-400'
+                                    ? 'w-8 bg-[#FBD24D]'
+                                    : 'bg-neutral-600 hover:bg-neutral-400'
                                     }`}
                                 aria-label={`Slajd ${idx + 1}`}
                             />
@@ -136,26 +137,28 @@ function CampModalContent({ setOpen }: { setOpen: (open: boolean) => void }) {
                     </div>
 
                     <div className="flex w-full justify-between gap-4 lg:hidden">
-                        <button
-                            onClick={prevSlide}
-                            className="flex-1 rounded-full bg-neutral-800 py-3 font-bold text-[#FBD24D] active:scale-95"
+                        <Link
+                            href="/oferta/stc"
+                            onClick={() => setOpen(false)}
+                            className="flex-1 rounded-full bg-[#FBD24D] py-3 text-center font-bold text-black active:scale-95"
                         >
-                            POPRZEDNI
-                        </button>
+                            WIĘCEJ INFO
+                        </Link>
                         <button
                             onClick={nextSlide}
-                            className="flex-1 rounded-full bg-[#FBD24D] py-3 font-bold text-black active:scale-95"
+                            className="flex-1 rounded-full bg-neutral-800 py-3 font-bold text-[#FBD24D] active:scale-95"
                         >
                             NASTĘPNY
                         </button>
                     </div>
 
-                    <button
+                    <Link
+                        href="/oferta/stc"
                         onClick={() => setOpen(false)}
                         className="hidden rounded-full bg-[#FBD24D] px-8 py-2 font-bold text-black transition-all hover:bg-[#ffe082] hover:shadow-lg active:scale-95 lg:block"
                     >
-                        ZAMKNIJ
-                    </button>
+                        DOWIEDZ SIĘ WIĘCEJ &gt;&gt;
+                    </Link>
                 </div>
             </div>
         </div>
