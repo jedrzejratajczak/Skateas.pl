@@ -174,8 +174,9 @@ export default function Group() {
         />
         <p className="text-center font-roboto">
           Terminy zajęć grupowych są&nbsp;ustalane na&nbsp;bieżąco,
-          aby&nbsp;dopasować się&nbsp;do&nbsp;potrzeb uczestników. Aby&nbsp;zapisać
-          dziecko, skontaktuj się&nbsp;z&nbsp;nami przez WhatsApp:
+          aby&nbsp;dopasować się&nbsp;do&nbsp;potrzeb uczestników.
+          Aby&nbsp;zapisać dziecko, skontaktuj się&nbsp;z&nbsp;nami przez
+          WhatsApp:
         </p>
         <PhoneNumber />
         <p className="text-center font-roboto">

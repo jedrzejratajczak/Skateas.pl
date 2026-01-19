@@ -64,8 +64,7 @@ function Modal({ open, setOpen, group, type }: ModalProps) {
     reset
   } = useForm<FormData>({
     resolver: yupResolver(validationSchema),
-    defaultValues: {
-    }
+    defaultValues: {}
   });
 
   const onSubmit: SubmitHandler<FormData> = async ({
@@ -86,7 +85,8 @@ function Modal({ open, setOpen, group, type }: ModalProps) {
         childName: childName2,
         age: age2,
         skills: skills2,
-        lessons: type === 'individual' ? 'Zajęcia indywidualne' : 'Zajęcia grupowe',
+        lessons:
+          type === 'individual' ? 'Zajęcia indywidualne' : 'Zajęcia grupowe',
         message: message2,
         template: type === 'individual' ? 'solo' : 'group'
       });
@@ -287,8 +287,8 @@ export function SignupModal({
 
   return mounted
     ? createPortal(
-      <Modal open={open} setOpen={setOpen} group={group} type={type} />,
-      document.body
-    )
+        <Modal open={open} setOpen={setOpen} group={group} type={type} />,
+        document.body
+      )
     : null;
 }

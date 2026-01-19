@@ -39,7 +39,8 @@ export function AboutTeacherSection() {
               target="_blank"
               className="text-[#FFC600]"
             >
-              certyfikat licencjonowanego instruktora Polish Skate Federation.{' '}
+              certyfikat licencjonowanego instruktora Polish Skate
+              Federation.{' '}
             </Link>
           </p>
           <div>
