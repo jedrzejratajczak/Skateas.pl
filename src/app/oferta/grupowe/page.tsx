@@ -3,10 +3,11 @@ import Image from 'next/image';
 import {
   ButtonLink,
   Locations,
+  PhoneNumber,
   QuestionFormSection,
   ScrollToButton,
   SectionContainer,
-  Timetable,
+  SignupModalButton,
   Title
 } from '@/components/home';
 
@@ -163,7 +164,7 @@ export default function Group() {
         </p>
         <Locations />
       </SectionContainer>
-      <SectionContainer className="relative flex flex-col gap-6 md:gap-8 lg:gap-10">
+      <SectionContainer className="relative flex flex-col gap-6 text-xs text-white sm:text-base md:gap-8 lg:gap-10 xl:text-xl">
         <Title
           id="terminy"
           titleClassName="text-[#FBD24D] -left-10 md:-left-16"
@@ -171,7 +172,19 @@ export default function Group() {
           subtitle="zajęć grupowych"
           subtitleClassName="left-6"
         />
-        <Timetable />
+        <p className="text-center font-roboto">
+          Terminy zajęć grupowych są&nbsp;ustalane na&nbsp;bieżąco,
+          aby&nbsp;dopasować się&nbsp;do&nbsp;potrzeb uczestników. Aby&nbsp;zapisać
+          dziecko, skontaktuj się&nbsp;z&nbsp;nami przez WhatsApp:
+        </p>
+        <PhoneNumber />
+        <p className="text-center font-roboto">
+          lub wypełnij formularz, który znajduje się&nbsp;na&nbsp;dole strony
+          albo klikając w&nbsp;poniższy przycisk:
+        </p>
+        <SignupModalButton color="orange" type="group" className="m-auto">
+          Zapisz na zajęcia grupowe &gt;&gt;
+        </SignupModalButton>
       </SectionContainer>
       <QuestionFormSection />
     </>

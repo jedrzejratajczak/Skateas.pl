@@ -30,7 +30,6 @@ type FormData = {
   childName2: string;
   age2: string;
   skills2: string;
-  lessons2: string;
   message2?: string;
   rules2: boolean;
 };
@@ -46,7 +45,6 @@ const validationSchema = Yup.object().shape({
   childName2: Yup.string().required('Imię i nazwisko dziecka jest wymagane'),
   age2: Yup.string().required('Musisz podać wiek dziecka'),
   skills2: Yup.string().required('Musisz wybrać opis umiejętności dziecka'),
-  lessons2: Yup.string().required('Wybrane zajęcia są wymagane'),
   message2: Yup.string(),
   rules2: Yup.boolean()
     .oneOf([true], 'Wymagana jest zgoda na przetwarzanie danych osobowych')
@@ -67,7 +65,6 @@ function Modal({ open, setOpen, group, type }: ModalProps) {
   } = useForm<FormData>({
     resolver: yupResolver(validationSchema),
     defaultValues: {
-      lessons2: type === 'individual' ? 'Zajęcia indywidualne' : group
     }
   });
 
@@ -78,7 +75,6 @@ function Modal({ open, setOpen, group, type }: ModalProps) {
     childName2,
     age2,
     skills2,
-    lessons2,
     message2
   }) => {
     try {
@@ -90,7 +86,7 @@ function Modal({ open, setOpen, group, type }: ModalProps) {
         childName: childName2,
         age: age2,
         skills: skills2,
-        lessons: lessons2,
+        lessons: type === 'individual' ? 'Zajęcia indywidualne' : 'Zajęcia grupowe',
         message: message2,
         template: type === 'individual' ? 'solo' : 'group'
       });
@@ -228,14 +224,6 @@ function Modal({ open, setOpen, group, type }: ModalProps) {
               ]}
             />
             <Textarea
-              name="lessons2"
-              label="Wybrane zajęcia"
-              rows={type === 'individual' ? 1 : 3}
-              isDisabled
-              register={register}
-              errorMessage={errors.lessons2?.message}
-            />
-            <Textarea
               name="message2"
               label="Wiadomość (opcjonalnie)"
               placeholder={
@@ -299,8 +287,8 @@ export function SignupModal({
 
   return mounted
     ? createPortal(
-        <Modal open={open} setOpen={setOpen} group={group} type={type} />,
-        document.body
-      )
+      <Modal open={open} setOpen={setOpen} group={group} type={type} />,
+      document.body
+    )
     : null;
 }
