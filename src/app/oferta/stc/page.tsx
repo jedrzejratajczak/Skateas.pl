@@ -1,15 +1,15 @@
 'use client';
 
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useEffect,useState } from 'react';
+
 import {
-  SectionContainer,
-  Title,
-  QuestionFormSection,
+  Button,
   PhoneNumber,
+  QuestionFormSection,
+  SectionContainer,
   STCSignupModal,
-  Button
-} from '@/components/home';
+  Title} from '@/components/home';
 
 function FullscreenImage({
   src,
