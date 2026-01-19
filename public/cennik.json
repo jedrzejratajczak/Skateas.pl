@@ -5,12 +5,12 @@
       "borderColor": "#5EE9D3",
       "pricePoints": [
         {
-          "description": "Jedna lekcja (60 min)",
+          "description": "Jedna osoba / lekcja (60 min)",
           "price": "120 zł"
         },
         {
-          "description": "Jedna lekcja 2-osoby (60 min)",
-          "price": "200 zł"
+          "description": "Dwie lub trzy osoby / lekcja (60 min)",
+          "price": "100 zł / os"
         }
       ],
       "features": [
@@ -25,8 +25,8 @@
       "borderColor": "#FBD24D",
       "pricePoints": [
         {
-          "description": "Jedna lekcja (75 min)",
-          "price": "80 zł"
+          "description": "Grupa powyżej 3 osób",
+          "price": "300 zł / msc"
         }
       ],
       "features": [
