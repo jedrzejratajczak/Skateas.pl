@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import {
+  Button,
   ButtonLink,
   Locations,
   PhoneNumber,
@@ -163,6 +164,51 @@ export default function Group() {
           wyprzedzeniem, aby&nbsp;zapewnić pełną wygodę i&nbsp;łatwy dojazd.
         </p>
         <Locations />
+      </SectionContainer>
+      <SectionContainer className="relative flex flex-col gap-6 md:gap-8 lg:gap-10">
+        <Title
+          titleClassName="text-[#FBD24D] -left-4"
+          title="Sobotnie zajęcia"
+          subtitle="8:45 - 9:45"
+          subtitleClassName="left-6 text-white"
+        />
+        <div className="flex flex-col items-center gap-6 md:flex-row md:items-start md:justify-center md:gap-10">
+          <div className="relative h-auto w-full max-w-[400px]">
+            <Image
+              src="/home/offers/sobotnie-zajecia.jpg"
+              alt="Sobotnie zajęcia na deskorolce"
+              className="rounded-[25px]"
+              width={400}
+              height={500}
+              style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
+              sizes="(max-width: 768px) 100vw, 400px"
+            />
+          </div>
+          <div className="flex flex-col items-center gap-4 text-center md:items-start md:text-left">
+            <p className="font-roboto text-lg font-bold text-[#FBD24D] md:text-2xl">
+              Skatepark Zajezdnia
+            </p>
+            <Button
+              color="blue"
+              href="https://maps.app.goo.gl/mwtUyaLXgD6q1NJRA?g_st=ic"
+            >
+              Zobacz na mapie &gt;&gt;
+            </Button>
+            <p className="font-roboto text-base text-white md:text-lg">
+              Zapraszamy na poranne zajęcia w każdą sobotę!
+              <br />
+              Obowiązują zapisy.
+            </p>
+            <SignupModalButton
+              color="orange"
+              type="group"
+              group="Sobota 8:45-9:45"
+              className="mt-2"
+            >
+              Zapisz się na sobotę &gt;&gt;
+            </SignupModalButton>
+          </div>
+        </div>
       </SectionContainer>
       <SectionContainer className="relative flex flex-col gap-6 text-xs text-white sm:text-base md:gap-8 lg:gap-10 xl:text-xl">
         <Title

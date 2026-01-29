@@ -86,7 +86,11 @@ function Modal({ open, setOpen, group, type }: ModalProps) {
         age: age2,
         skills: skills2,
         lessons:
-          type === 'individual' ? 'Zajęcia indywidualne' : 'Zajęcia grupowe',
+          type === 'individual'
+            ? 'Zajęcia indywidualne'
+            : group
+              ? `Zajęcia grupowe ${group}`
+              : 'Zajęcia grupowe',
         message: message2,
         template: type === 'individual' ? 'solo' : 'group'
       });
@@ -287,8 +291,8 @@ export function SignupModal({
 
   return mounted
     ? createPortal(
-        <Modal open={open} setOpen={setOpen} group={group} type={type} />,
-        document.body
-      )
+      <Modal open={open} setOpen={setOpen} group={group} type={type} />,
+      document.body
+    )
     : null;
 }
