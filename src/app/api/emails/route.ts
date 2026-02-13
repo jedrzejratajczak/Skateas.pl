@@ -1,6 +1,11 @@
-import axios from 'axios';
+import sgMail from '@sendgrid/mail';
 import { verify } from 'hcaptcha';
 import { NextRequest, NextResponse } from 'next/server';
+
+import {
+  SENDGRID_API_KEY,
+  SENDGRID_FROM
+} from '@/environment';
 
 export const POST = async (req: NextRequest) => {
   try {
@@ -16,38 +21,34 @@ export const POST = async (req: NextRequest) => {
       return NextResponse.json(null, { status: 500 });
     }
 
-    await axios.post(
-      'https://api.sendinblue.com/v3/smtp/email',
-      {
-        sender: destination,
-        replyTo: { name: data.name, email: data.email },
-        to: [destination],
-        subject: 'Formularz skateas.pl',
-        htmlContent: renderTemplate(data)
-      },
-      { headers }
-    );
+    sgMail.setApiKey(SENDGRID_API_KEY);
+
+    const msg = {
+      to: destination.email,
+      from: SENDGRID_FROM,
+      replyTo: { name: data.name, email: data.email },
+      subject: 'Formularz skateas.pl',
+      html: renderTemplate(data)
+    };
+
+    await sgMail.send(msg);
 
     return NextResponse.json(null, { status: 200 });
-  } catch (error) {
+  } catch (error: any) {
     console.error(error);
 
-    return NextResponse.json(null, { status: 500 });
+    return NextResponse.json(
+      { error: error.message || 'Something went wrong', details: error.response?.body || null },
+      { status: 500 }
+    );
   }
 };
 
 const hcaptchaSecret = process.env.HCAPTCHA_SECRET as string;
-const apiKey = process.env.EMAIL_API_KEY as string;
 
 const destination = {
   email: 'akademiaskateboardingu@gmail.com',
   name: 'Akademia Skateboardingu'
-};
-
-const headers = {
-  'content-type': 'application/json',
-  'api-key': apiKey,
-  accept: 'application/json'
 };
 
 const renderTemplate = (data: { template: 'contact' | 'group' | 'solo' }) => {
