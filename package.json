@@ -12,7 +12,6 @@
     "@headlessui/tailwindcss": "^0.2.0",
     "@hookform/resolvers": "^3.9.0",
     "@remixicon/react": "^4.2.0",
-    "@sendgrid/mail": "^8.1.0",
     "@tremor/react": "^3.14.0",
     "axios": "^1.7.7",
     "hcaptcha": "^0.2.0",

@@ -1,18 +1,8 @@
-import sgMail from '@sendgrid/mail';
-
 import {
-  SENDGRID_API_KEY,
-  SENDGRID_CONTACT_TEMPLATE,
-  SENDGRID_FROM,
-  SENDGRID_ORDER_CONFIRMATION_TEMPLATE,
-  SENGDGRID_SUBSCRIPTION_TEMPLATE
+  BREVO_API_KEY,
+  BREVO_SENDER_EMAIL,
+  BREVO_SENDER_NAME
 } from '@/environment';
-
-const templates = {
-  orderConfirmation: SENDGRID_ORDER_CONFIRMATION_TEMPLATE,
-  subscription: SENGDGRID_SUBSCRIPTION_TEMPLATE,
-  contact: SENDGRID_CONTACT_TEMPLATE
-};
 
 type Email = {
   to: string;
@@ -55,17 +45,36 @@ type ContactEmail = {
 
 export type EmailData = Email & (OrderEmail | SubscriptionEmail | ContactEmail);
 
+const buildHtml = (type: EmailData['type'], data: Record<string, any>) => {
+  const rows = Object.entries(data)
+    .map(([key, value]) => `<p><strong>${key}:</strong> ${value}</p>`)
+    .join('');
+
+  return `<html><body><h2>${type}</h2>${rows}</body></html>`;
+};
+
 export const emailService = {
   sendEmail: async ({ to, type, data }: EmailData) => {
-    sgMail.setApiKey(SENDGRID_API_KEY);
+    const response = await fetch('https://api.brevo.com/v3/smtp/email', {
+      method: 'POST',
+      headers: {
+        'accept': 'application/json',
+        'api-key': BREVO_API_KEY,
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        sender: { email: BREVO_SENDER_EMAIL, name: BREVO_SENDER_NAME },
+        to: [{ email: to }],
+        subject: type,
+        htmlContent: buildHtml(type, data)
+      })
+    });
 
-    const msg = {
-      to,
-      from: SENDGRID_FROM,
-      templateId: templates[type],
-      dynamic_template_data: data
-    };
+    if (!response.ok) {
+      const errorBody = await response.json().catch(() => null);
+      throw { message: 'Brevo API error', status: response.status, details: errorBody };
+    }
 
-    return await sgMail.send(msg);
+    return response.json();
   }
 };

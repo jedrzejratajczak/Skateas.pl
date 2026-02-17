@@ -1,10 +1,10 @@
-import sgMail from '@sendgrid/mail';
 import { verify } from 'hcaptcha';
 import { NextRequest, NextResponse } from 'next/server';
 
 import {
-  SENDGRID_API_KEY,
-  SENDGRID_FROM
+  BREVO_API_KEY,
+  BREVO_SENDER_EMAIL,
+  BREVO_SENDER_NAME
 } from '@/environment';
 
 export const POST = async (req: NextRequest) => {
@@ -21,24 +21,33 @@ export const POST = async (req: NextRequest) => {
       return NextResponse.json(null, { status: 500 });
     }
 
-    sgMail.setApiKey(SENDGRID_API_KEY);
+    const response = await fetch('https://api.brevo.com/v3/smtp/email', {
+      method: 'POST',
+      headers: {
+        'accept': 'application/json',
+        'api-key': BREVO_API_KEY,
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify({
+        sender: { email: BREVO_SENDER_EMAIL, name: BREVO_SENDER_NAME },
+        to: [{ email: destination.email, name: destination.name }],
+        replyTo: { email: data.email, name: data.name },
+        subject: 'Formularz skateas.pl',
+        htmlContent: renderTemplate(data)
+      })
+    });
 
-    const msg = {
-      to: destination.email,
-      from: SENDGRID_FROM,
-      replyTo: { name: data.name, email: data.email },
-      subject: 'Formularz skateas.pl',
-      html: renderTemplate(data)
-    };
-
-    await sgMail.send(msg);
+    if (!response.ok) {
+      const errorBody = await response.json().catch(() => null);
+      throw { message: 'Brevo API error', status: response.status, details: errorBody };
+    }
 
     return NextResponse.json(null, { status: 200 });
   } catch (error: any) {
     console.error(error);
 
     return NextResponse.json(
-      { error: error.message || 'Something went wrong', details: error.response?.body || null },
+      { error: error.message || 'Something went wrong', details: error.details || null },
       { status: 500 }
     );
   }
